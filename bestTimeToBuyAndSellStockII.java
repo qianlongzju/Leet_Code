@@ -1,0 +1,17 @@
+import java.util.*;
+public class Solution {
+    public int maxProfit(int[] prices) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        int profit = 0;
+        if (prices.length <= 1) {
+            return 0;
+        }
+        for (int i=1; i < prices.length; i++) {
+            if (prices[i] > prices[i-1]) {
+                profit += prices[i] - prices[i-1];
+            } 
+        }
+        return profit;
+    }
+}
