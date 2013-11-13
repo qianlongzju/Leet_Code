@@ -1,3 +1,4 @@
+#include "leetcode.h"
 #include <iostream>
 #include <string>
 #include <stack>
@@ -6,56 +7,36 @@
 #include <algorithm>
 #include <limits.h>
 using namespace std;
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-void printTree(TreeNode* root) {
-    if (root == NULL) {
-        return;
-    }
-    queue<TreeNode *> treeNodeQueue;
-    queue<char> numQueue;
-    treeNodeQueue.push(root);
-    while (!treeNodeQueue.empty()) {
-        TreeNode* tmp = treeNodeQueue.front();
-        treeNodeQueue.pop();
-        if (tmp != NULL) {
-            numQueue.push(tmp->val + '0');
-        } else {
-            numQueue.push('#');
-            continue;
-        }
-        if (tmp->left != NULL) {
-            treeNodeQueue.push(tmp->left);
-        } else {
-            treeNodeQueue.push(NULL);
-        }
-        if (tmp->right != NULL) {
-            treeNodeQueue.push(tmp->right);
-        } else {
-            treeNodeQueue.push(NULL);
-        }
-    }
-    while (!numQueue.empty()) {
-        char c = numQueue.front();
-        cout << c;
-        numQueue.pop();
-    }
-}
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        for (int i=1        
+        vector<string> result;
+        string s;
+        generateParenthesis(n, 0, 0, s, result);
+        return result;
+    }
+    void generateParenthesis(int n, int left, int right, string s,
+            vector<string> &result) {
+        if (left == n && right == n) {
+            result.push_back(s);
+            return;
+        }
+        if (left < n) {
+            generateParenthesis(n, left+1, right, s + "(", result);
+        }
+        if (right < left) {
+            generateParenthesis(n, left, right+1, s + ")", result);
+        }
     }
 };
 int main() {
     Solution s;
-
+    vector<string> v = s.generateParenthesis(2);
+    for (int i=0; i < v.size(); i++) {
+        cout << v[i] << endl;
+    }
     return 0;
 }
 

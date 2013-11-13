@@ -12,7 +12,7 @@ public class Solution {
         // Start typing your Java solution below
         // DO NOT write main() function
         ArrayList<Integer> v = new ArrayList<Integer>();
-        ArrayList<TreeNode> stack = new ArrayList<TreeNode>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode p = root;
         while (stack.size() != 0 || p != null) {
             if (p != null) {
@@ -20,8 +20,8 @@ public class Solution {
                 p = p.left;
             }
             else {
-                p = stack.get(stack.size()-1);
-                stack.remove(stack.size()-1);
+                p = stack.peek();
+                stack.pop();
                 v.add(p.val);
                 p = p.right;
             }

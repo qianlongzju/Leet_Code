@@ -59,19 +59,76 @@ public:
     vector<vector<string> > solveNQueens(int n) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        int a[n];
+        vector<int> num;
         for (int i = 0; i < n; i++) {
-            a[i] = 0;
+            num.push_back(i);
         }
-        while (a[0] < n) {
-            for (int i = 1; i < n; i++) {
-                k
+        vector<vector<string> > result;
+        vector<vector<int> > permutations;
+        permute(num, 0, permutations);
+        for (int i = 0; i < permutations.size(); i++) {
+            if (isValid(permutations[i])) {
+                result.push_back(getSolution(permutations[i]));
             }
+        }
+        return result;
+    }
+    vector<string> getSolution(vector<int> permutation) {
+        vector<string> result;
+        for (int i=0; i < permutation.size(); i++) {
+            string s = "";
+            for (int j=0; j < permutation.size(); j++) {
+                if (j == permutation[i]) {
+                    s += "Q";
+                } else {
+                    s += ".";
+                }
+            }
+            result.push_back(s);
+        }
+        return result;
+    }
+    bool isValid(vector<int> permutation) {
+        for (int i=0; i < permutation.size(); i++) {
+            for (int j=i+1; j < permutation.size(); j++) {
+                if (j-i == permutation[j]-permutation[i]) {
+                    return false;
+                }
+                if (j-i == permutation[i]-permutation[j]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    void permute(vector<int> &num, int index,
+            vector<vector<int> > &result) {
+        // Start typing your C/C++ solution below
+        // DO NOT write int main() function
+        if (num.size() == index) {
+            result.push_back(num);
+            return;
+        }
+        for (int i=index; i < num.size(); ++i) {
+            int temp = num[i];
+            num[i] = num[index];
+            num[index] = temp;
+            permute(num, index+1, result);
+            temp = num[i];
+            num[i] = num[index];
+            num[index] = temp;
+        }
     }
 };
 int main() {
     Solution s;
-
+    vector<vector<string> > v = s.solveNQueens(4);
+    for (int i=0; i < v.size(); i++) {
+        for (int j=0; j < v[i].size(); j++) {
+            cout << v[i][j] << endl;
+        }
+        cout << endl;
+    }
     return 0;
 }
 
