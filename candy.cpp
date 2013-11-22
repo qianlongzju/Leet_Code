@@ -1,5 +1,4 @@
-#include "All.h"
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int candy(vector<int> &ratings) {

@@ -1,3 +1,4 @@
+#include "leetcode.h"
 class Solution {
 public:
     char *strStr(char *haystack, char *needle) {

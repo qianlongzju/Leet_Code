@@ -1,11 +1,4 @@
-#include <iostream>
-#include <string>
-#include <stack>
-#include <vector>
-#include <limits.h>
-#include <set>
-#include <algorithm>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int threeSumClosest(vector<int> &num, int target) {

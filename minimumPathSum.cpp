@@ -1,6 +1,4 @@
-#include "vector"
-#include "iostream"
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int minPathSum(vector<vector<int> > &grid) {

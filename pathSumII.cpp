@@ -1,21 +1,4 @@
-#include <vector>
-#include <iostream>
-using namespace std;
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+#include "leetcode.h"
 class Solution {
 public:
     vector<vector<int> > pathSum(TreeNode *root, int sum) {

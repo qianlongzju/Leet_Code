@@ -1,24 +1,4 @@
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <stack>
-#include <vector>
-#include <queue>
-#include <set>
-#include <algorithm>
-#include <limits.h>
-#include <stdlib.h>
-#include <math.h>
-#include "ListNode.h"
-using namespace std;
-/**
- * Definition for singly-linked list.
- * struct ListNode {
- *     int val;
- *     ListNode *next;
- *     ListNode(int x) : val(x), next(NULL) {}
- * };
- */
+#include "leetcode.h"
 class Solution {
 public:
     ListNode *partition(ListNode *head, int x) {

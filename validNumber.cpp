@@ -1,10 +1,4 @@
-#include <string>
-#include <stack>
-#include <vector>
-#include <iostream>
-#include <ctype.h>
-#include <string.h>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     bool isNumber(const char *s) {

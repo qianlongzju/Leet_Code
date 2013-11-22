@@ -1,5 +1,4 @@
-#include <iostream>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     string addBinary(string a, string b) {

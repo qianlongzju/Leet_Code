@@ -1,3 +1,4 @@
+#include "leetcode.h"
 class Solution {
 public:
     vector<int> searchRange(int A[], int n, int target) {

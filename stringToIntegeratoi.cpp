@@ -1,10 +1,4 @@
-#include <string>
-#include <string.h>
-#include <stack>
-#include <vector>
-#include <iostream>
-#include <ctype.h>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int atoi(const char *str) {

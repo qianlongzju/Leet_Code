@@ -1,8 +1,4 @@
-#include <string>
-#include <stack>
-#include <vector>
-#include <iostream>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int longestValidParentheses(string s) {

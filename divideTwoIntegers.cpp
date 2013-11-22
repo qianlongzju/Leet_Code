@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include <cstdlib>
-#include <limits.h>
-#include <iostream>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int divide(int dividend, int divisor) {

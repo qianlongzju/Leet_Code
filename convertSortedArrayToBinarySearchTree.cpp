@@ -1,20 +1,4 @@
-#include <iostream>
-#include <string>
-#include <stack>
-#include <vector>
-#include <set>
-#include <algorithm>
-#include <limits.h>
-using namespace std;
-/**
- * Definition for binary tree
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
- */
+#include "leetcode.h"
 class Solution {
 public:
     TreeNode *sortedArrayToBST(vector<int> &num) {

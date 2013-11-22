@@ -1,108 +1,72 @@
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <stack>
-#include <vector>
-#include <queue>
-#include <set>
-#include <algorithm>
-#include <limits.h>
-#include <stdlib.h>
-#include <math.h>
-using namespace std;
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode(int x) : val(x), next(NULL) {}
-};
-void printTree(TreeNode* root) {
-    if (root == NULL) {
-        return;
-    }
-    queue<TreeNode *> treeNodeQueue;
-    queue<char> numQueue;
-    treeNodeQueue.push(root);
-    while (!treeNodeQueue.empty()) {
-        TreeNode* tmp = treeNodeQueue.front();
-        treeNodeQueue.pop();
-        if (tmp != NULL) {
-            numQueue.push(tmp->val + '0');
-        } else {
-            numQueue.push('#');
-            continue;
-        }
-        if (tmp->left != NULL) {
-            treeNodeQueue.push(tmp->left);
-        } else {
-            treeNodeQueue.push(NULL);
-        }
-        if (tmp->right != NULL) {
-            treeNodeQueue.push(tmp->right);
-        } else {
-            treeNodeQueue.push(NULL);
-        }
-    }
-    while (!numQueue.empty()) {
-        char c = numQueue.front();
-        cout << c;
-        numQueue.pop();
-    }
-}
+#include "leetcode.h"
 class Solution {
 public:
     int maximalRectangle(vector<vector<char> > &matrix) {
         // Start typing your C/C++ solution below
         // DO NOT write int main() function
-        vector<vector<vector<int> > > record;
-        for (int i = 0; i < matrix.size(); i ++) {
-            vector<vector<int> > w;
-            for (int j = 0; j < matrix[i].size(); j++) {
-                vector<int> v;
-                v.push_back(0);
-                v.push_back(0);
-                w.push_back(v);
-            }
-            record.push_back(w);
-        }
-        for (int i = 0; i < matrix.size(); i ++) {
-            for (int j = 0; j < matrix[i].size(); j++) {
-                if (matrix[i][j] == '0') {
+        int m = matrix.size();
+        if (m == 0)
+            return 0;
+        int n = matrix[0].size();
+        vector<vector<int> > heights(m, vector<int>(n, 0));
+        for (int i=0; i < m; ++i) {
+            for (int j=0; j < n; ++j) {
+                if (matrix[i][j] == '0')
                     continue;
-                }
-                if (i == 0 || j == 0) {
-                    if (i > 0) {
-                        record[i][j][0] = record[i-1][j][0]?record[i-1][j][0]+1:1;
-                        record[i][j][1] = 1;
-                    } else if (j > 0) {
-                        record[i][j][1] = record[i][j-1][1]?record[i][j-1][1]+1:1;
-                        record[i][j][0] = 1;
-                    } else {
-                        record[i][j][0] = 1;
-                        record[i][j][1] = 1;
+                if (i == 0)
+                    heights[i][j] = 1;
+                else 
+                    heights[i][j] = heights[i-1][j] + 1;
+            }
+        }
+        int maxArea = INT_MIN;
+        for (int i=0; i < m; i++) {
+            int area = largestRectangleArea(heights[i]);
+            if (area > maxArea) 
+                maxArea = area;
+        }
+        return maxArea;
+    }
+    int largestRectangleArea(vector<int> &height) {
+        // Start typing your C/C++ solution below
+        // DO NOT write int main() function
+        if (height.size() == 0) {
+            return 0;
+        }
+        stack<int> heights, indexes;
+        heights.push(height[0]);
+        indexes.push(0);
+        int largestArea = height[0];
+        int i = 1;
+        while (i < height.size()) {
+            if (height[i] >= heights.top()) {
+                heights.push(height[i]);
+                indexes.push(i);
+            } else {
+                int h, j;
+                while (!heights.empty() && height[i] < heights.top()) {
+                    h = heights.top();
+                    j = indexes.top();
+                    int area = h * (i - j);
+                    if (area > largestArea) {
+                        largestArea = area;
                     }
-                } else {
-                    record[i][j][0] = record[i-1][j][0] + 1;
-                    record[i][j][1] = record[i][j-1][1] + 1;
+                    heights.pop();
+                    indexes.pop();
                 }
+                heights.push(height[i]);
+                indexes.push(j);
             }
+            i++;
         }
-        int max = 0;
-        for (int i = 0; i < matrix.size(); i ++) {
-            for (int j = 0; j < matrix[i].size(); j++) {
-                cout << record[i][j][0] << record[i][j][1] << " ";
-                if (record[i][j][0] * record[i][j][1] > max) {
-                    max = record[i][j][0] * record[i][j][1];
-                }
+        while (!heights.empty()) {
+            if (heights.top() * (i - indexes.top()) > largestArea) {
+                largestArea = heights.top() * (i - indexes.top());
             }
-            cout << endl;
+            heights.pop();
+            indexes.pop();
         }
-        return max; 
+        return largestArea;
     }
 };
 int main() {

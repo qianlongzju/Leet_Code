@@ -13,10 +13,10 @@ public class Solution {
         int largestArea = height[0];
         int i = 1;
         while (i < height.length) {
-            if (height[i] > heights.peek()) {
+            if (height[i] >= heights.peek()) {
                 heights.push(height[i]);
                 indexes.push(i);
-            } else if (height[i] < heights.peek()) {
+            } else {
                 int h=0, j=0;
                 while (!heights.empty() && height[i] < heights.peek()) {
                     h = heights.peek();

@@ -1,11 +1,4 @@
-#include <iostream>
-#include <string>
-#include <stack>
-#include <vector>
-#include <set>
-#include <limits.h>
-#include <algorithm>
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {

@@ -1,3 +1,4 @@
+#include "leetcode.h"
 class Solution {
 public:
     string longestCommonPrefix(vector<string> &strs) {

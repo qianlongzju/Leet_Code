@@ -1,7 +1,4 @@
-#include <iostream>
-#include <vector>
-#include "string"
-using namespace std;
+#include "leetcode.h"
 class Solution {
 public:
     int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {

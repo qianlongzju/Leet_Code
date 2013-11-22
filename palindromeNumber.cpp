@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "leetcode.h"
 class Solution {
 public:
     bool isPalindrome(int x) {

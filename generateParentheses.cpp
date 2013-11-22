@@ -1,12 +1,4 @@
 #include "leetcode.h"
-#include <iostream>
-#include <string>
-#include <stack>
-#include <vector>
-#include <set>
-#include <algorithm>
-#include <limits.h>
-using namespace std;
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
