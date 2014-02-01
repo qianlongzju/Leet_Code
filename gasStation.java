@@ -1,7 +1,6 @@
 import java.util.*;
 public class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         int n = gas.length;
         int start = 0;
         int sum = 0;

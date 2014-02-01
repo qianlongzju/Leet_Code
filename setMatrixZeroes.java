@@ -1,7 +1,5 @@
 public class Solution {
     public void setZeroes(int[][] matrix) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int M = matrix.length;
         int N = matrix[0].length;
         boolean setFirstRowZeroes = false;

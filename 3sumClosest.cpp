@@ -2,33 +2,32 @@
 class Solution {
 public:
     int threeSumClosest(vector<int> &num, int target) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         sort(num.begin(), num.end());
         int n = num.size();
         int lowestGap = INT_MAX;
         int closestSum = 0;
-        for (int i = 0;i < n; i++) {
+        for (int i = 0; i < n; i++) {
+            while (i > 0 && i < n && num[i] == num[i-1])
+                i++;
             int j = i + 1;
             int k = n - 1;
             while (j < k) {
-                int sum_three = num[i] + num[j] + num[k];
-                int gap = target - sum_three;
-                if (gap < 0) {
-                    gap = -gap;
-                }
+                int total = num[i] + num[j] + num[k];
+                int gap = abs(target - total);
                 if (gap < lowestGap) {
                     lowestGap = gap;
-                    closestSum = sum_three;
+                    closestSum = total;
                 }
-                if (sum_three < target) {
+                if (total < target) {
                     j++;
-                } else if (sum_three > target) {
+                    while (j < k && num[j] == num[j-1])
+                        j++;
+                } else if (total > target) {
                     k--;
-                } else {
-                    j++;
-                    k--;
-                }
+                    while (k > j && num[k] == num[k+1])
+                        k--;
+                } else
+                    return closestSum;
             }
         }
         return closestSum;
@@ -44,4 +43,3 @@ int main() {
     cout << s.threeSumClosest(v, 1) << endl;
     return 0;
 }
-

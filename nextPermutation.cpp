@@ -2,8 +2,6 @@
 class Solution {
 public:
     void nextPermutation(vector<int> &num) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         for (int i=num.size()-1; i > 0; i--) {
             if (num[i] <= num[i-1]) {
                 continue;

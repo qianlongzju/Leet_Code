@@ -1,22 +1,14 @@
 public class Solution {
     public int removeDuplicates(int[] A) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = A.length;
-        if (n == 0 || n == 1 || n == 2) {
+        if (n <= 2) {
             return n;
         }
-        int[] B = new int[n];
-        B[0] = A[0];
-        B[1] = A[1];
         int j = 1;
         for (int i=2; i < n; i++) {
-            if (!(A[i] == A[i-1] && A[i] == A[i-2])) {
-                B[++j] = A[i];
+            if (A[i] != A[j-1]) {
+                A[++j] = A[i];
             }
-        }
-        for (int i=0; i <= j; i++) {
-            A[i] = B[i];
         }
         return j+1;
     }

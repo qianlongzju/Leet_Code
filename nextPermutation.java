@@ -1,7 +1,5 @@
 public class Solution {
     public void nextPermutation(int[] num) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         for (int i=num.length-1; i > 0; i--) {
             if (num[i] <= num[i-1]) {
                 continue;

@@ -2,7 +2,6 @@
 class Solution {
 public:
     int canCompleteCircuit(vector<int> &gas, vector<int> &cost) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         int n = gas.size();
         int start = 0;
         int sum = 0;
@@ -51,4 +50,3 @@ int main() {
     cout << s.canCompleteCircuit(gas, cost) << endl;
     return 0;
 }
-

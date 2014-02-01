@@ -1,9 +1,7 @@
 public class Solution {
     public int removeDuplicates(int[] A) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = A.length;
-        if (n == 0 || n == 1) {
+        if (n <= 1) {
             return n;
         }
         int j = 0;
@@ -13,6 +11,5 @@ public class Solution {
             }
         }
         return j+1;
-        
     }
 }

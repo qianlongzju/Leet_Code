@@ -1,27 +1,20 @@
 #include "leetcode.h"
-// http://blog.unieagle.net/2012/10/31/leetcode%E9%A2%98%E7%9B%AE%EF%BC%9Atrapping-rain-water/
 class Solution {
 public:
     int trap(int A[], int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        int total = 0;
         int leftToRight[n];
-        int highest = 0;
-        for (int i = 0; i < n; ++i) {
-            leftToRight[i] = highest;
-            if (A[i] > highest) {
-                highest = A[i];
-            }
+        int rightToLeft[n];
+        leftToRight[0] = 0;
+        rightToLeft[n-1] = 0;
+        for (int i = 1; i < n; ++i) {
+            leftToRight[i] = max(leftToRight[i-1], A[i-1]);
+            rightToLeft[n-i-1] = max(rightToLeft[n-i], A[n-i]);
         }
-        highest = 0;
-        for (int i = n-1; i >= 0; i --) {
-            if (A[i] > highest) {
-                highest = A[i];
-            } else if (A[i] < leftToRight[i]) {
-                total += highest > leftToRight[i] ? leftToRight[i]: highest;
-                total -= A[i];
-            }
+        int total = 0;
+        for (int i=1; i < n-1; i++) {
+            int height = min(leftToRight[i], rightToLeft[i]);
+            if (height > A[i]) 
+                total += height - A[i];
         }
         return total;
     }
@@ -34,4 +27,3 @@ int main() {
     cout << s.trap(b, 6) << endl;
     return 0;
 }
-

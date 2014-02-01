@@ -1,26 +1,22 @@
 import java.util.*;
 public class Solution {
     public int trap(int[] A) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
-        int total = 0;
         int n = A.length;
+        if (n < 3)
+            return 0;
         int[] leftToRight = new int[n];
-        int highest = 0;
-        for (int i = 0; i < n; ++i) {
-            leftToRight[i] = highest;
-            if (A[i] > highest) {
-                highest = A[i];
-            }
+        int[] rightToLeft = new int[n];
+        leftToRight[0] = 0;
+        rightToLeft[n-1] = 0;
+        for (int i = 1; i < n; ++i) {
+            leftToRight[i] = Math.max(leftToRight[i-1], A[i-1]);
+            rightToLeft[n-i-1] = Math.max(rightToLeft[n-i], A[n-i]);
         }
-        highest = 0;
-        for (int i = n-1; i >= 0; i --) {
-            if (A[i] > highest) {
-                highest = A[i];
-            } else if (A[i] < leftToRight[i]) {
-                total += highest > leftToRight[i] ? leftToRight[i]: highest;
-                total -= A[i];
-            }
+        int total = 0;
+        for (int i=1; i < n-1; i++) {
+            int height = Math.min(leftToRight[i], rightToLeft[i]);
+            if (height > A[i]) 
+                total += height - A[i];
         }
         return total;
     }

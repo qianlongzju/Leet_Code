@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         HashSet<ArrayList<Integer>> quadplets = new HashSet<ArrayList<Integer>>();
         ArrayList<Integer> quadplet = new ArrayList<Integer>();

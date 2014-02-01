@@ -2,30 +2,21 @@
 class Solution {
 public:
     int longestConsecutive(vector<int> &num) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         unordered_set<int> m;
-        for (int i=0; i < num.size(); ++i) {
-            m.insert(num[i]);
-        }
+        for (auto i: num)
+            m.insert(i);
         int longestLength = 0;
-        for (int i=0; i < num.size(); ++i) {
-            int j = num[i];
+        for (auto i: num) {
             int length = 1;
-            while (m.find(j+1) != m.end()) {
-                m.erase(j+1);
-                j ++;
+            for (int j=i+1; m.find(j) != m.end(); j++) {
+                m.erase(j);
                 length ++;
             }
-            j = num[i];
-            while (m.find(j-1) != m.end()) {
-                m.erase(j-1);
-                j --;
+            for (int j=i-1; m.find(j) != m.end(); j--) {
+                m.erase(j);
                 length ++;
             }
-            if (length > longestLength) {
-                longestLength = length;
-            }
+            longestLength = max(longestLength, length);
         }
         return longestLength;
     }
@@ -42,4 +33,3 @@ int main() {
     cout << s.longestConsecutive(num) << endl;
     return 0;
 }
-

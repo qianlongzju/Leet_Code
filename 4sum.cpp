@@ -2,14 +2,10 @@
 class Solution {
 public:
     vector<vector<int> > fourSum(vector<int> &num, int target) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<int> > result;
         sort(num.begin(), num.end());
         set<vector<int> > quadplets;
-        vector<int> quadplet(4);
         int n = num.size();
-        //cout << n << endl;
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) { 
                 int k = j + 1;
@@ -21,19 +17,14 @@ public:
                     } else if (sum_four > target) {
                         l--;
                     } else {
-                        quadplet[0] = num[i];
-                        quadplet[1] = num[j];
-                        quadplet[2] = num[k];
-                        quadplet[3] = num[l];
-                        //cout << quadplet[0] << " " << quadplet[1] << " " << quadplet[2] << " " << quadplet[3] << endl;
-                        quadplets.insert(quadplet);
+                        quadplets.insert({num[i], num[j], num[k], num[l]);
                         k++;
                         l--;
                     }
                 }
             }
         }
-        for (set<vector<int> >::iterator it=quadplets.begin(); it!=quadplets.end(); ++it)
+        for (auto it=quadplets.begin(); it != quadplets.end(); ++it)
                 result.push_back(*it);
         return result;
     }
@@ -51,4 +42,3 @@ int main() {
     }
     return 0;
 }
-
