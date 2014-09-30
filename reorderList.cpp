@@ -2,23 +2,9 @@
 class Solution {
 public:
     void reorderList(ListNode *head) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
         ListNode* p = split(head);
-        //print(head);
-        //print(p);
         p = reverse(p);
-        //print(p);
         head = merge(head, p);
-    }
-    void print(ListNode *head) {
-        ListNode *p = head;
-        cout << "start print" << endl;
-        while (p != NULL) {
-            cout << p->val << " ";
-            p = p->next;
-        }
-        cout << endl << "end print" << endl;
     }
     ListNode* split(ListNode *head) {
         if (head == NULL) 
@@ -65,10 +51,8 @@ int main() {
     ListNode a = ListNode(1);
     ListNode b = ListNode(2);
     ListNode c = ListNode(3);
-    ListNode d = ListNode(4);
     a.next = &b;
     b.next = &c;
-    //c.next = &d;
     ListNode * head = &a;
     s.reorderList(head);
     while (head != NULL) {

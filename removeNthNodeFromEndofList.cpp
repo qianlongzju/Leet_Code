@@ -2,8 +2,6 @@
 class Solution {
 public:
     ListNode *removeNthFromEnd(ListNode *head, int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int index = 0;
         ListNode *p = head;
         ListNode *del = NULL;
@@ -18,12 +16,15 @@ public:
             }
         }
         if (index >= n+1) {
+            ListNode *tmp = del->next;
             del->next = del->next->next;
+            delete tmp;
         }
         else {
+            ListNode *tmp = head;
             head = head->next;
+            delete tmp;
         }
         return head;
-        
     }
 };

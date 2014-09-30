@@ -2,8 +2,6 @@
 class Solution {
 public:
     bool isPalindrome(string s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         for (int i=0, j=s.length()-1; i < j; ) {
             char a = s[i];
             char b = s[j];
@@ -24,7 +22,6 @@ public:
             j--;
         }
         return true;
-        
     }
     bool isAlphaNumeric(char c) {
         if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {

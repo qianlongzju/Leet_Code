@@ -2,8 +2,6 @@
 class Solution {
 public:
     ListNode *swapPairs(ListNode *head) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (head == NULL || head->next == NULL) {
             return head;
         }

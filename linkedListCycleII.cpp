@@ -2,8 +2,6 @@
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
         if (head == NULL)
             return NULL;
         ListNode *slow = head;

@@ -2,7 +2,6 @@
 class Solution {
 public:
     RandomListNode *copyRandomList(RandomListNode *head) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         Clone(head);
         CopyRandomPointer(head);
         return restore(head);
@@ -53,4 +52,3 @@ int main() {
     s.copyRandomList(a);
     return 0;
 }
-

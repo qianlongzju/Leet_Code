@@ -2,11 +2,8 @@
 class Solution {
 public:
     ListNode *deleteDuplicates(ListNode *head) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (head == NULL) {
+        if (head == NULL)
             return head;
-        }
         ListNode *headptr = new ListNode(head->val-1);
         headptr->next = head;
         ListNode *previous = headptr;
@@ -15,11 +12,14 @@ public:
         while (p != NULL) {
             while (p != NULL && p->next != NULL && p->val == p->next->val) {
                 remove = true;
+                ListNode *tmp = p;
                 p = p->next;
+                delete tmp;
             }
             if (remove) {
                 previous->next = p->next;
-                p = p->next;
+                delete p;
+                p = previous->next;
                 remove = false;
             }
             else {

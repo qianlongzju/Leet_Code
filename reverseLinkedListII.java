@@ -11,11 +11,8 @@
  */
 public class Solution {
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
-        if (m == n) {
+        if (m == n)
             return head;
-        }
         ListNode headptr = new ListNode(0);
         headptr.next = head;
         ListNode ins = headptr;
@@ -33,6 +30,5 @@ public class Solution {
             }
         }
         return headptr.next;
-        
     }
 }

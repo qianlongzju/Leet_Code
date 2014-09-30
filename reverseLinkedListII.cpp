@@ -2,11 +2,8 @@
 class Solution {
 public:
     ListNode *reverseBetween(ListNode *head, int m, int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
-        if (m == n) {
+        if (m == n) 
             return head;
-        }
         ListNode *headptr = new ListNode(0);
         headptr->next = head;
         ListNode *ins = headptr;

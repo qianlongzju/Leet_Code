@@ -1,6 +1,5 @@
-public class Solution { public boolean isPalindrome(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
+public class Solution {
+    public boolean isPalindrome(String s) {
         s = s.toLowerCase();
         for (int i=0, j=s.length()-1; i < j; ) {
             char a = s.charAt(i);

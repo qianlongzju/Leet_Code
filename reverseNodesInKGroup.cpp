@@ -2,8 +2,6 @@
 class Solution {
 public:
     ListNode *reverseKGroup(ListNode *head, int k) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (k < 2 || head == NULL) {
             return head;
         }
