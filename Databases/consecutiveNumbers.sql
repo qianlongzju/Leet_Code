@@ -1,12 +1,10 @@
-# Write your MySQL query statement below
 select distinct(ConsecutiveNums)
 from 
 (
-select 
-num as ConsecutiveNums,
-IF(@old_old = @old and @old = num, 1, 0) as flag,
-@old_old := @old,
-@old := num
-from Logs, (select @old_old := null) t, (select @old := null) s
-) o
+    select Num as ConsecutiveNums,
+    IF(@pre_pre = @pre and @pre = num, 1, 0) as flag,
+    @pre_pre := @pre,
+    @pre := Num
+    from Logs, (select @pre_pre := null) p_p, (select @pre := null) p
+) t
 where flag = 1;
