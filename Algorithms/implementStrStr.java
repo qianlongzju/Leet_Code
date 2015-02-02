@@ -1,14 +1,12 @@
 public class Solution {
-    public String strStr(String haystack, String needle) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
+    public int strStr(String haystack, String needle) {
         if (haystack == null || needle == null) {
-            return null;
+            return -1;
         }
         int lenstr = haystack.length();
         int lensubstr = needle.length();;
         if (lenstr < lensubstr) {
-            return null;
+            return -1;
         }
         int len = lenstr - lensubstr;
         for (int i=0; i <= len; i++) {
@@ -19,10 +17,9 @@ public class Solution {
                 }
             }
             if (j == lensubstr) {
-                return haystack.substring(i);
+                return i;
             }
         }
-        return null;
-        
+        return -1;
     }
 }
