@@ -1,8 +1,8 @@
 #include "leetcode.h"
 class Solution {
 public:
-    bool isNumber(const char *s) {
-        int len = strlen(s);
+    bool isNumber(string s) {
+        int len = s.size();
         int i = len-1;
         while (i >= 0 && isspace(s[i]))
             i --;
@@ -10,14 +10,10 @@ public:
         i = 0;
         while (i < len && isspace(s[i])) 
             i ++;
-        if (i < len && s[i] == '+') 
+        if (i < len && (s[i] == '+' || s[i] == '-')) 
             i ++;
-        else if (i < len && s[i] == '-') {
-            i ++;
-        }
-        if (i == len) {
+        if (i == len)
             return false;
-        }
         bool isE = false;
         bool isPoint = false;
         bool hasNum = false;
@@ -70,4 +66,3 @@ int main() {
     cout << s.isNumber("4e+") << " 0" << endl;
     return 0;
 }
-
