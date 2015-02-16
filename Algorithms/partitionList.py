@@ -1,4 +1,4 @@
-from util import *
+from leetcode import *
 class Solution:
     # @param head, a ListNode
     # @param x, an integer

@@ -2,8 +2,8 @@
 class Solution {
 public:
     string countAndSay(int n) {
-        std::vector<int> v;
-        std::vector<int> w;
+        vector<int> v;
+        vector<int> w;
         string result;
         v.push_back(1);
         while (--n) {

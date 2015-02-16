@@ -1,4 +1,4 @@
-from util import *
+from leetcode import *
 class Solution:
     # @return a ListNode
     def removeNthFromEnd(self, head, n):
