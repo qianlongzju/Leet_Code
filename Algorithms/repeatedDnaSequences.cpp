@@ -4,9 +4,9 @@ public:
     	int mapping_size = 4;
     	long seq_len = 10;
     	int v = 0;
-    	std::set<long> keys;
-    	std::set<string> result;
-    	std::vector<string> result2;
+    	set<long> keys;
+    	set<string> result;
+    	vector<string> result2;
         for (int i=0; i < s.size(); i ++) {
         	int c = 0;
         	if (s[i] == 'A')
@@ -25,7 +25,7 @@ public:
         	else
         		keys.insert(v);
         }
-        for (std::set<string>::iterator it=result.begin(); it != result.end(); it++) {
+        for (set<string>::iterator it=result.begin(); it != result.end(); it++) {
         	result2.push_back(*it);
         }
         return result2;

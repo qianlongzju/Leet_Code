@@ -3,8 +3,6 @@ class Solution {
 public:
     // dfs
     bool exist(vector<vector<char> > &board, string word) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int m = board.size();
         int n = board[0].size();
         vector<vector<bool> > visited(m, vector<bool>(n, false));

@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<Integer>> combine(int n, int k) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> path = new ArrayList<Integer>();
         combine(n, k, 1, path, result);
@@ -23,8 +21,6 @@ public class Solution {
         combine(n, k, min+1, clone_path, result);
     }
     //public ArrayList<ArrayList<Integer>> combine(int n, int k) {
-    //    // Start typing your Java solution below
-    //    // DO NOT write main() function
     //    
     //    ArrayList<ArrayList<Integer> > result = new ArrayList<ArrayList<Integer>>();
     //    for (int i=0; i < Math.pow(2, n); i++) {

@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] S) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         Arrays.sort(S);        
         int n = S.length;
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

@@ -10,8 +10,6 @@
  */
 public class Solution {
     public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;

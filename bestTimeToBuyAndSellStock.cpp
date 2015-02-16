@@ -2,8 +2,6 @@
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int max = 0;
         if (prices.size() <= 1) {
             return 0;

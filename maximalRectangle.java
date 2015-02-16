@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int maximalRectangle(char[][] matrix) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int m = matrix.length;
         if (m == 0)
             return 0;
@@ -27,8 +25,6 @@ public class Solution {
         return maxArea;
     }
     private int largestRectangleArea(int[] height) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (height.length < 1) {
             return 0;
         }

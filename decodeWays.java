@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int numDecodings(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
         if (s.length() == 0)
             return 0;

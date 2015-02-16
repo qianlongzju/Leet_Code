@@ -9,8 +9,6 @@
  */
 public class Solution {
     public int sumNumbers(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         return sumNumbersToLeaf(root, 0);
     }
     int sumNumbersToLeaf(TreeNode root, int s) {

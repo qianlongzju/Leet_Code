@@ -2,8 +2,6 @@
 class Solution {
 public:
     bool isValidBST(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         return validBST(root, false, 0, false, 0);
     }
     bool validBST(TreeNode *root, bool minBound, int min, bool maxBound, int max) {

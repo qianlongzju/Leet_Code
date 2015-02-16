@@ -2,8 +2,6 @@
 class Solution {
 public:
     void connect(TreeLinkNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (root == NULL) {
             return ;
         }

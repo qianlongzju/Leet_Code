@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<String> generateParenthesis(int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<String> result = new ArrayList<String>();
         String s = "";
         generateParenthesis(n, 0, 0, s, result);

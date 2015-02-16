@@ -2,8 +2,6 @@
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (lists.size() == 0) {
             return NULL;
         }
@@ -17,8 +15,6 @@ public:
         return p;
     }
     ListNode *mergeTwoLists(ListNode *l1, ListNode *l2) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         ListNode *head = NULL;
         ListNode *p = NULL;
         while (l1 != NULL && l2 != NULL) {

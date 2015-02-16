@@ -2,8 +2,6 @@
 class Solution {
 public:
     int divide(int dividend, int divisor) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         bool positive = true;
         long long un_dividend = dividend;
         long long un_divisor = divisor;

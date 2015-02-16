@@ -9,8 +9,6 @@ public class Solution {
         return (int)result;
     }
     public int numTrees2(int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int[] num = new int[n+1];
         num[0] = 1;
         for (int i=1; i <=n; i++) {

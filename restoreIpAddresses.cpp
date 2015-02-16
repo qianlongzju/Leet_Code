@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<string> restoreIpAddresses(string s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int n = s.size();
         vector<string> v;
         for (int i=1; i <= 3 && i < n; i++) {

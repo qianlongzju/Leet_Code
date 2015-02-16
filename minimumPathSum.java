@@ -1,7 +1,5 @@
 public class Solution {
     public int minPathSum(int[][] grid) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int i=0, j=0;
         for (i=0; i < grid.length; i++) {
             for (j=0; j < grid[0].length; j++) {

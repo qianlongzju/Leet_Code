@@ -1,7 +1,5 @@
 public class Solution {
     public ArrayList<Integer> spiralOrder(int[][] matrix) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<Integer> result = new ArrayList<Integer>();
         int m = matrix.length;
         if (m == 0) {

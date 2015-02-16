@@ -2,8 +2,6 @@
 class Solution {
 public:
     TreeNode *buildTree(vector<int> &inorder, vector<int> &postorder) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         return buildTreeDriver(inorder, 0, inorder.size()-1, postorder, 0, postorder.size()-1);
     }
     TreeNode *buildTreeDriver(vector<int> &inorder, int inStart, int inEnd, vector<int> &postorder, int postStart, int postEnd) {   

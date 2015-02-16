@@ -10,8 +10,6 @@ import java.util.*;
  */
 public class Solution {
     public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         ArrayList<Integer> path = new ArrayList<Integer>();
         path_sum(root, sum, path, result);

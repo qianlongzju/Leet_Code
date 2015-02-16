@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int longestValidParentheses(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         Stack<Integer> stk = new Stack<Integer>();
         char[] ss = new char[s.length()];
         for (int i = 0; i < s.length(); ++i) {

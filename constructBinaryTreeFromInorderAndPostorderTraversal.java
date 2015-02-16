@@ -9,8 +9,6 @@
  */
 public class Solution {
     public TreeNode buildTree(int[] inorder, int[] postorder) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         return buildTreeDriver(inorder, 0, inorder.length-1, postorder, 0, postorder.length-1);
     }
     TreeNode buildTreeDriver(int[] inorder, int inStart, int inEnd, int[] postorder, int postStart, int postEnd) { 	

@@ -6,8 +6,6 @@ public class Solution {
         return result;
     }
     public void permute(int[] num, int index, ArrayList<ArrayList<Integer>> result) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (num.length == index) {
             ArrayList<Integer> temp = new ArrayList<Integer>();
             for (int i = 0; i < num.length; i++) {
@@ -27,8 +25,6 @@ public class Solution {
         }
     }
     //public ArrayList<ArrayList<Integer>> permute(int[] num) {
-    //    // Start typing your Java solution below
-    //    // DO NOT write main() function
     //    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
     //    ArrayList<Integer> temp = new ArrayList<Integer>();
     //    if (num.length == 1) {
@@ -56,8 +52,6 @@ public class Solution {
     //    return result;
     //}
     //public ArrayList<ArrayList<Integer>> permute(int[] num) {
-    //    // Start typing your Java solution below
-    //    // DO NOT write main() function
     //    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
     //    ArrayList<Integer> temp = new ArrayList<Integer>();
     //    if (num.length == 1) {

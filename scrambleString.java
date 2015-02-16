@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public boolean isScramble(String s1, String s2) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int l1 = s1.length();
         int l2 = s2.length();
         if (l1 != l2)

@@ -1,17 +1,13 @@
-#include <vector>
-#include <string>
-#include <iostream>
-using namespace std;
-
+#include "leetcode.h"
 class Solution {
     public:
         string largestNumber(vector<int> &num) {
-            std::sort(num.begin(), num.end(), cmp);
+            sort(num.begin(), num.end(), cmp);
             if (num[0] == 0)
                 return "0";
             string result = "";
             for (int i = 0; i < num.size(); i++) {
-                result += std::to_string(num[i]);
+                result += to_string(num[i]);
             }
             return result;
         }

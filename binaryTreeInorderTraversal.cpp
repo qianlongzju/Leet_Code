@@ -20,8 +20,6 @@ public:
         return v;
     }
     vector<int> inorderTraversal_recursive(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<int> v;
         if (root == NULL) {
             return v;

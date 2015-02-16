@@ -1,7 +1,5 @@
 public class Solution {
     public int sqrt(int x) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (x == 0) {
             return 0;
         }

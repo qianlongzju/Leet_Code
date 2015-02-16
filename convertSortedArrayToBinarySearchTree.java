@@ -10,13 +10,9 @@ import java.util.*;
  */
 public class Solution {
     public TreeNode sortedArrayToBST(int[] num) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         return sortedSubArrayToBST(num, 0, num.length-1);
     }
     TreeNode sortedSubArrayToBST(int[] num, int start, int end) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (start > end) 
             return null;
         int middle = start + (end-start)/2;

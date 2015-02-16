@@ -9,8 +9,6 @@
  */
 public class Solution {
     public boolean hasPathSum(TreeNode root, int sum) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (root == null) {
             return false;
         }

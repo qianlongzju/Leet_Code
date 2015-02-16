@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<Integer> findSubstring(String S, String[] L) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<Integer> result = new ArrayList<Integer>();
         int wordLength = L[0].length();
         int subLength = wordLength * L.length;

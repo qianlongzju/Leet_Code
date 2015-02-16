@@ -2,8 +2,6 @@
 class Solution {
 public:
     void recoverTree(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         TreeNode *pre = NULL;
         TreeNode *node1 = NULL;
         TreeNode *node2 = NULL;

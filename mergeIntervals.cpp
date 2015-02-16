@@ -7,8 +7,6 @@ public:
         return a.start < b.start;
     }
     vector<Interval> merge(vector<Interval> &intervals) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (intervals.size() <= 1) {
             return intervals;
         }

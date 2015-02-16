@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int jump(int[] A) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = A.length;
         int maxIndex = 0;
         int[] steps = new int[n];

@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<vector<int> > levelOrderBottom(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<int> > result;
         if (root == NULL) {
             return result;

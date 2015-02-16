@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int> > &matrix) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<int> result;
         int m = matrix.size();
         if (m == 0) {

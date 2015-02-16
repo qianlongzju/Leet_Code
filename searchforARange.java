@@ -1,7 +1,5 @@
 public class Solution {
     public int[] searchRange(int[] A, int target) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int[] v = new int[2];
         int low = 0;
         int high = A.length-1;

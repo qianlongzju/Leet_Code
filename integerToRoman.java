@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public String intToRoman(int num) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         String s = "";
         while (num != 0) {
             if (num >= 1000) {

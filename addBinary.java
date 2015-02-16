@@ -1,7 +1,5 @@
 public class Solution {
     public String addBinary(String a, String b) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int m = a.length();
         int n = b.length();
         int p = 0, i;

@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int largestRectangleArea(int[] height) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (height.length < 1) {
             return 0;
         }

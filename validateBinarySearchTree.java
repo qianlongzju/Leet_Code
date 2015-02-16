@@ -9,8 +9,6 @@
  */
 public class Solution {
     public boolean isValidBST(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         return validBST(root, false, 0, false, 0);
     }
     boolean validBST(TreeNode root, boolean minBound, int min, boolean maxBound, int max) {

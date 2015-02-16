@@ -10,8 +10,6 @@ import java.util.*;
  */
 public class Solution {
     public void flatten(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         flat(root);
     }
     TreeNode flat(TreeNode root) {

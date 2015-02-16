@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int romanToInt(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int result = 0;
         for (int i = 0; i < s.length(); ++i) {
             if (s.charAt(i) == 'M') {

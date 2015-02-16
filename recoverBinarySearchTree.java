@@ -11,8 +11,6 @@ import java.util.*;
 public class Solution {
     TreeNode pre, node1, node2;
     public void recoverTree(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         pre = null;
         node1 = null;
         node2 = null;

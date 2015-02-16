@@ -1,8 +1,6 @@
 //public class Solution {
 public class divideToIntegers {
     public int divide(int dividend, int divisor) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         boolean positive = true;
         long un_dividend = dividend;
         long un_divisor = divisor;

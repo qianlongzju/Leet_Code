@@ -18,8 +18,6 @@ import java.util.*;
  */
 public class Solution {
     public TreeNode sortedListToBST(ListNode head) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (head == null) {
             return null;
         }
@@ -39,8 +37,6 @@ public class Solution {
         return root;
     }
     //TreeNode sortedListToBST(ListNode head) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    int length = 0;
     //    ListNode p = head;
     //    while (p != null) {
@@ -65,8 +61,6 @@ public class Solution {
     //}       
     //private ListNode list;
     //TreeNode sortedListToBST(ListNode head) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    int length = 0;
     //    ListNode p = head;
     //    while (p != null) {

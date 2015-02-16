@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<string> letterCombinations(string digits) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         string digitStrings[] = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         vector<string> letters;
         letters.push_back("");

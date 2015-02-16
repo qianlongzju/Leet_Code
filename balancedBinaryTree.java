@@ -9,8 +9,6 @@
  */
 public class Solution {
     public boolean isBalanced(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (height(root) == -1) {
             return false;
         }

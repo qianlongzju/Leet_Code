@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         Arrays.sort(candidates);
         int[] index = new int[target+2];
@@ -29,8 +27,6 @@ public class Solution {
         }
     }
     //public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-    //    // Start typing your Java solution below
-    //    // DO NOT write main() function
     //    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
     //    Arrays.sort(candidates);
     //    int[] index = new int[target+2];

@@ -2,8 +2,6 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int result = 0;
         for (int i = 0; i < s.size(); ++i) {
             if (s[i] == 'M') {

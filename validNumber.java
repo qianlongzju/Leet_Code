@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public boolean isNumber(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int len = s.length();
         int i = len-1;
         while (i >= 0 && Character.isWhitespace(s.charAt(i)))

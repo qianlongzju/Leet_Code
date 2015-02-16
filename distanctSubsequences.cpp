@@ -2,8 +2,6 @@
 class Solution {
 public:
     int numDistinct(string S, string T) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int n = S.size();
         int m = T.size();
         int result[m+1][n+1];

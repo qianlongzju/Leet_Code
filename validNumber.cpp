@@ -2,8 +2,6 @@
 class Solution {
 public:
     bool isNumber(const char *s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int len = strlen(s);
         int i = len-1;
         while (i >= 0 && isspace(s[i]))

@@ -1,7 +1,5 @@
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = s.length();
         int i = 0, j = 0;
         int maxLen = 0;

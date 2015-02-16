@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<TreeNode *> generateTrees(int n) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         return generateTreesSub(1, n);    
     }
     vector<TreeNode *> generateTreesSub(int start, int end) {

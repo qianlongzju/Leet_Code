@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<vector<int> > combine(int n, int k) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<int> > result;
         vector<int> path;
         combine(n, k, 1, path, result);
@@ -23,8 +21,6 @@ public:
         combine(n, k, min+1, path, result);
     }
     //vector<vector<int> > combine(int n, int k) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<vector<int> > result;
     //    for (int i=0; i < pow(2, n); i++) {
     //        vector<int> v;

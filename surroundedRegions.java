@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public void solve(char[][] board) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int m = board.length;
         if (m == 0)
             return;

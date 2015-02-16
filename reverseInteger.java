@@ -1,7 +1,5 @@
 public class Solution {
     public int reverse(int x) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         boolean positive = true;
         if (x < 0) {
             positive = false;

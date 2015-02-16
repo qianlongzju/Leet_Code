@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int maxProfit(int[] prices) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int max = 0;
         if (prices.length <= 1) {
             return 0;

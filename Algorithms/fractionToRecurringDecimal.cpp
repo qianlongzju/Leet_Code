@@ -1,8 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
-using namespace std;
+#include "leetcode.h"
 class Solution {
     public:
         string fractionToDecimal(int numerator2, int denominator2) {
@@ -14,8 +10,8 @@ class Solution {
             numerator = abs(numerator);
             denominator = abs(denominator);
             if (numerator % denominator == 0)
-                return result + std::to_string(numerator / denominator);
-            result += std::to_string(numerator / denominator) + ".";
+                return result + to_string(numerator / denominator);
+            result += to_string(numerator / denominator) + ".";
             numerator %= denominator;
             vector<int> reminders;
             vector<int> numerators;
@@ -24,14 +20,14 @@ class Solution {
             while (numerator) {
                 reminders.push_back(numerator / denominator);
                 numerator %= denominator;
-                vector<int>::iterator i = std::find(numerators.begin(), numerators.end(), numerator);
+                vector<int>::iterator i = find(numerators.begin(), numerators.end(), numerator);
                 if (i != numerators.end()) {
                     int left = i - numerators.begin();
                     for (int t=0; t < left; t++)
-                        result += std::to_string(reminders[t]);
+                        result += to_string(reminders[t]);
                     result += "(";
                     for (; left < reminders.size(); left++)
-                        result += std::to_string(reminders[left]);
+                        result += to_string(reminders[left]);
                     result += ")";
                     return result;
                 }
@@ -39,7 +35,7 @@ class Solution {
                 numerator *= 10;
             }
             for (vector<int>::iterator index = reminders.begin(); index != reminders.end(); index++) {
-                result += std::to_string(*index);
+                result += to_string(*index);
             }
             return result;
         }

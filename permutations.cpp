@@ -8,8 +8,6 @@ public:
     }
     void permute(vector<int> &num, int index,
             vector<vector<int> > &result) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (num.size() == index) {
             result.push_back(num);
             return;
@@ -25,8 +23,6 @@ public:
         }
     }
     //vector<vector<int> > permute(vector<int> &num) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<vector<int> > result;
     //    vector<int> temp;
     //    if (num.size() == 1) {
@@ -52,8 +48,6 @@ public:
     //    return result;
     //}
     //vector<vector<int> > permute(vector<int> &num) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<vector<int> > result;
     //    vector<int> temp;
     //    if (num.size() == 1) {

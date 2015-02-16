@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public boolean isMatch(String s, String p) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = s.length();
         int m = p.length();
         if (m == 0)

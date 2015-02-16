@@ -1,7 +1,5 @@
 public class Solution {
     public ArrayList<ArrayList<Integer>> generate(int numRows) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (numRows == 0) {
             return result;

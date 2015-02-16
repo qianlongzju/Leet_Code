@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<vector<int> > pathSum(TreeNode *root, int sum) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<int> > result;
         vector<int> path;
         path_sum(root, sum, path, result);
@@ -25,8 +23,6 @@ public:
         path.pop_back();
     }
     //vector<vector<int> > pathSum(TreeNode *root, int sum) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<int> path;
     //    return path_sum(root, sum, path);
     //}

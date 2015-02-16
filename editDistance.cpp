@@ -2,8 +2,6 @@
 class Solution {
 public:
     int minDistance(string word1, string word2) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int D[word1.size()+1][word2.size()+1];
         for (int i=0; i <= word1.size(); i++) {
             D[i][0] = i;

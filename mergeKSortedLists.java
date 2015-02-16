@@ -12,8 +12,6 @@ import java.util.*;
  */
 public class Solution {
     public ListNode mergeKLists(ArrayList<ListNode> lists) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (lists.size() == 0) {
             return null;
         }
@@ -27,8 +25,6 @@ public class Solution {
         return p;
     }
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ListNode head = null;
         ListNode p = null;
         while (l1 != null && l2 != null) {

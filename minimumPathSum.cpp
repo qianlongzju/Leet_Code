@@ -2,8 +2,6 @@
 class Solution {
 public:
     int minPathSum(vector<vector<int> > &grid) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int i, j;
         for (i=0; i < grid.size(); i++) {
             for (j=0; j < grid[0].size(); j++) {

@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<int> > result;
         sort(candidates.begin(), candidates.end());
         int index[target];
@@ -30,8 +28,6 @@ public:
         }
     }
     //vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<vector<int> > result;
     //    sort(candidates.begin(), candidates.end());
     //    int index[target];
@@ -60,8 +56,6 @@ public:
     // for further thoughts on
     // http://leetcode.com/2010/09/print-all-combinations-of-number-as-sum.html
     //vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<vector<int> > result;
     //    sort(candidates.begin(), candidates.end());
     //    int index[target];

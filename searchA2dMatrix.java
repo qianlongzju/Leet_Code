@@ -1,7 +1,5 @@
 public class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int low = 0;
         int high = matrix.length-1;
         int middle;

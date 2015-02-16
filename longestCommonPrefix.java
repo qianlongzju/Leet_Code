@@ -1,7 +1,5 @@
 public class Solution {
     public String longestCommonPrefix(String[] strs) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (strs.length == 0) {
             return "";
         }

@@ -1,7 +1,5 @@
 public class Solution {
     public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int m = obstacleGrid.length;
         if (m == 0) {
             return 0;

@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<vector<string> > partition(string s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         vector<vector<string> > result;
         vector<string> output; // 一个 partition 方案
         DFS(s, 0, output, result);

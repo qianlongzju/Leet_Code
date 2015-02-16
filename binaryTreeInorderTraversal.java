@@ -9,8 +9,6 @@
  */
 public class Solution {
     public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<Integer> v = new ArrayList<Integer>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode p = root;
@@ -29,8 +27,6 @@ public class Solution {
         return v;
     }
     public ArrayList<Integer> inorderTraversal_recursive(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<Integer> v = new ArrayList<Integer>();
         if (root == null) {
             return v;

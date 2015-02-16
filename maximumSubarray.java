@@ -1,7 +1,5 @@
 public class Solution {
     public int maxSubArray(int[] A) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         return maxSubsequenceSum(A, 0, A.length-1);
     }
     int maxSubsequenceSum(int A[], int left, int right) {
@@ -43,8 +41,6 @@ public class Solution {
         return sum;
     }
     public int maxSubArray2(int[] A) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int thisSum, maxSum;
         thisSum = maxSum = A[0];
         for (int i=1; i < A.length; i++) {

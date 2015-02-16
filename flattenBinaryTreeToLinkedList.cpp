@@ -2,8 +2,6 @@
 class Solution {
 public:
     void flatten(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         flat(root);
     }
     TreeNode* flat(TreeNode* root) {

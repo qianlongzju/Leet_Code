@@ -8,8 +8,6 @@ public:
         return numDecodings(s, 0, m);
     }
     int numDecodings(string s, int index, map<int, int> &m) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (m.find(index) != m.end()) {
             return m[index];
         }

@@ -2,8 +2,6 @@
 class Solution {
 public:
     bool isBalanced(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int depth = 0;
         return isBalanced(root, depth);
     }
@@ -23,8 +21,6 @@ public:
         return false;
     }
     //bool isBalanced(TreeNode *root) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    if (height(root) == -1) {
     //        return false;
     //    }

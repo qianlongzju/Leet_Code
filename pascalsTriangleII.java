@@ -1,7 +1,5 @@
 public class Solution {
     public ArrayList<Integer> getRow(int rowIndex) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<Integer> result = new ArrayList<Integer>();
         if (rowIndex == 0) {
             result.add(1);

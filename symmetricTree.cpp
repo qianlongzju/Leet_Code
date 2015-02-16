@@ -2,8 +2,6 @@
 class Solution {
 public:
     bool isSymmetric(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (root == NULL) {
             return true;
         }

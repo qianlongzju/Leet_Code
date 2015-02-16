@@ -1,7 +1,5 @@
 public class Solution {
         public String multiply(String num1, String num2) {
-            // Start typing your Java solution below
-            // DO NOT write main() function
             int m = num1.length();
             int n = num2.length();
             int[] result = new int[m+n];

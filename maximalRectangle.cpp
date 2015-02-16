@@ -2,8 +2,6 @@
 class Solution {
 public:
     int maximalRectangle(vector<vector<char> > &matrix) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int m = matrix.size();
         if (m == 0)
             return 0;
@@ -28,8 +26,6 @@ public:
         return maxArea;
     }
     int largestRectangleArea(vector<int> &height) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         if (height.size() == 0) {
             return 0;
         }

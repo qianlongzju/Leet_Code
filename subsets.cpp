@@ -2,8 +2,6 @@
 class Solution {
 public:
     vector<vector<int> > subsets(vector<int> &S) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         sort(S.begin(), S.end());        
         int n = S.size();
         //for (int i=0; i < n; i++)

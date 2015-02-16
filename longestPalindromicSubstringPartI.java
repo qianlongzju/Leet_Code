@@ -1,7 +1,5 @@
 public class Solution {
     public String longestPalindrome(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int length = s.length();
         boolean[][] table = new boolean[length][length];
         int maxLen = 1;

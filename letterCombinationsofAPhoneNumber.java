@@ -1,7 +1,5 @@
 public class Solution {
     public ArrayList<String> letterCombinations(String digits) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         String[] digitStrings = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
         ArrayList<String> letters = new ArrayList<String>();
         letters.add("");

@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<String>> partition(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
         ArrayList<String> output = new ArrayList<String>(); // 一个 partition 方案
         DFS(s, 0, output, result);

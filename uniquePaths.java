@@ -1,7 +1,5 @@
 public class Solution {
     public int uniquePaths(int m, int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int[][] path = new int[m][n];
         int i=0, j=0;
         for (i=0; i < m; i ++) {

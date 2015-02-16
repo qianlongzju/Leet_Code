@@ -1,7 +1,5 @@
 public class Solution {
     public int searchInsert(int[] A, int target) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int low = 0;
         int high = A.length-1;
         while (low <= high) {

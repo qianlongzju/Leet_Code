@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int maxArea(int[] height) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = height.length;
         int maxArea = 0;
         int area=0, i=0, j=n-1;

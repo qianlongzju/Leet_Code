@@ -1,8 +1,6 @@
 import java.util.Vector;
 public class Solution {
     public boolean isValid(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         Vector<Character> v = new Vector<Character>();
         for (int i=0; i < s.length(); i++) {
             char a = s.charAt(i);

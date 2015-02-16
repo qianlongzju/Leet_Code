@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<String> fullJustify(String[] words, int L) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<String> result = new ArrayList<String>();    
         int start = 0;
         int length = 0;

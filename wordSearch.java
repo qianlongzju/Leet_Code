@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public boolean exist(char[][] board, String word) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int m = board.length;
         int n = board[0].length;
         boolean[][] visited = new boolean[m][n];

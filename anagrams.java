@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<String> anagrams(String[] strs) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<String> result = new ArrayList<String>();
         HashMap<String, ArrayList<String>> m = new HashMap<String, ArrayList<String>>();
         for (int i=0; i < strs.length; ++i) {

@@ -10,8 +10,6 @@ import java.util.*;
  */
 public class Solution {
     public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (intervals.size() <= 1) {
             return intervals;
         }

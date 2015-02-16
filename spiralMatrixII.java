@@ -1,7 +1,5 @@
 public class Solution {
     public int[][] generateMatrix(int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int[][] result = new int[n][n];
         int k=1;
         for (int i=0; i < n/2; i++) {

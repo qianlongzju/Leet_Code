@@ -2,8 +2,6 @@
 class Solution {
 public:
     int maxArea(vector<int> &height) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int n = height.size();
         int maxArea = 0;
         int area=0, i=0, j=n-1;
@@ -24,7 +22,7 @@ public:
 };
 int main() {
     Solution s;
-    vi v;
+    vector<int> v;
     v.push_back(1);
     v.push_back(2);
     v.push_back(1);

@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public int firstMissingPositive(int[] A) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = A.length;
         for (int i=0; i < n; i++) {
             while (A[i] <= n  && A[i] > 0 && A[i] != i+1) {

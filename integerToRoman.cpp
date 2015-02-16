@@ -2,8 +2,6 @@
 class Solution {
 public:
     string intToRoman(int num) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function    
         string s;
         while (num != 0) {
             if (num >= 1000) {

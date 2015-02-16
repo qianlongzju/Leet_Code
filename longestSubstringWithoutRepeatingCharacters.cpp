@@ -2,8 +2,6 @@
 class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int n = s.length();
         int i = 0, j = 0;
         int maxLen = 0;

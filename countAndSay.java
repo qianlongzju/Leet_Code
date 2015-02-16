@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public String countAndSay(int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<Integer> v = new ArrayList<Integer>();
         ArrayList<Integer> w = new ArrayList<Integer>();
         String result = "";

@@ -1,7 +1,5 @@
 public class Solution {
     public int lengthOfLastWord(String s) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int n = s.length();
         if (n == 0) {
             return 0;

@@ -11,8 +11,6 @@
  */
 public class Solution {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ListNode head = null;
         ListNode p = null;
         while (l1 != null && l2 != null) {

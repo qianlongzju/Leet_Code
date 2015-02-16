@@ -1,7 +1,4 @@
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
+#include "leetcode.h"
 int buckets[10000000];
 class Solution {
 public:

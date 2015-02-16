@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<String>> findLadders(String start, String end, HashSet<String> dict) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
         LinkedList<String> q = new LinkedList<String>();
         q.add(start);

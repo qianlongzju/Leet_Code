@@ -2,8 +2,6 @@
 class Solution {
 public:
     int sumNumbers(TreeNode *root) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         return sumNumbersToLeaf(root, 0);
     }
     int sumNumbersToLeaf(TreeNode *root, int s) {

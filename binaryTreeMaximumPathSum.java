@@ -10,8 +10,6 @@ import java.util.*;
  */
 public class Solution {
     public int maxPathSum(TreeNode root) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int[] temp_sum  = new int[1];
         temp_sum[0] = Integer.MIN_VALUE;
         maxPathSum(root, temp_sum); 

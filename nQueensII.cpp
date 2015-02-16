@@ -2,8 +2,6 @@
 class Solution {
 public:
     //int totalNQueens(int n) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    vector<int> num;
     //    for (int i = 0; i < n; i++) {
     //        num.push_back(i);
@@ -33,8 +31,6 @@ public:
     //}
     //void permute(vector<int> &num, int index,
     //        vector<vector<int> > &result) {
-    //    // Start typing your C/C++ solution below
-    //    // DO NOT write int main() function
     //    if (num.size() == index) {
     //        result.push_back(num);
     //        return;

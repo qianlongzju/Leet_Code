@@ -2,8 +2,6 @@
 class Solution {
 public:
     bool isScramble(string s1, string s2) {
-        // Start typing your C/C++ solution below
-        // DO NOT write int main() function
         int l1 = s1.length();
         int l2 = s2.length();
         if (l1 != l2)

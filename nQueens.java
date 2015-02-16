@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<String[]> solveNQueens(int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         int[] num = new int[n];
         for (int i=0; i < n; i++) {
             num[i] = 0;

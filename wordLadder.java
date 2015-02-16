@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
       public int ladderLength(String start, String end, HashSet<String> dict) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         if (start.equals(end)) {
             return 2;
         }

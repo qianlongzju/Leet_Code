@@ -1,8 +1,6 @@
 import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         HashSet<ArrayList<Integer>> uniqueResult = new HashSet<ArrayList<Integer>>();
         ArrayList<Integer> temp = new ArrayList<Integer>();

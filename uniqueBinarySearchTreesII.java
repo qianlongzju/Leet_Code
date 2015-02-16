@@ -10,8 +10,6 @@ import java.util.*;
  */
 public class Solution {
     public ArrayList<TreeNode> generateTrees(int n) {
-        // Start typing your Java solution below
-        // DO NOT write main() function
         return generateTreesSub(1, n);    
     }
     ArrayList<TreeNode> generateTreesSub(int start, int end) {
