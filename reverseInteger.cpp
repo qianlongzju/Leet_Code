@@ -2,19 +2,21 @@
 class Solution {
 public:
     int reverse(int x) {
-        bool positive = true;
-        if (x < 0) {
-            positive = false;
-            x = -x;
-        }
         int y = 0;
         while (x) {
+            if (abs(y) > 214748364 || (abs(y) == 214748364 && (x % 10) >= 8)) {
+                return 0;
+            }
             y = (10 * y) + (x % 10);
             x /= 10;
         }
-        if (positive)
-            return y;
-        else
-            return -y;
+        return y;
     }
 };
+
+int main() {
+    Solution s;
+    cout << s.reverse(1056389759) << endl;
+    cout << s.reverse(-2147483648) << endl;
+    return 0;
+}
