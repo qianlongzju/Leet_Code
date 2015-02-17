@@ -7,6 +7,8 @@ class Solution:
             digits[i] += p
             p = digits[i] / 10
             digits[i] %= 10
+            if p == 0:
+                return digits
         if p != 0:
             digits = [1] + digits
         return digits

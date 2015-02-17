@@ -5,6 +5,8 @@ public class Solution {
             digits[i] += p;
             p = digits[i] / 10;
             digits[i] %= 10;
+            if (p == 0)
+                return digits;
         }
         if (p != 0) {
             int[] new_digits = new int[digits.length+1];
