@@ -2,41 +2,24 @@
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-        ListNode *newHead = new ListNode(0);
-        ListNode *previous = newHead;
-        int q = 0;
-        while (l1 != NULL && l2 != NULL) {
-            int p = q + l1->val + l2->val;
-            q = p / 10;
-            p %= 10;
-            ListNode *a = new ListNode(p);
-            previous->next = a;
-            previous = a;
-            l1 = l1->next;
-            l2 = l2->next;
+        ListNode *dummyHead = new ListNode(0);
+        ListNode *current = dummyHead;
+        int carry = 0;
+        while (l1 != NULL || l2 != NULL) {
+            int x = l1 != NULL? l1->val : 0;
+            int y = l2 != NULL? l2->val : 0;
+            int digit = x + y + carry;
+            carry = digit / 10;
+            current->next = new ListNode(digit % 10);
+            current = current->next;
+            if (l1 != NULL)
+                l1 = l1->next;
+            if (l2 != NULL)
+                l2 = l2->next;
         }
-        while (l1 != NULL) {
-            int p = q + l1->val;
-            q = p / 10;
-            p %= 10;
-            ListNode *a = new ListNode(p);
-            previous->next = a;
-            previous = a;
-            l1 = l1->next;
+        if (carry) {
+            current->next = new ListNode(carry);
         }
-        while (l2 != NULL) {
-            int p = q + l2->val;
-            q = p / 10;
-            p %= 10;
-            ListNode *a = new ListNode(p);
-            previous->next = a;
-            previous = a;
-            l2 = l2->next;
-        }
-        if (q) {
-            ListNode *a = new ListNode(q);
-            previous->next = a;
-        }
-        return newHead->next;
+        return dummyHead->next;
     }
 };
