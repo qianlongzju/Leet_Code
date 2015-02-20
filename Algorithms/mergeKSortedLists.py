@@ -1,6 +1,18 @@
 class Solution:
-    # @param two ListNodes
+    # @param a list of ListNode
     # @return a ListNode
+    def mergeKLists(self, lists):
+        if not lists:
+            return None
+        end = len(lists) -1 
+        while end:
+            begin = 0
+            while begin < end:
+                lists[begin] = self.mergeTwoLists(lists[begin], lists[end])
+                begin += 1
+                end -= 1
+        return lists[0]
+
     def mergeTwoLists(self, l1, l2):
         dummyHead = ListNode(1)
         p = dummyHead
