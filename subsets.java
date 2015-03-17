@@ -1,5 +1,23 @@
 import java.util.*;
 public class Solution {
+    public List<List<Integer>> subsets(int[] S) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        Arrays.sort(S);
+        List<Integer> current = new ArrayList<Integer>();
+        subsetsHelper(result, current, S, 0);
+        return result;
+    }
+    private void subsetsHelper(List<List<Integer>> result, List<Integer> current, int[] S, int pos) {
+        result.add((List)((ArrayList)current).clone());
+        for (int i = pos; i < S.length; i++) {
+            current.add(S[i]);
+            subsetsHelper(result, current, S, i+1);
+            current.remove(current.size()-1);
+        }
+    }
+}
+/*
+public class Solution {
     public ArrayList<ArrayList<Integer>> subsets(int[] S) {
         Arrays.sort(S);        
         int n = S.length;
@@ -20,3 +38,4 @@ public class Solution {
         return result;
     }
 }
+/*

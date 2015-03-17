@@ -1,5 +1,26 @@
 import java.util.*;
 public class Solution {
+    public List<List<Integer>> subsetsWithDup(int[] num) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        Arrays.sort(num);
+        List<Integer> current = new ArrayList<Integer>();
+        subsetsHelper(result, current, num, 0);
+        return result;
+    }
+    private void subsetsHelper(List<List<Integer>> result, List<Integer> current, int[] S, int pos) {
+        result.add((List)((ArrayList)current).clone());
+        for (int i = pos; i < S.length; i++) {
+            if (i != pos && S[i] == S[i-1]) {
+                continue;
+            }
+            current.add(S[i]);
+            subsetsHelper(result, current, S, i+1);
+            current.remove(current.size()-1);
+        }
+    }
+}
+/*
+public class Solution {
     public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] S) {
         Arrays.sort(S);        
         int n = S.length;
@@ -24,3 +45,4 @@ public class Solution {
         return result;
     }
 }
+*/
