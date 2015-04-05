@@ -7,34 +7,26 @@ class Solution:
         return self.restore(head)
 
     def Clone(self, head):
-        pNode = head
-        while pNode:
-            clonedNode = RandomListNode(pNode.label)
-            clonedNode.next = pNode.next
-            pNode.next = clonedNode
-            pNode = clonedNode.next
+        while head:
+            clonedNode = RandomListNode(head.label)
+            clonedNode.next = head.next
+            head.next = clonedNode
+            head = clonedNode.next
 
     def CopyRandomPointer(self, head):
-        pNode = head
-        while pNode:
-            clonedNode = pNode.next
-            if pNode.random:
-                clonedNode.random = pNode.random.next
-            pNode = clonedNode.next
+        while head:
+            clonedNode = head.next
+            if head.random:
+                clonedNode.random = head.random.next
+            head = clonedNode.next
 
     def restore(self, head):
-        pNode = head
-        pClonedHead = None
-        pClonedNode = None
-        if pNode:
-            pClonedHead = pNode.next
-            pClonedNode = pNode.next
-            pNode.next = pClonedNode.next
-            pNode = pNode.next
-        while pNode:
-            pClonedNode.next = pNode.next
+        pClonedHead = RandomListNode(-1)
+        pClonedNode = pClonedHead
+        while head:
+            pClonedNode.next = head.next
             pClonedNode = pClonedNode.next
-            pNode.next = pClonedNode.next
-            pNode = pNode.next
-        return pClonedHead
+            head.next = pClonedNode.next
+            head = head.next
+        return pClonedHead.next
 
