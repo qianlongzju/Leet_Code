@@ -14,7 +14,6 @@
 class Solution:
     # @param head, a list node
     # @return a tree node
-    listNode = None
     def sortedListToBST(self, head):
         n = 0
         p = head
