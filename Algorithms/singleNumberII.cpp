@@ -5,8 +5,9 @@ public:
         int result = 0;
         for (int j=0; j < 32; ++j) {
             int tmp = 0;
+            int bitOps = 1 << j;
             for (int i=0; i < n; ++i) {
-                if (A[i] & (1<<j)) {
+                if (A[i] & bitOps) {
                     tmp ++;
                 }
             }

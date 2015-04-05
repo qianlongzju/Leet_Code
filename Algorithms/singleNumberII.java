@@ -5,8 +5,9 @@ public class Solution {
         int result = 0;
         for (int j=0; j < 32; ++j) {
             int tmp = 0;
+            int bitOps = 1 << j
             for (int i=0; i < n; ++i) {
-                if ((A[i] & (1<<j)) != 0) {
+                if ((A[i] & bitOps) != 0) {
                     tmp ++;
                 }
             }
