@@ -2,6 +2,27 @@
 class Solution {
 public:
     TreeNode *sortedListToBST(ListNode *head) {
+        int length = 0;
+        ListNode* p = head;
+        while (p != NULL) {
+            length ++;
+            p = p->next;
+        }
+        return sortedListToBST(head, 0, length-1);
+    }
+
+    TreeNode* sortedListToBST(ListNode* &list, int start, int end) {
+        if (start > end) return NULL;
+        int mid = start + (end - start) / 2;
+        TreeNode *leftChild = sortedListToBST(list, start, mid-1);
+        TreeNode *parent = new TreeNode(list->val);
+        parent->left = leftChild;
+        list = list->next;
+        parent->right = sortedListToBST(list, mid+1, end);
+        return parent;
+    } 
+    /*
+    TreeNode *sortedListToBST(ListNode *head) {
         if (head == NULL) {
             return NULL;
         }
@@ -20,27 +41,7 @@ public:
         root->left = sortedListToBST(head);
         return root;
     }
-    //TreeNode *sortedListToBST(ListNode *head) {
-    //    int length = 0;
-    //    ListNode* p = head;
-    //    while (p != NULL) {
-    //        length ++;
-    //        p = p->next;
-    //    }
-    //    return sortedListToBST(head, 0, length-1);
-    //}
-
-    //TreeNode* sortedListToBST(ListNode* &list, int start, int end) {
-    //    if (start > end) return NULL;
-    //    // same as (start+end)/2, avoids overflow
-    //    int mid = start + (end - start) / 2;
-    //    TreeNode *leftChild = sortedListToBST(list, start, mid-1);
-    //    TreeNode *parent = new TreeNode(list->val);
-    //    parent->left = leftChild;
-    //    list = list->next;
-    //    parent->right = sortedListToBST(list, mid+1, end);
-    //    return parent;
-    //}       
+    */
 };
 int main() {
     Solution s;
@@ -49,4 +50,3 @@ int main() {
 
     return 0;
 }
-
