@@ -2,6 +2,28 @@
 class Solution {
 public:
     vector<int> spiralOrder(vector<vector<int> > &matrix) {
+        vector<int> elements;
+        if (matrix.size() == 0) return elements;
+        int m = matrix.size(), n = matrix[0].size();
+        int row = 0, col = -1;
+        while (true) {
+            for (int i = 0; i < n; i++) 
+                elements.push_back(matrix[row][++col]);
+            if (--m == 0) break;
+            for (int i = 0; i < m; i++) 
+                elements.push_back(matrix[++row][col]);
+            if (--n == 0) break;
+            for (int i = 0; i < n; i++) 
+                elements.push_back(matrix[row][--col]);
+            if (--m == 0) break;
+            for (int i = 0; i < m; i++) 
+                elements.push_back(matrix[--row][col]);
+            if (--n == 0) break;
+        }
+        return elements;
+    }
+    /*
+    vector<int> spiralOrder(vector<vector<int> > &matrix) {
         vector<int> result;
         int m = matrix.size();
         if (m == 0) {
@@ -53,4 +75,5 @@ public:
         }
         return result;
     }
+    */
 };
