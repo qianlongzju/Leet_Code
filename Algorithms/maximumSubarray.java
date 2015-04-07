@@ -1,8 +1,31 @@
-#include "leetcode.h"
-class Solution {
-public:
-    int maxSubArray(int A[], int n) {
-        return maxSubsequenceSum(A, 0, n-1);
+public class Solution {
+    public int maxSubArray(int[] A) {
+        int maxEndingHere = A[0], maxSoFar = A[0];
+        for (int i = 1; i < A.length; i++) {
+            maxEndingHere = Math.max(maxEndingHere + A[i], A[i]);
+            maxSoFar = Math.max(maxSoFar, maxEndingHere);
+        }
+        return maxSoFar;
+    }
+    /*
+    public int maxSubArray(int[] A) {
+        int thisSum, maxSum;
+        thisSum = maxSum = A[0];
+        for (int i=1; i < A.length; i++) {
+            if (thisSum < 0) {
+                thisSum = 0;
+            }
+            thisSum += A[i];
+            if (thisSum > maxSum) {
+                maxSum = thisSum;
+            }
+        }
+        return maxSum;
+    }
+    */
+    /*
+    public int maxSubArray(int[] A) {
+        return maxSubsequenceSum(A, 0, A.length-1);
     }
     int maxSubsequenceSum(int A[], int left, int right) {
         int maxLeftSum, maxRightSum;
@@ -14,13 +37,8 @@ public:
         }
 
         center = (left + right) / 2;
-        //cout << left << endl;
-        //cout << right << endl;
-        //cout << center << endl;
         maxLeftSum = maxSubsequenceSum(A, left, center);
-        //cout << "maxLeftSum:" << maxLeftSum << endl;
         maxRightSum = maxSubsequenceSum(A, center+1, right);
-        //cout << "maxRightSum:" << maxRightSum << endl;
         
         maxLeftBorderSum = leftBorderSum = A[center];
         for (i = center-1; i >= left; i--) {
@@ -29,7 +47,6 @@ public:
                 maxLeftBorderSum = leftBorderSum;
             }
         }
-        //cout << maxLeftBorderSum << endl;
 
         maxRightBorderSum = rightBorderSum = A[center+1];
         for (i = center+2; i <= right; i++) {
@@ -38,7 +55,6 @@ public:
                 maxRightBorderSum = rightBorderSum;
             }
         }
-        //cout << maxRightBorderSum << endl;
 
         int sum = maxLeftBorderSum + maxRightBorderSum;
         if (maxLeftSum > sum) {
@@ -49,25 +65,5 @@ public:
         }
         return sum;
     }
-    int maxSubArray2(int A[], int n) {
-        int thisSum, maxSum;
-        thisSum = maxSum = A[0];
-        for (int i=1; i < n; i++) {
-            if (thisSum < 0) {
-                thisSum = 0;
-            }
-            thisSum += A[i];
-            if (thisSum > maxSum) {
-                maxSum = thisSum;
-            }
-        }
-        return maxSum;
-    }
-};
-
-int main() {
-    Solution s;
-    int a[] = {1, 2};
-    cout << s.maxSubArray(a, 2) << endl;
-    return 0;
+    */
 }
