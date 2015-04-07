@@ -2,21 +2,12 @@ class Solution:
     # @param A, a list of integers
     # @return an integer
     def maxProduct(self, A):
-        if not A or len(A) == 0:
-            return 0
-        if len(A) == 1:
-            return A[0]
-        result = 0
-        max_product = 1
-        min_product = 1
-        for a in A:
-            max_product = max(1, max_product)
-            if a > 0:
-                max_product = a * max_product
-                min_product = a * min_product
-            else:
-                max_product, min_product = a * min_product, a * max_product
-            result = max(result, max_product)
+        max_product, min_product, result = A[0], A[0], A[0]
+        for i in range(1, len(A)):
+            mx, mn = max_product, min_product
+            max_product = max(max(A[i], A[i] * mx), A[i] * mn)
+            min_product = min(min(A[i], A[i] * mx), A[i] * mn)
+            result = max(max_product, result)
         return result
 
 

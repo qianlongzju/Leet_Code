@@ -2,22 +2,11 @@
 class Solution {
 public:
     int maxProduct(int A[], int n) {
-        if (n == 0)
-            return 0;
-        if (n == 1)
-            return A[0];
-        int max_product = 1;
-        int min_product = 1;
-        int result = 0;
+        int max_product = A[0], min_product = A[0], result = A[0];
         for (int i = 0; i < n; i++) {
-            int old_max_product = max(1, max_product);
-            if (A[i] > 0) {
-                max_product = A[i] * old_max_product;
-                min_product *= A[i];
-            } else {
-                max_product = A[i] * min_product;
-                min_product = A[i] * old_max_product;
-            }
+            int mx = max_product, mn = min_product;
+            max_product = max(max(A[i], mx * A[i]), mn * A[i]);
+            min_product = min(min(A[i], mx * A[i]), mn * A[i]);
             result = max(result, max_product);
         }
         return result;
