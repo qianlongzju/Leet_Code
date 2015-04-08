@@ -8,33 +8,47 @@ import java.util.*;
  * };
  */
 public class Solution {
+    public UndirectedGraphNode cloneGraph(UndirectedGraphNode graph) {
+        if (graph == null) return null;
+        Map<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<>();
+        return DFS(graph, map);
+    }
+    private UndirectedGraphNode DFS(UndirectedGraphNode graph,
+            Map<UndirectedGraphNode, UndirectedGraphNode> map) {
+        if (map.containsKey(graph)) {
+            return map.get(graph);
+        }
+        UndirectedGraphNode graphCopy = new UndirectedGraphNode(graph.label);
+        map.put(graph, graphCopy);
+        for (UndirectedGraphNode neighbor : graph.neighbors) {
+            graphCopy.neighbors.add(DFS(neighbor, map));
+        }
+        return graphCopy;
+    }
+    /*
+    //bfs
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         if (node == null) return null;
-
         HashMap<UndirectedGraphNode, UndirectedGraphNode>  map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();
         LinkedList<UndirectedGraphNode> q = new LinkedList<UndirectedGraphNode>();
         q.add(node);
-
         UndirectedGraphNode graphCopy = new UndirectedGraphNode(node.label);
         map.put(node, graphCopy);
 
         while (!q.isEmpty()) {
             node = q.remove();
-            int n = node.neighbors.size();
-            for (int i = 0; i < n; i++) {
-                UndirectedGraphNode neighbor = node.neighbors.get(i);
-                // no copy exists
+            for (UndirectedGraphNode neighbor: node.neighbors) {
                 if (map.get(neighbor) == null) {
                     UndirectedGraphNode p = new UndirectedGraphNode(neighbor.label);
-                    map.get(node).neighbors.add(p);
                     map.put(neighbor, p);
                     q.add(neighbor);
-                } else {     // a copy already exists
+                    map.get(node).neighbors.add(p);
+                } else {
                     map.get(node).neighbors.add(map.get(neighbor));
                 }
             }
         }
         return graphCopy;
     }
+    */
 }
