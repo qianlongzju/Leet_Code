@@ -1,10 +1,25 @@
 #include "leetcode.h"
 class Solution {
-    public:
+public:
+    int findMin(vector<int> &num) {
+        int start = 0, end = num.size()-1;
+        while (start < end && num[start] >= num[end]) {
+            int mid = start + (end - start)/2;
+            if (num[mid] > num[end]) {
+                start = mid + 1;
+            } else if (num[mid] < num[end]) {
+                end = mid;
+            } else {
+                start++;
+            }
+        }
+        return num[start];
+    }
+    /*
     int findMin(vector<int> &num) {
         return findMin(num, 0, num.size()-1);
     }
-    private:
+private:
     int findMin(vector<int> &num, int start, int end) {
         if (start == end)
             return num[start];
@@ -17,6 +32,7 @@ class Solution {
             return findMin(num, mid+1, end);
         return findMin(num, start, mid);
     }
+    */
 };
 
 int main() {
