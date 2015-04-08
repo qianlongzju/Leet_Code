@@ -7,15 +7,15 @@ class MinStack {
         min = new Stack<Integer>();
     }
     public void push(int x) {
-       data.push(x);
-      if (!min.empty() && x > min.peek())
-         ;
-      else 
-         min.push(x); 
+        data.push(x);
+        if (!min.empty() && x > min.peek())
+            ;
+        else 
+            min.push(x); 
     }
 
     public void pop() {
-       int temp = data.peek();
+        int temp = data.peek();
         data.pop();
         if (temp == min.peek())
             min.pop();
