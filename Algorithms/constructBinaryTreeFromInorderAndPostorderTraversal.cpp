@@ -5,8 +5,6 @@ public:
         return buildTreeDriver(inorder, 0, inorder.size()-1, postorder, 0, postorder.size()-1);
     }
     TreeNode *buildTreeDriver(vector<int> &inorder, int inStart, int inEnd, vector<int> &postorder, int postStart, int postEnd) {   
-        //cout << inStart << " " << inEnd << endl;
-        //cout << postStart << " " << postEnd << endl;
         if (postStart > postEnd || inStart > inEnd) {
             return NULL;
         }
@@ -22,7 +20,6 @@ public:
                 break;
             }
         }
-        //cout << "root index:" << rootIndex << endl; 
         TreeNode* root = new TreeNode(rootVal);
         root->left = buildTreeDriver(inorder, inStart, rootIndex-1, postorder, postStart, postStart+(rootIndex-inStart)-1);
         root->right = buildTreeDriver(inorder, rootIndex+1, inEnd, postorder, postStart+(rootIndex-inStart), postEnd-1);
