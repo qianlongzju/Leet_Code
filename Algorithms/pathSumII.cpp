@@ -22,31 +22,33 @@ public:
         path_sum(root->right, sum-(root->val), path, result);
         path.pop_back();
     }
-    //vector<vector<int> > pathSum(TreeNode *root, int sum) {
-    //    vector<int> path;
-    //    return path_sum(root, sum, path);
-    //}
-    //vector<vector<int> > path_sum(TreeNode *root, int sum, vector<int> path) {
-    //    vector<vector<int> > v;
-    //    vector<vector<int> > p;
-    //    if (root == NULL) {
-    //        return v;
-    //    }
-    //    path.push_back(root->val);
-    //    if (root->left == NULL && root->right == NULL && root->val == sum) {
-    //        v.push_back(path);
-    //        return v;
-    //    }
-    //    p = path_sum(root->left, sum-(root->val), path);
-    //    for (int i=0; i < p.size(); i++) {
-    //        v.push_back(p[i]);
-    //    }
-    //    p = path_sum(root->right, sum-(root->val), path);
-    //    for (int i=0; i < p.size(); i++) {
-    //        v.push_back(p[i]);
-    //    }
-    //    return v;
-    //}
+    /*
+    vector<vector<int> > pathSum(TreeNode *root, int sum) {
+        vector<int> path;
+        return path_sum(root, sum, path);
+    }
+    vector<vector<int> > path_sum(TreeNode *root, int sum, vector<int> path) {
+        vector<vector<int> > v;
+        vector<vector<int> > p;
+        if (root == NULL) {
+            return v;
+        }
+        path.push_back(root->val);
+        if (root->left == NULL && root->right == NULL && root->val == sum) {
+            v.push_back(path);
+            return v;
+        }
+        p = path_sum(root->left, sum-(root->val), path);
+        for (int i=0; i < p.size(); i++) {
+            v.push_back(p[i]);
+        }
+        p = path_sum(root->right, sum-(root->val), path);
+        for (int i=0; i < p.size(); i++) {
+            v.push_back(p[i]);
+        }
+        return v;
+    }
+    */
 };
 int main() {
     TreeNode* a1 = new TreeNode(5);

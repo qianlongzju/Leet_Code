@@ -19,14 +19,14 @@ public class Solution {
         if (root == null) {
             return;
         }
-        ArrayList<Integer> clone_path = (ArrayList<Integer>)path.clone();
-        clone_path.add(root.val);
+        path.add(root.val);
         if (root.left == null && root.right == null && root.val == sum) {
-            result.add(clone_path);
+            result.add((ArrayList<Integer>)path.clone());
+            path.remove(path.size()-1);
             return;
         }
-        path_sum(root.left, sum-root.val, clone_path, result);
-        path_sum(root.right, sum-root.val, clone_path, result);
-        return;
+        path_sum(root.left, sum-root.val, path, result);
+        path_sum(root.right, sum-root.val, path, result);
+        path.remove(path.size()-1);
     }
 }
