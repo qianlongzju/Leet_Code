@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     void merge(int A[], int m, int B[], int n) {
@@ -21,9 +20,9 @@ public:
             C[k++] = B[j++];
         }
         k = 0;
-        i = 0;
         while (k < (m+n)) {
-            A[i++] = C[k++];
+            A[k] = C[k];
+            k++;
         }
     }
 };

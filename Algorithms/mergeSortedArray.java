@@ -19,10 +19,9 @@ public class Solution {
             C[k++] = B[j++];
         }
         k = 0;
-        i = 0;
         while (k < (m+n)) {
-            A[i++] = C[k++];
+            A[k] = C[k];
+            k++;
         }
-        
     }
 }
