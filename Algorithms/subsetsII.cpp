@@ -2,6 +2,24 @@
 class Solution {
 public:
     vector<vector<int> > subsetsWithDup(vector<int> &S) {
+        vector<vector<int> > results;
+        vector<int> current;
+        sort(S.begin(), S.end());
+        subsetsHelper(results, current, S, 0);
+        return results;
+    }
+    void subsetsHelper(vector<vector<int> > &result, vector<int> &current,
+            vector<int> &S, int pos) {
+        result.push_back(current);
+        for (int i = pos; i < S.size(); i++) {
+            if (i != pos && S[i] == S[i-1]) continue;
+            current.push_back(S[i]);
+            subsetsHelper(result, current, S, i+1);
+            current.pop_back();
+        }
+    }
+    /*
+    vector<vector<int> > subsetsWithDup(vector<int> &S) {
         sort(S.begin(), S.end());        
         int n = S.size();
         //for (int i=0; i < n; i++)
@@ -27,6 +45,7 @@ public:
         }
         return result;
     }
+    */
 };
 int main() {
     Solution s;

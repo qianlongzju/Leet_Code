@@ -18,9 +18,7 @@ public class Solution {
             current.remove(current.size()-1);
         }
     }
-}
-/*
-public class Solution {
+    /*
     public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] S) {
         Arrays.sort(S);        
         int n = S.length;
@@ -44,5 +42,5 @@ public class Solution {
         }
         return result;
     }
+    */
 }
-*/
