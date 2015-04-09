@@ -17,15 +17,11 @@ public:
             if (s[i] == '*') {
                 len ++;
             } else {
-                if (len > maxLen) 
-                    maxLen = len;
+                maxLen = max(maxLen, len);
                 len = 0;
             }
         }
-        if (len > maxLen) {
-            maxLen = len;
-        }
-        return maxLen;
+        return max(maxLen, len);
     }
 };
 int main() {
@@ -37,4 +33,3 @@ int main() {
     cout << s.longestValidParentheses(ss) << endl;
     return 0;
 }
-

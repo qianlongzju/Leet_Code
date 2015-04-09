@@ -19,14 +19,10 @@ public class Solution {
             if (ss[i] == '*') {
                 len ++;
             } else {
-                if (len > maxLen) 
-                    maxLen = len;
+                maxLen = Math.max(maxLen, len);
                 len = 0;
             }
         }
-        if (len > maxLen) {
-            maxLen = len;
-        }
-        return maxLen;
+        return Math.max(maxLen, len);
     }
 }
