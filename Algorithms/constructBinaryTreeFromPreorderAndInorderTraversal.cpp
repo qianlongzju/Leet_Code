@@ -5,8 +5,6 @@ public:
         return buildTreeDriver(preorder, 0, preorder.size()-1, inorder, 0, inorder.size()-1);
     }
     TreeNode *buildTreeDriver(vector<int> &preorder, int preStart, int preEnd, vector<int> &inorder, int inStart, int inEnd) {
-        //cout << preStart << " " << preEnd << endl;
-        //cout << inStart << " " << inEnd << endl;
         if (preStart > preEnd) {
             return NULL;
         }
@@ -22,7 +20,6 @@ public:
                 break;
             }
         }
-        //cout << "root index:" << rootIndex << endl; 
         TreeNode* root = new TreeNode(rootVal);
         root->left = buildTreeDriver(preorder, preStart+1, preStart+rootIndex-inStart, inorder, inStart, rootIndex-1);
         root->right = buildTreeDriver(preorder, preStart+rootIndex-inStart+1, preEnd, inorder, rootIndex+1, inEnd);
@@ -52,7 +49,7 @@ int main(int argc, char const *argv[])
     // }
     //for (int i = 0; i < 3; ++i)
     //{
-   //   cout << A[i];
+    //   cout << A[i];
     //}
     //cout << A[0]  << A[1] << A[2] << endl;
     return 0;
