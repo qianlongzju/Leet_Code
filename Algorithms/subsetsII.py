@@ -2,9 +2,9 @@ class Solution:
     # @param S, a list of integer
     # @return a list of lists of integer
     def subsetsWithDup(self, S):
+        S.sort()
         self.results = []
         self.current = []
-        S = sorted(S)
         self.subsetsHelper(S, 0)
         return self.results
 

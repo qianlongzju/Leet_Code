@@ -5,19 +5,19 @@ public:
         sort(candidates.begin(), candidates.end());
         vector<vector<int> > result;
         vector<int> path;
-        DFS(result, path, candidates, target, 0, 0);
+        DFS(result, path, candidates, target, 0);
         return result;
     }
     void DFS(vector<vector<int> > &result, vector<int> path, 
-            vector<int> &candidates, int target, int level, int sum) {
-        if (sum == target) {
+            vector<int> &candidates, int target, int level) {
+        if (target == 0) {
             result.push_back(path);
             return;
         }
-        if (sum > target) return;
         for (int i = level; i < candidates.size(); i++) {
+            if (candidates[i] > target) break;
             path.push_back(candidates[i]);
-            DFS(result, path, candidates, target, i, sum + candidates[i]);
+            DFS(result, path, candidates, target-candidates[i], i);
             path.pop_back();
         }
     }

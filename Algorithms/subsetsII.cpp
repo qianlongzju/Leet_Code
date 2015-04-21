@@ -2,9 +2,9 @@
 class Solution {
 public:
     vector<vector<int> > subsetsWithDup(vector<int> &S) {
+        sort(S.begin(), S.end());
         vector<vector<int> > results;
         vector<int> current;
-        sort(S.begin(), S.end());
         subsetsHelper(results, current, S, 0);
         return results;
     }

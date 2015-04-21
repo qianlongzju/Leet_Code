@@ -2,6 +2,28 @@ import java.util.*;
 public class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        ArrayList<Integer> path = new ArrayList<Integer>();
+        DFS(result, path, candidates, target, 0);
+        return result;
+    }
+    private void DFS(List<List<Integer>> result, ArrayList<Integer> path,
+            int[] candidates, int target, int level) {
+        if (target == 0) {
+            result.add((ArrayList<Integer>)path.clone());
+            return;
+        }
+        for (int i = level; i < candidates.length; i++) {
+            if (i != level && candidates[i] == candidates[i-1]) continue;
+            if (candidates[i] > target) break;
+            path.add(candidates[i]);
+            DFS(result, path, candidates, target-candidates[i], i+1);
+            path.remove(path.size()-1);
+        }
+    }
+    /*
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        Arrays.sort(candidates);
         HashSet<List<Integer>> set_result = new HashSet<List<Integer>>();
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         ArrayList<Integer> path = new ArrayList<Integer>();
@@ -23,6 +45,7 @@ public class Solution {
             path.remove(path.size()-1);
         }
     }
+    */
     /*
     public ArrayList<ArrayList<Integer>> combinationSum2(int[] candidates, int target) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

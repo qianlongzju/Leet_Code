@@ -4,6 +4,28 @@ public:
     vector<vector<int> > combinationSum2(vector<int> &candidates, int target) {
         sort(candidates.begin(), candidates.end());
         vector<vector<int> > result;
+        vector<int> path;
+        DFS(result, path, candidates, target, 0);
+        return result;
+    }
+    void DFS(vector<vector<int> > &result, vector<int> path, 
+            vector<int> &candidates, int target, int level) {
+        if (target == 0) {
+            result.push_back(path);
+            return;
+        }
+        for (int i = level; i < candidates.size(); i++) {
+            if (i != level && candidates[i] == candidates[i-1]) continue;
+            if (candidates[i] > target) break;
+            path.push_back(candidates[i]);
+            DFS(result, path, candidates, target-candidates[i], i+1);
+            path.pop_back();
+        }
+    }
+    /*
+    vector<vector<int> > combinationSum2(vector<int> &candidates, int target) {
+        sort(candidates.begin(), candidates.end());
+        vector<vector<int> > result;
         set<vector<int> > result2;
         vector<int> path;
         DFS(result2, path, candidates, target, 0, 0);
@@ -25,6 +47,7 @@ public:
             path.pop_back();
         }
     }
+    */
     /*
     vector<vector<int> > combinationSum2(vector<int> &candidates, int target) {
         vector<vector<int> > result;

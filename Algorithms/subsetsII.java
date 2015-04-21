@@ -1,8 +1,8 @@
 import java.util.*;
 public class Solution {
     public List<List<Integer>> subsetsWithDup(int[] num) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(num);
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> current = new ArrayList<Integer>();
         subsetsHelper(result, current, num, 0);
         return result;
@@ -10,9 +10,7 @@ public class Solution {
     private void subsetsHelper(List<List<Integer>> result, List<Integer> current, int[] S, int pos) {
         result.add((List)((ArrayList)current).clone());
         for (int i = pos; i < S.length; i++) {
-            if (i != pos && S[i] == S[i-1]) {
-                continue;
-            }
+            if (i != pos && S[i] == S[i-1]) continue;
             current.add(S[i]);
             subsetsHelper(result, current, S, i+1);
             current.remove(current.size()-1);

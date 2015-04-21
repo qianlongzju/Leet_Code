@@ -3,22 +3,18 @@ class Solution:
     # @param target, integer
     # @return a list of lists of integers
     def combinationSum(self, candidates, target):
+        candidates.sort()
         self.result = []
         self.comb = []
-        candidates.sort()
         self.DFS(candidates, target, 0)
         return self.result
     
-    def DFS(self, candidates, target, i):
-        s = sum(self.comb)
-        if s == target:
+    def DFS(self, candidates, target, level):
+        if target == 0:
             self.result.append(self.comb[:])
             return
-        if s > target:
-            return
-        for i in range(i, len(candidates)):
-            if s + candidates[i] > target:
-                return
+        for i in range(level, len(candidates)):
+            if candidates[i] > target: break
             self.comb.append(candidates[i])
-            self.DFS(candidates, target, i)
+            self.DFS(candidates, target-candidates[i], i)
             self.comb.pop()

@@ -1,8 +1,8 @@
 import java.util.*;
 public class Solution {
     public List<List<Integer>> subsets(int[] S) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(S);
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> current = new ArrayList<Integer>();
         subsetsHelper(result, current, S, 0);
         return result;

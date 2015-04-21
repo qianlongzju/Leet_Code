@@ -4,18 +4,19 @@ public class Solution {
         Arrays.sort(candidates);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         ArrayList<Integer> path = new ArrayList<Integer>();
-        DFS(result, path, candidates, target, 0, 0);
+        DFS(result, path, candidates, target, 0);
         return result;
     }
     private void DFS(List<List<Integer>> result, ArrayList<Integer> path,
-            int[] candidates, int target, int level, int sum) {
-        if (sum == target) {
+            int[] candidates, int target, int level) {
+        if (target == 0) {
             result.add((ArrayList<Integer>)path.clone());
+            return;
         }
-        if (sum > target) return;
         for (int i = level; i < candidates.length; i++) {
+            if (candidates[i] > target) break;
             path.add(candidates[i]);
-            DFS(result, path, candidates, target, i, sum + candidates[i]);
+            DFS(result, path, candidates, target-candidates[i], i);
             path.remove(path.size()-1);
         }
     }
