@@ -6,7 +6,7 @@ public class Solution {
         DFS(result, path, n, k, 1);
         return result;
     }
-    void DFS(List<List<Integer>> result,
+    private void DFS(List<List<Integer>> result,
             ArrayList<Integer> path,
             int n, int k, int min) {
         if (path.size() == k) {
