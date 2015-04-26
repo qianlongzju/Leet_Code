@@ -1,9 +1,11 @@
-public class Solution {
-    public double pow(double x, int n) {
+#include "leetcode.h"
+class Solution {
+public:
+    double myPow(double x, int n) {
         double result = 1.0;
         if (n == 0)
             return 1.0;
-        boolean positive = true;
+        bool positive = true;
         if (n < 0) {
             positive = false;
             n = -n;
@@ -22,4 +24,4 @@ public class Solution {
             return 1/result;
         }
     }
-}
+};
