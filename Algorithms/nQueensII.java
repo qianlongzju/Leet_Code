@@ -2,8 +2,6 @@ import java.util.*;
 public class Solution {
     private int result;
     public int totalNQueens(int n) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
         int[] num = new int[n];
         result = 0;
         solveNQueens(0, n, num);
