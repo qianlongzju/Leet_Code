@@ -1,10 +1,10 @@
 public class Solution {
-    public ArrayList<ArrayList<Integer>> generate(int numRows) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    public List<List<Integer>> generate(int numRows) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (numRows == 0) {
             return result;
         }
-        ArrayList<Integer> v = new ArrayList<Integer>();
+        List<Integer> v = new ArrayList<Integer>();
         v.add(1);
         result.add(v);
         for (int i=2; i <= numRows; i++) {
@@ -17,6 +17,5 @@ public class Solution {
             result.add(v1);
         }
         return result;
-
     }
 }
