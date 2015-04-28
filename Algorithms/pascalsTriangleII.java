@@ -1,6 +1,6 @@
 public class Solution {
-    public ArrayList<Integer> getRow(int rowIndex) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> result = new ArrayList<Integer>();
         if (rowIndex == 0) {
             result.add(1);
             return result;
@@ -17,6 +17,5 @@ public class Solution {
             result.add(1);
         }
         return result;
-
     }
 }
