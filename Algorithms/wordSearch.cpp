@@ -55,7 +55,6 @@ int main() {
     cout << s.exist(board, "ABCCED") << endl;
     cout << s.exist(board, "SEE") << endl;
     cout << s.exist(board, "ABCB") << endl;
-
     return 0;
 }
 
