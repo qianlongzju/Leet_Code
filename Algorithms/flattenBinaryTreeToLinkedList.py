@@ -1,3 +1,4 @@
+# http://n00tc0d3r.blogspot.jp/2013/03/flatten-binary-tree-to-linked-list-in.html
 class Solution:
     # @param {TreeNode} root
     # @return {void} Do not return anything, modify root in-place instead.
