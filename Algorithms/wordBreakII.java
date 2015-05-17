@@ -1,7 +1,5 @@
-import java.util.*;
 public class Solution {
-    public ArrayList<String> wordBreak(String s, Set<String> dict) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
+    public List<String> wordBreak(String s, Set<String> wordDict) {
         // 长度为 n 的字符串有 n+1 个隔板
         int n = s.length();
         boolean[] f = new boolean[n+1];
@@ -16,7 +14,7 @@ public class Solution {
                 prev[i][j] = false;
         for (int i = 1; i <= n; ++i) {
             for (int j = i - 1; j >= 0; --j) {
-                if (f[j] && dict.contains(s.substring(j, i))) {
+                if (f[j] && wordDict.contains(s.substring(j, i))) {
                     f[i] = true;
                     prev[i][j] = true;
                 }
