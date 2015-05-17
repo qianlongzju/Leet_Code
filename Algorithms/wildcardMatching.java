@@ -1,7 +1,5 @@
-import java.util.*;
 public class Solution {
     public boolean isMatch(String s, String p) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         int m = s.length();
         int mm = 0;
         int n = p.length();
