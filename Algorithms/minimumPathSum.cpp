@@ -18,14 +18,6 @@ public:
         }
         return grid[i-1][j-1];
     }
-    int min(int a, int b) {
-        if (a > b) {
-            return b;
-        }
-        else {
-            return a;
-        }
-    }
 };
 int main(int argc, char const *argv[])
 {
