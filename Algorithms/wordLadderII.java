@@ -1,7 +1,6 @@
-import java.util.*;
 public class Solution {
-    public ArrayList<ArrayList<String>> findLadders(String start, String end, HashSet<String> dict) {
-        ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
+    public List<List<String>> findLadders(String start, String end, Set<String> dict) {
+        List<List<String>> result = new ArrayList<List<String>>();
         LinkedList<String> q = new LinkedList<String>();
         q.add(start);
         HashSet<String> visited = new HashSet<String>();
@@ -48,7 +47,7 @@ public class Solution {
         return result;
     }
     void buildPaths(String start, String end, HashMap<String, ArrayList<String>> m, 
-            ArrayList<String> path, ArrayList<ArrayList<String>> result) {
+            ArrayList<String> path, List<List<String>> result) {
         if (end.equals(start)) {
             ArrayList<String> clone = (ArrayList<String>)path.clone();
             clone.add(0, start);
@@ -62,3 +61,4 @@ public class Solution {
         path.remove(0);
     }
 }
+
