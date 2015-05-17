@@ -13,32 +13,25 @@ public:
         while (!q.empty()) {
             string tmp = q.front();
             q.pop();
-            //cout << tmp << endl;
             for (int i=0; i < tmp.size(); i++) {
                 for (char c='a'; c <= 'z'; c++) {
-                    if (c != tmp[i]) {
-                        string temp = tmp;
-                        temp[i] = c;
-                        if (temp == end) {
-                            int length = 2;
-                            while (tmp != start) {
-                                //cout << tmp << endl;
-                                tmp = m[tmp];
-                                length++;
-                            }
-                            return length;
+                    if (c == tmp[i]) continue;
+                    string temp = tmp;
+                    temp[i] = c;
+                    if (temp == end) {
+                        int length = 2;
+                        while (tmp != start) {
+                            tmp = m[tmp];
+                            length++;
                         }
-                        
-                        //unordered_set<string> visit;
-                        //cout << (visited.find(temp)==dict.end()) << endl;
-                        //cout << (visit.end() == dict.end()) << endl;
-                        if (dict.find(temp) != dict.end() && 
-                                //visited.find(temp) == dict.end()) {
-                                visited.find(temp) == visited.end()) {
-                            q.push(temp);
-                            visited.insert(temp);
-                            m[temp] = tmp;
-                        }
+                        return length;
+                    }
+                    
+                    if (dict.find(temp) != dict.end() && 
+                            visited.find(temp) == visited.end()) {
+                        q.push(temp);
+                        visited.insert(temp);
+                        m[temp] = tmp;
                     }
                 }
             }
@@ -72,4 +65,3 @@ int main() {
     cout << s.ladderLength(start, end, dict) << endl;
     return 0;
 }
-
