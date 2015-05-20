@@ -1,7 +1,6 @@
-import java.util.*;
 public class Solution {
-    public ArrayList<String> anagrams(String[] strs) {
-        ArrayList<String> result = new ArrayList<String>();
+    public List<String> anagrams(String[] strs) {
+        List<String> result = new ArrayList<String>();
         HashMap<String, ArrayList<String>> m = new HashMap<String, ArrayList<String>>();
         for (int i=0; i < strs.length; ++i) {
             char[] chars = strs[i].toCharArray();

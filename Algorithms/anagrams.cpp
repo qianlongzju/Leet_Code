@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     vector<string> anagrams(vector<string> &strs) {
@@ -9,7 +8,6 @@ public:
             temp = strs[i];
             sort(temp.begin(), temp.end());
             if (m.find(temp) == m.end()) {
-                //m[temp] = new vector<string>(1, strs[i]);
                 vector<string> a;
                 a.push_back(strs[i]);
                 m[temp] = a;
@@ -25,8 +23,3 @@ public:
         return result;
     }
 };
-int main() {
-
-    return 0;
-}
-
