@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int numTrees(int n) {
         double result = 1;
@@ -8,7 +7,8 @@ public class Solution {
         result /= n+1;
         return (int)result;
     }
-    public int numTrees2(int n) {
+    /*
+    public int numTrees(int n) {
         int[] num = new int[n+1];
         num[0] = 1;
         for (int i=1; i <=n; i++) {
@@ -19,4 +19,5 @@ public class Solution {
         }
         return num[n];
     }
+    */
 }

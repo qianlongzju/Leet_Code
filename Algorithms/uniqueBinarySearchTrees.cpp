@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     int numTrees(int n) {
@@ -11,7 +10,8 @@ public:
         result /= n+1;
         return result;
     }
-    int numTrees2(int n) {
+    /*
+    int numTrees(int n) {
         int num[n+1];
         num[0] = 1;
         for (int i=1; i <=n; i++) {
@@ -22,11 +22,5 @@ public:
         }
         return num[n];
     }
+    */
 };
-int main() {
-    Solution s;
-    cout << s.numTrees(3) << endl;
-
-    return 0;
-}
-
