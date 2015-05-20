@@ -1,8 +1,7 @@
-#include "leetcode.h"
 class Solution {
 public:
-    int lengthOfLastWord(const char *s) {
-        int n = strlen(s);
+    int lengthOfLastWord(string s) {
+        int n = s.size();
         if (n == 0) {
             return 0;
         }
