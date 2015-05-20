@@ -1,12 +1,3 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
 public class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> v = new ArrayList<Integer>();
@@ -26,20 +17,23 @@ public class Solution {
         }
         return v;
     }
-    public List<Integer> inorderTraversal_recursive(TreeNode root) {
+    /*
+    // recursive
+    public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> v = new ArrayList<Integer>();
         if (root == null) {
             return v;
         }
-        ArrayList<Integer> left = inorderTraversal_recursive(root.left);
+        List<Integer> left = inorderTraversal_recursive(root.left);
         for (int i=0; i < left.size(); i++) {
             v.add(left.get(i));
         }
         v.add(root.val);
-        ArrayList<Integer> right = inorderTraversal_recursive(root.right);
+        List<Integer> right = inorderTraversal_recursive(root.right);
         for (int i=0; i < right.size(); i++) {
             v.add(right.get(i));
         }
         return v;
     }
+    */
 }
