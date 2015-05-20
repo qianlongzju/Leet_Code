@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     vector<int> inorderTraversal(TreeNode *root) {
@@ -19,7 +18,8 @@ public:
         }
         return v;
     }
-    vector<int> inorderTraversal_recursive(TreeNode *root) {
+    /*
+    vector<int> inorderTraversal(TreeNode *root) {
         vector<int> v;
         if (root == NULL) {
             return v;
@@ -35,4 +35,5 @@ public:
         }
         return v;
     }
+    */
 };

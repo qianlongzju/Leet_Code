@@ -8,8 +8,8 @@
  * }
  */
 public class Solution {
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        ArrayList<Integer> v = new ArrayList<Integer>();
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> v = new ArrayList<Integer>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode p = root;
         while (stack.size() != 0 || p != null) {
@@ -26,8 +26,8 @@ public class Solution {
         }
         return v;
     }
-    public ArrayList<Integer> inorderTraversal_recursive(TreeNode root) {
-        ArrayList<Integer> v = new ArrayList<Integer>();
+    public List<Integer> inorderTraversal_recursive(TreeNode root) {
+        List<Integer> v = new ArrayList<Integer>();
         if (root == null) {
             return v;
         }
