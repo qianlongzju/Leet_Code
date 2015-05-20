@@ -1,9 +1,6 @@
-#include "leetcode.h"
 class Solution {
 public:
     vector<int> postorderTraversal(TreeNode *root) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
         vector<int> v;
         if (root == NULL)
             return v;
@@ -33,29 +30,23 @@ public:
         return v;
     }
 
+    /*
     // recursive version
-    //vector<int> postorderTraversal(TreeNode *root) {
-    //    // IMPORTANT: Please reset any member data you declared, as
-    //    // the same Solution instance will be reused for each test case.
-    //    vector<int> v;
-    //    if (root == NULL) {
-    //        return v;
-    //    }
-    //    vector<int> left = postorderTraversal(root->left);
-    //    for (int i=0; i < left.size(); i++) {
-    //        v.push_back(left[i]);
-    //    }
-    //    vector<int> right = postorderTraversal(root->right);
-    //    for (int i=0; i < right.size(); i++) {
-    //        v.push_back(right[i]);
-    //    }
-    //    v.push_back(root->val);
-    //    return v;
-    //}
+    vector<int> postorderTraversal(TreeNode *root) {
+        vector<int> v;
+        if (root == NULL) {
+            return v;
+        }
+        vector<int> left = postorderTraversal(root->left);
+        for (int i=0; i < left.size(); i++) {
+            v.push_back(left[i]);
+        }
+        vector<int> right = postorderTraversal(root->right);
+        for (int i=0; i < right.size(); i++) {
+            v.push_back(right[i]);
+        }
+        v.push_back(root->val);
+        return v;
+    }
+    */
 };
-int main() {
-    Solution s;
-
-    return 0;
-}
-
