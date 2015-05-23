@@ -1,39 +1,35 @@
-/**
- * Definition for binary tree with next pointer.
- * public class TreeLinkNode {
- *     int val;
- *     TreeLinkNode left, right, next;
- *     TreeLinkNode(int x) { val = x; }
- * }
- */
 public class Solution {
+    private TreeLinkNode root;
     public void connect(TreeLinkNode root) {
-        if (root == null) {
-            return ;
+        if (root == null) return;
+        this.root = root;
+        while (this.root != null) {
+            TreeLinkNode start = nextLevelFirstNode();
+            TreeLinkNode curr_node = start;
+            while (curr_node != null) {
+                TreeLinkNode next_node = nextLevelNextNode(curr_node);
+                curr_node.next = next_node;
+                curr_node = next_node;
+            }
+            this.root = start;
         }
-        ArrayList<TreeLinkNode> stack = new ArrayList<TreeLinkNode>();
-        ArrayList<TreeLinkNode> next_level_stack = new ArrayList<TreeLinkNode>();
-        TreeLinkNode previous = null;
-        stack.add(root);
-        while (stack.size() != 0) {
-            TreeLinkNode p = stack.get(0);
-            if (previous != null) {
-                previous.next = p;
-            }
-            previous = p;
-            stack.remove(0);
-            if (p.left != null) {
-                next_level_stack.add(p.left);
-            }
-            if (p.right != null) {
-                next_level_stack.add(p.right);
-            }
-            if (stack.size() == 0) {
-                p.next = null;
-                stack = next_level_stack;
-                next_level_stack = new ArrayList<TreeLinkNode>();
-                previous = null;
-            }
+    }
+
+    private TreeLinkNode nextLevelFirstNode() {
+        if (root == null) return null;
+        if (root.left != null) return root.left;
+        return nextLevelNextNode(root.left);
+    }
+
+    private TreeLinkNode nextLevelNextNode(TreeLinkNode curr_node) {
+        if (root.left == curr_node && root.right != null) {
+            return root.right;
         }
+        while (root.next != null) {
+            root = root.next;
+            if (root.left != null) return root.left;
+            if (root.right != null) return root.right;
+        }
+        return null;
     }
 }
