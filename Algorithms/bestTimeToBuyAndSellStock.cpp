@@ -2,20 +2,16 @@
 class Solution {
 public:
     int maxProfit(vector<int> &prices) {
-        int max = 0;
         if (prices.size() <= 1) {
             return 0;
         }
         int minimum = prices[0];
+        int maximum = 0;
         for (int i=1; i < prices.size(); i++) {
-            if (prices[i] < minimum) {
-                minimum = prices[i];
-            } 
-            if (prices[i] - minimum > max) {
-                max = prices[i] - minimum;
-            }
+            minimum = min(prices[i], minimum);
+            maximum = max(prices[i] - minimum, maximum);
         }
-        return max;
+        return maximum;
     }
 };
 int main() {
@@ -26,4 +22,3 @@ int main() {
     cout << s.maxProfit(v) << endl;
     return 0;
 }
-
