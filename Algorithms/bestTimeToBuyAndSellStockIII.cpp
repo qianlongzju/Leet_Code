@@ -75,4 +75,3 @@ int main() {
     cout << s.maxProfit(v) << endl;
     return 0;
 }
-
