@@ -1,7 +1,5 @@
-import java.util.*;
 public class Solution {
     public int minCut(String s) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         int len = s.length();
         int[] f = new int[len+1];
         boolean[][] p = new boolean[len][len];
