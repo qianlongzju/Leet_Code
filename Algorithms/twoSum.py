@@ -1,11 +1,12 @@
-class Solution:
-    # @return a tuple, (index1, index2)
-    def twoSum(self, num, target):
-        mapping = {}
-        for i in range(len(num)):
-            mapping[num[i]] = i
-        for i in range(len(num)):
-            gap = target - num[i]
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        mapping = dict((num, i) for i, num in enumerate(nums))
+        for i, num in enumerate(nums):
+            gap = target - num
             if gap in mapping and mapping[gap] != i:
-                break
-        return (i + 1, mapping[gap] + 1)
+                return [i, mapping[gap]]
