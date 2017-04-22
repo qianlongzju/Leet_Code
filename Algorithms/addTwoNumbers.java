@@ -10,10 +10,8 @@ public class Solution {
             carry = digit / 10;
             current.next = new ListNode(digit % 10);
             current = current.next;
-            if (l1 != null)
-                l1 = l1.next;
-            if (l2 != null)
-                l2 = l2.next;
+            if (l1 != null) { l1 = l1.next; }
+            if (l2 != null) { l2 = l2.next; }
         }
         if (carry != 0) {
             current.next = new ListNode(carry);
