@@ -1,0 +1,321 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Algorithms/minStack.java",
+			"settings":
+			{
+				"buffer_size": 632,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/C++/C++ Single File.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/isaiah/Workspace/LeetCode",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms"
+	],
+	"file_history":
+	[
+		"/Users/isaiah/IdeaProjects/dispatch-workflow/dispatch-workflow-service/src/test/resources/call/schedule-multi.00",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms/addTwoNumbers.py",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms/addTwoNumbers.java",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms/addTwoNumbers.cpp",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms/longestSubstringWithoutRepeatingCharacters.cpp",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms/longestSubstringWithoutRepeatingCharacters.py",
+		"/Users/isaiah/Workspace/LeetCode/Algorithms/longestSubstringWithoutRepeatingCharacters.java",
+		"/Users/isaiah/Desktop/diaodu/a.html",
+		"/Users/isaiah/Desktop/p.txt",
+		"/Users/isaiah/Desktop/总结.txt",
+		"/Users/isaiah/Desktop/plot.js",
+		"/Users/isaiah/Desktop/niuke.txt",
+		"/Users/isaiah/Desktop/diaodu/taker_track_time_check.sql",
+		"/Users/isaiah/Desktop/diaodu/plot_ditu.html",
+		"/Users/isaiah/Desktop/diaodu/case_20170405.json",
+		"/Users/isaiah/lpd_infra.intelligent_dispatch/api/schedule_multi.go",
+		"/Users/isaiah/Workspace/real_time_face_recognition/ttt/false/1489162288804_VW3APTZ74WPE2GGBCB3P2I8LO935Q5SE_False.jpg",
+		"/Users/isaiah/Workspace/real_time_face_recognition/ttt/false/1489162977525_W1V7HNZ16T7CJHAU7Q54H4SKMKSFPDBT_False.jpg",
+		"/Users/isaiah/Workspace/real_time_face_recognition/ttt/false/1489163701941_4TDIN06TR46VP0OJG5IJTHH22NC9D8B7_False.jpg",
+		"/Users/isaiah/Workspace/real_time_face_recognition/ttt/false/1489162613048_R1KC0RL0FKANIWE9JZONNNRMCLT6VFA7_False.jpg",
+		"/Users/isaiah/Workspace/real_time_face_recognition/ttt/false/1489163782441_20LW8JZRW1YGVVFTUBN8EHCAVJ95QN0C_False.jpg",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Reinforcement Learning - Ep. 30 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Inceptionism with Somatic - Ep. 29 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Neural Storyteller with Somatic - Ep. 28 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Fashion Matching Demo with indico - Ep. 27 Part 2 (Deep Learning SIMPLIFIED).eng_chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Fashion Matching Demo with indico - Ep. 27 Part 2 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Transfer Learning with indico  - Ep. 27 Part 1 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Transfer Learning with indico  - Ep. 27 Part 1 (Deep Learning SIMPLIFIED).eng_chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Text Analytics - Ep. 25 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Configuring a Deep net - Ep. 26 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Your choice of Deep Net - Ep. 4 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Your choice of Deep Net - Ep. 4 (Deep Learning SIMPLIFIED).eng_chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Recurrent Neural Networks - Ep. 9 (Deep Learning SIMPLIFIED).eng_chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Recurrent Neural Networks - Ep. 9 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Deep Net Performance - Ep. 24 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Metrics - Ep. 23 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/TensorFlow - Ep. 22 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/How good is your fit\\? - Ep. 21 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Use Cases - Ep. 12 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Recursive Neural Tensor Nets - Ep. 11 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Caffe - Ep. 20 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Torch - Ep. 19 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Deeplearning4j - Ep. 18 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Theano - Ep. 17 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Dato GraphLab - Ep. 15 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/H2O.ai - Ep. 14 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Restricted Boltzmann Machines - Ep. 6 (Deep Learning SIMPLIFIED).srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/What is a Deep Learning Library\\? - Ep. 16 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Deep Belief Nets - Ep. 7 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Deep Learning SIMPLIFIED  The Series Intro - Ep. 1.chs copy.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/What is a Deep Net Platform\\? - Ep. 13 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Autoencoders - Ep. 10 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/Deep Learning SIMPLIFIED  The Series Intro - Ep. 1.chs.srt",
+		"/Users/isaiah/Downloads/DeepLearning.TV/What is a Neural Network - Ep. 2 (Deep Learning SIMPLIFIED).chs.srt",
+		"/Users/isaiah/Programs/hadoop_project/test/rec/scripts/rec_hotfood_food_training_sample_v2.sql",
+		"/Users/isaiah/Desktop/Dockerfile",
+		"/Users/isaiah/Desktop/classification using for ranking:",
+		"/Users/isaiah/Desktop/之前：",
+		"/Users/isaiah/Desktop/info-地区",
+		"/Users/isaiah/Desktop/abc_20161204.txt",
+		"/Users/isaiah/Downloads/vip.qt3633.com安全设置.bat",
+		"/Users/isaiah/Downloads/MyJsonParser/MyJsonParser/JsonType.cs",
+		"/Users/isaiah/Downloads/MyJsonParser/MyJsonParser/JsonParser.cs",
+		"/Users/isaiah/Downloads/MyJsonParser/MyJsonParser/JsonObject.cs",
+		"/Users/isaiah/Dropbox/Documents/cv/moderncv/qianlong-moderncv-zh.tex",
+		"/Applications/Sublime Text.app/Contents/MacOS/changelog.txt"
+	],
+	"find":
+	{
+		"height": 29.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"奖励",
+			"step"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"回报"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Algorithms/minStack.java",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 632,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								632
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 29.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 136.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 136.0
+	},
+	"pinned_build_system": "",
+	"project": "leetcode.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Programs/hadoop_project/hadoop_project.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 321.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
