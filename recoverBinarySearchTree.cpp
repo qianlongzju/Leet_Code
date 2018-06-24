@@ -28,9 +28,3 @@ public:
         recoverTree(root->right, pre, node1, node2);
     }
 };
-int main() {
-    Solution s;
-
-    return 0;
-}
-

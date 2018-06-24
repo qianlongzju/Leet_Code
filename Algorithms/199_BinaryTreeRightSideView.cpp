@@ -9,10 +9,13 @@
  */
 class Solution {
 public:
-    int findBottomLeftValue(TreeNode* root) {
-        deque<TreeNode*> cur_level, next_level, last_level;
-        cur_level.push_back(root);
-        last_level = cur_level;
+    vector<int> rightSideView(TreeNode* root) {
+        vector<int> result;
+        if (root == NULL)
+            return result;
+        result.push_back(root->val);
+        deque<TreeNode*> cur_level, next_level;
+        cur_level.push_front(root);
         while(!cur_level.empty()) {
             TreeNode* node = cur_level.front();
             cur_level.pop_front();
@@ -20,10 +23,11 @@ public:
             if (node->right != NULL) next_level.push_back(node->right);
             if (cur_level.empty()) {
                 cur_level = next_level;
-                last_level = cur_level;
                 next_level.clear();
+                if (!cur_level.empty())
+                    result.push_back(cur_level.back()->val);
             }
         }
-        return last_level.front()->val;
+        return result;
     }
 };

@@ -1,7 +1,7 @@
 class Solution {
 public:
-    vector<string> anagrams(vector<string> &strs) {
-        vector<string> result;
+    vector<vector<string>> groupAnagrams(vector<string>& strs) {
+        vector<vector<string>> result;
         map<string, vector<string> > m;
         string temp;
         for (int i=0; i < strs.size(); ++i) {
@@ -16,9 +16,7 @@ public:
             }
         }
         for (map<string, vector<string> >::iterator it=m.begin(); it != m.end(); it++) {
-            if (it->second.size() > 1) {
-                result.insert(result.begin(), it->second.begin(), it->second.end());
-            }
+            result.push_back(it->second);
         }
         return result;
     }
