@@ -1,19 +1,18 @@
-#include "leetcode.h"
 class Solution {
-public:
-    bool searchMatrix(vector<vector<int> > &matrix, int target) {
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if (matrix.length == 0 || matrix[0].length == 0)
+            return false;
         int low = 0;
-        int high = matrix.size()-1;
+        int high = matrix.length - 1;
         int middle;
         while (low < high) {
-            middle = low + (high-low)/2;
+            middle = low + (high - low)/2;
             if (matrix[middle][0] > target) {
-                high = middle-1;
+                high = middle - 1;
             }
             else if (matrix[middle][0] < target) {
-                low = middle+1;
-            }
-            else {
+                low = middle + 1;
+            } else {
                 return true;
             }
         }
@@ -23,24 +22,21 @@ public:
            if (row < 0) {
                return false;
            }
-        }
-        else {
+        } else {
             row = low;
         }
         low = 0;
-        high = matrix[row].size()-1;
+        high = matrix[row].length - 1;
         while (low <= high) {
-            middle = low + (high-low)/2;
+            middle = low + (high - low)/2;
             if (matrix[row][middle] > target) {
-                high = middle-1;
-            }
-            else if (matrix[row][middle] < target) {
+                high = middle - 1;
+            } else if (matrix[row][middle] < target) {
                 low = middle + 1;
-            }
-            else {
+            } else {
                 return true;
             }
         }
         return false;
     }
-};
+}
