@@ -40,8 +40,3 @@ public:
         return maxCount;
     }
 };
-int main() {
-
-    return 0;
-}
-
