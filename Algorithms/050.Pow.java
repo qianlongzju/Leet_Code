@@ -4,16 +4,17 @@ public class Solution {
         if (n == 0)
             return 1.0;
         boolean positive = true;
+        long nn = n;
         if (n < 0) {
             positive = false;
-            n = -n;
+            nn = -nn;
         }
-        while (n != 0) {
-            if (n%2 == 1) {
+        while (nn != 0) {
+            if (nn%2 == 1) {
                 result *= x;
             }
             x *= x;
-            n /= 2;
+            nn /= 2;
         }
         if (positive) {
             return result;

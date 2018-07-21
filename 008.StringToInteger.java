@@ -1,5 +1,5 @@
 public class Solution {
-    public int atoi(String str) {
+    public int myAtoi(String str) {
         int len = str.length();
         int i = 0;
         boolean positive = true;

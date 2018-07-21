@@ -1,6 +1,9 @@
-class Solution:
-    # @return an integer
-    def atoi(self, str):
+class Solution(object):
+    def myAtoi(self, str):
+        """
+        :type str: str
+        :rtype: int
+        """
         length = len(str)
         i = 0
         positive = True

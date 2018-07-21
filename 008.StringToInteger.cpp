@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int atoi(string str) {
+    int myAtoi(string str) {
         int len = str.size();
         int i = 0;
         bool positive = true;
