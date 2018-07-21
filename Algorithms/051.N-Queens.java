@@ -1,14 +1,14 @@
-public class Solution {
-    public List<String[]> solveNQueens(int n) {
+class Solution {
+    public List<List<String>> solveNQueens(int n) {
         int[] num = new int[n];
         for (int i=0; i < n; i++) {
             num[i] = 0;
         }
-        List<String[]> result = new ArrayList<String[]>();
+        List<List<String>> result = new ArrayList<List<String>>();
         solveNQueens(n, num, result, 0);
         return result;
     }
-    void solveNQueens(int n, int[] num, List<String[]> result, int level) {
+    void solveNQueens(int n, int[] num, List<List<String>> result, int level) {
         if (level == n) {
             result.add(getBoard(num));
             return;
@@ -28,8 +28,8 @@ public class Solution {
         }
         return true;
     }
-    String[] getBoard(int[] num) {
-        String[] board = new String[num.length];
+    List<String> getBoard(int[] num) {
+        List<String> board = new ArrayList<String>();
         for (int i=0; i < num.length; i++) {
             String s = "";
             for (int j=0; j < num.length; j++) {
@@ -39,7 +39,7 @@ public class Solution {
                     s += ".";
                 }
             }
-            board[i] = s;
+            board.add(s);
         }
         return board;
     }
