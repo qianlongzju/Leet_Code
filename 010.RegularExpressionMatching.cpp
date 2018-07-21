@@ -2,7 +2,7 @@
 //  If the next character of p is ‘*’, then we do a brute force exhaustive matching of 0, 1, or more repeats of current character of p… Until we could not match any more characters.
 class Solution {
 public:
-    bool isMatch(const char *s, const char *p) {
+    bool isMatch(string s, string p) {
         if (*p == '\0')
             return *s == '\0';
         // next char is not '*': must match current character

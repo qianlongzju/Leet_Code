@@ -1,18 +1,18 @@
 public class Solution {
-    public ListNode mergeKLists(List<ListNode> lists) {
-        if (lists.size() == 0) {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
             return null;
         }
-        int end = lists.size() - 1;
+        int end = lists.length - 1;
         while (end > 0) {
             int begin = 0;
             while (begin < end) {
-                lists.set(begin, mergeTwoLists(lists.get(begin), lists.get(end)));
+                lists[begin] = mergeTwoLists(lists[begin], lists[end]);
                 begin ++;
                 end --;
             }
         }
-        return lists.get(0);
+        return lists[0];
     }
 
     private ListNode mergeTwoLists(ListNode l1, ListNode l2) {

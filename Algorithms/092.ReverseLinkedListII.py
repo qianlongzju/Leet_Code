@@ -1,5 +1,4 @@
 # http://jessicasco.github.io/blog/2015/05/22/python-swap-caution/
-from leetcode import *
 class Solution:
     # @param {ListNode} head
     # @param {integer} m

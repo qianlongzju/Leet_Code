@@ -4,7 +4,6 @@
 #         self.val = x
 #         self.left = None
 #         self.right = None
-from leetcode import TreeNode
 class Solution:
     # @param root, a tree node
     # @return a boolean

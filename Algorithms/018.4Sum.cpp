@@ -1,22 +1,23 @@
 class Solution {
 public:
-    vector<vector<int> > fourSum(vector<int> &num, int target) {
+    vector<vector<int>> fourSum(vector<int>& nums, int target) {
         vector<vector<int> > result;
-        sort(num.begin(), num.end());
+        sort(nums.begin(), nums.end());
         set<vector<int> > quadplets;
-        int n = num.size();
+        int n = nums.size();
         for (int i = 0; i < n; i++) {
-            for (int j = i+1; j < n; j++) { 
+            for (int j = i+1; j < n; j++) {
                 int k = j + 1;
                 int l = n - 1;
                 while (k < l) {
-                    int sum_four = num[i] + num[j] + num[k] + num[l];
+                    int sum_four = nums[i] + nums[j] + nums[k] + nums[l];
                     if (sum_four < target) {
                         k++;
                     } else if (sum_four > target) {
                         l--;
                     } else {
-                        quadplets.insert({num[i], num[j], num[k], num[l]);
+                        vector<int> temp {nums[i], nums[j], nums[k], nums[l]};
+                        quadplets.insert(temp);
                         k++;
                         l--;
                     }

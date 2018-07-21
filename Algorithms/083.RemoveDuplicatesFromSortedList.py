@@ -1,4 +1,3 @@
-from leetcode import *
 class Solution:
     # @param head, a ListNode
     # @return a ListNode

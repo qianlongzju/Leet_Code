@@ -8,7 +8,7 @@
  * }
  */
 public class Solution {
-    public ArrayList<Interval> merge(ArrayList<Interval> intervals) {
+    public List<Interval> merge(List<Interval> intervals) {
         if (intervals.size() <= 1) {
             return intervals;
         }
@@ -19,7 +19,7 @@ public class Solution {
                 return a.start - b.start;
             }
         });
-        ArrayList<Interval> result = new ArrayList<Interval>();
+        List<Interval> result = new ArrayList<Interval>();
         Interval v = intervals.get(0);
         int i = 1;
         while (i < intervals.size()) {
