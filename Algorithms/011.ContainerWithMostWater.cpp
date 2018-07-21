@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     int maxArea(vector<int> &height) {

@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     int findMin(vector<int> &num) {
@@ -31,12 +30,3 @@ public:
     }
     */
 };
-
-int main() {
-    Solution s;
-    //int nums[] = {4, 5, 6, 7, 1, 2};
-    int nums[] = {1, 2};
-    vector<int> num(nums, nums + sizeof(nums)/sizeof(nums[0]));
-    cout << s.findMin(num) << endl;
-    return 0;
-}

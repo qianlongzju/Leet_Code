@@ -23,7 +23,3 @@ class Solution:
             numerators.append(numerator)
             numerator *= 10
         return result + "%s.%s" % (left, "".join(reminders))
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.fractionToDecimal(1, 6)

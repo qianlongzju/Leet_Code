@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     void reorderList(ListNode *head) {
@@ -46,18 +45,3 @@ public:
         return head->next;
     }
 };
-int main() {
-    Solution s;
-    ListNode a = ListNode(1);
-    ListNode b = ListNode(2);
-    ListNode c = ListNode(3);
-    a.next = &b;
-    b.next = &c;
-    ListNode * head = &a;
-    s.reorderList(head);
-    while (head != NULL) {
-        cout << head->val << endl;
-        head = head->next;
-    }
-    return 0;
-}

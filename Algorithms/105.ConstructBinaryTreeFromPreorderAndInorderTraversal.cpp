@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {

@@ -1,4 +1,3 @@
-#include "leetcode.h"
 struct Node {
     int key, value;
     Node *pre, *next;
@@ -65,6 +64,3 @@ public:
        } 
     }
 };
-int main() {
-    return 0;
-}

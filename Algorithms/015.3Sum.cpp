@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     vector<vector<int> > threeSum(vector<int> &num) {

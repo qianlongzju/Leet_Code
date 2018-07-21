@@ -4,11 +4,7 @@ class Solution:
     def reverseWords(self, s):
         s = s.strip()
         if not s:
-        	return ""
+                return ""
         s = s.split()
         s.reverse()
         return " ".join(s)
-
-if __name__ == '__main__':
-	s = Solution()
-	print s.reverseWords("a b")

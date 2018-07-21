@@ -14,8 +14,3 @@ def cmp(x, y):
         return -1
     else:
         return 0
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.largestNumber([3, 30, 34, 5, 9]) == '9534330'
-    print s.largestNumber([824,938,1399,5607,6973,5703,9609,4398,8247])

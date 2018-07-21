@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
     public:
         string fractionToDecimal(int numerator2, int denominator2) {
@@ -40,10 +39,3 @@ class Solution {
             return result;
         }
 };
-
-int main() {
-    Solution s = Solution();
-    cout << s.fractionToDecimal(1, 6) << endl;
-    cout << s.fractionToDecimal(-1, -2147483648) << endl;
-    return 0;
-}

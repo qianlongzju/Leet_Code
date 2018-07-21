@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
@@ -23,16 +22,3 @@ public:
         return fast;
     }
 };
-int main() {
-    Solution s;
-    ListNode *head = new ListNode(1);
-    ListNode *a = new ListNode(2);
-    head->next = a;
-    a->next = head;
-    ListNode *result = s.detectCycle(head);
-    if (result != NULL) 
-        cout << result->val << endl;
-    else 
-        cout << "no cycle" << endl;
-    return 0;
-}

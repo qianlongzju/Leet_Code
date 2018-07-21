@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     string getPermutation(int n, int k) {

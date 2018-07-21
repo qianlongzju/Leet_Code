@@ -17,11 +17,3 @@ class Solution:
                 min_HP_on_exit = min(cost[i+1][j], cost[i][j+1])
                 cost[i][j] = max(min_HP_on_exit - dungeon[i][j], 1)
         return cost[0][0]
-
-if __name__ == '__main__':
-    s = Solution()
-    #print s.calculateMinimumHP([[0,5],[-2,-3]])
-    #print s.calculateMinimumHP([[-3,5]])
-    #print s.calculateMinimumHP([[0,-5],[0,0]])
-    #print s.calculateMinimumHP( [[0,-3],[-10,0]])
-    print s.calculateMinimumHP([[-3, 5]])

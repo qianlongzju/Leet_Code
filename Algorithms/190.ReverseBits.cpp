@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     uint32_t reverseBits(uint32_t n) {
@@ -13,9 +12,3 @@ public:
         return result;
     }
 };
-
-int main() {
-    Solution s;
-    cout << s.reverseBits(0) << endl;
-    return 0;
-}

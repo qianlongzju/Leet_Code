@@ -1,4 +1,3 @@
-#include "leetcode.h"
 int buckets[10000000];
 class Solution {
 public:
@@ -22,22 +21,22 @@ public:
         for (int i = 0; i < 2*n; i++)
             buckets[i] = -1;
         for (int i = 0; i < n; i++) {
-        	int loc = int(((num[i] - B)*1.0 / bucketRange) + 0.5);
-        	if (buckets[loc*2] == -1) {
-        		buckets[loc*2] = num[i];
-        		buckets[loc*2+1] = num[i];
-        		continue;
-        	}
-        	if (buckets[loc*2] > num[i])
-        		buckets[loc*2] = num[i];
-        	if (buckets[loc*2+1] < num[i])
-        		buckets[loc*2+1] = num[i];
+            int loc = int(((num[i] - B)*1.0 / bucketRange) + 0.5);
+            if (buckets[loc*2] == -1) {
+                buckets[loc*2] = num[i];
+                buckets[loc*2+1] = num[i];
+                continue;
+            }
+            if (buckets[loc*2] > num[i])
+                buckets[loc*2] = num[i];
+            if (buckets[loc*2+1] < num[i])
+                buckets[loc*2+1] = num[i];
         }
         int maxGap = 0;
         int i = 0; 
         while (i < bucketLen) {
             if (buckets[2*i] == -1) {
-            	i ++;
+                i ++;
                 continue;
 
             }
@@ -48,7 +47,7 @@ public:
                     continue;
                 }
                 if ((buckets[2*j] - buckets[i*2+1]) > maxGap)
-                	maxGap = buckets[2*j] - buckets[2*i+1];
+                    maxGap = buckets[2*j] - buckets[2*i+1];
                 break;
             }
             i = j;
@@ -56,14 +55,3 @@ public:
         return maxGap;
     }
 };
-int main() {
-	Solution s;
-	vector<int> num;
-	num.push_back(3);
-	num.push_back(6);
-	num.push_back(9);
-	num.push_back(1);
-	//for (int i=0; i < num.size(); i++)
-	//	cout << num[i] << endl;
-	cout << s.maximumGap(num) << endl;
-}

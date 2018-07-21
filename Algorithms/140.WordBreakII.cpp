@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     vector<string> wordBreak(string s, unordered_set<string>& wordDict) {
@@ -96,30 +95,3 @@ private:
     }
     */
 };
-int main() {
-    Solution s;
-    unordered_set<string> dict;
-    dict.insert("cat");
-    dict.insert("cats");
-    dict.insert("and");
-    dict.insert("sand");
-    dict.insert("dog");
-    vector<string> result = s.wordBreak("catsanddog", dict);
-    for (int i=0; i < result.size(); ++i) {
-        cout << result[i] << endl;
-    }
-    dict.clear();
-    dict.insert("a");
-    result = s.wordBreak("a", dict);
-    for (int i=0; i < result.size(); ++i) {
-        cout << result[i] << endl;
-    }
-    dict.clear();
-    dict.insert("aaaa");
-    dict.insert("aaa");
-    result = s.wordBreak("aaaaaaa", dict);
-    for (int i=0; i < result.size(); ++i) {
-        cout << result[i] << endl;
-    }
-    return 0;
-}

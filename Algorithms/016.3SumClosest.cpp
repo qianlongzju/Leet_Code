@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     int threeSumClosest(vector<int> &num, int target) {

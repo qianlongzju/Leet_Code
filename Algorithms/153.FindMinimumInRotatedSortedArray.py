@@ -21,7 +21,3 @@ class Solution:
     #    if num[mid] >= num[start]:
     #        return self.findMin_interval(num, mid+1, end)
     #    return self.findMin_interval(num, start, mid)
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.findMin([1])

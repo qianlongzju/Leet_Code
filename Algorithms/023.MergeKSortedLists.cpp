@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     ListNode *mergeKLists(vector<ListNode *> &lists) {

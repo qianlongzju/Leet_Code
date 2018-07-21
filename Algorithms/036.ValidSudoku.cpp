@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     bool isValidSudoku(vector<vector<char> > &board) {

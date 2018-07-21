@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     int maxProduct(int A[], int n) {
@@ -12,9 +11,3 @@ public:
         return result;
     }
 };
-int main() {
-    int A[] = {2, 3, -2, 4};
-    Solution s;
-    cout << s.maxProduct(A, 4) << endl;
-    return 0;
-}

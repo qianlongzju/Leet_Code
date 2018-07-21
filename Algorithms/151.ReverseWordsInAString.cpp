@@ -1,4 +1,3 @@
-#include "leetcode.cpp"
 class Solution {
 public:
     void reverseWords(string &s) {
@@ -40,15 +39,3 @@ public:
         }     
     }
 };
-
-int main()
-{
-    string t = "the sky is blue";
-    Solution s;
-    s.reverseWords(t);
-    cout << t << endl;
-    t = "   a   b ";
-    s.reverseWords(t);
-    cout << t << endl;
-    return 0;
-}

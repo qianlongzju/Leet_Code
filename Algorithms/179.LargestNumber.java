@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.*;
 public class Solution {
     public String largestNumber(int[] num) {
         List<Integer> new_num = new ArrayList<Integer>();
@@ -33,10 +30,5 @@ public class Solution {
                 return 1;
             return -1;
         }
-    }
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        int[] a = {0,9,8,7,6,5,4,3,2,1};
-        System.out.println(s.largestNumber(a));
     }
 }

@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     double myPow(double x, int n) {

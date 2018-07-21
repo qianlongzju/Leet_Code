@@ -31,10 +31,3 @@ class Solution:
                 maxGap = max(maxGap, buckets[j]['min'] - buckets[i]['max'])
                 break
         return maxGap
-
-if __name__ == '__main__':
-    s = Solution()
-    #print s.maximumGap([1, 10000000])
-    #print s.maximumGap([1,1,1,1,1,5,5,5,5,5])
-    print s.maximumGap([100,3,2,1])
-

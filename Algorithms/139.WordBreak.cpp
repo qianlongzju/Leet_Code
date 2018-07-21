@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     bool wordBreak(string s, vector<string> &wordDict) {
@@ -21,11 +20,3 @@ public:
         return false;
     }
 };
-int main() {
-    Solution s;
-    vector<string> dict;
-    dict.push_back("leet");
-    dict.push_back("code");
-    cout << s.wordBreak("leetcode", dict) << endl;
-    return 0;
-}

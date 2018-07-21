@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     static bool lesser(const Interval& a, const Interval& b) {

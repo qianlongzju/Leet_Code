@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 public class Solution {
     public String fractionToDecimal(int numerator2, int denominator2) {
             String result = "";
@@ -36,10 +35,5 @@ public class Solution {
                 result += i;
             }
             return result;
-    }
-    public static void main(String[] args) {
-        Solution s = new Solution();
-        System.out.println(s.fractionToDecimal(1, 6));
-        return;
     }
 }

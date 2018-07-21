@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     int evalRPN(vector<string> &tokens) {
@@ -35,22 +34,3 @@ public:
         return stk.top();
     }
 };
-int main() {
-    Solution s;
-    vector<string> tokens;
-    tokens.push_back("2");
-    tokens.push_back("1");
-    tokens.push_back("+");
-    tokens.push_back("3");
-    tokens.push_back("*");
-    cout << s.evalRPN(tokens) << endl;
-    tokens.clear();
-    tokens.push_back("4");
-    tokens.push_back("13");
-    tokens.push_back("5");
-    tokens.push_back("/");
-    tokens.push_back("+");
-    cout << s.evalRPN(tokens) << endl;
-    return 0;
-}
-

@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     void nextPermutation(vector<int> &num) {

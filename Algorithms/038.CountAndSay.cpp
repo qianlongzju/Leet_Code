@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     string countAndSay(int n) {
@@ -31,12 +30,3 @@ public:
         return result;
     }
 };
-
-int main() {
-    Solution s;
-    cout << s.countAndSay(3) << endl;
-    cout << s.countAndSay(4) << endl;
-    cout << s.countAndSay(5) << endl;
-    return 0;
-}
-
