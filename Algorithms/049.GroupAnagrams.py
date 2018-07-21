@@ -1,12 +1,13 @@
-class Solution:
-    # @param {string[]} strs
-    # @return {string[]}
-    def anagrams(self, strs):
+class Solution(object):
+    def groupAnagrams(self, strs):
+        """
+        :type strs: List[str]
+        :rtype: List[List[str]]
+        """
         m = collections.defaultdict(list)
         for s in strs:
             m["".join(sorted(s))].append(s)
         result = []
         for key, value in m.items():
-            if len(value) > 1:
-                result.extend(value)
+            result.append(value)
         return result
