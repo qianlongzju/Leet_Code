@@ -1,5 +1,4 @@
-//public class Solution {
-public class divideToIntegers {
+public class Solution {
     public int divide(int dividend, int divisor) {
         boolean positive = true;
         long un_dividend = dividend;
@@ -14,6 +13,8 @@ public class divideToIntegers {
         }
         if (un_divisor == 1) {
             if (positive) {
+                if (un_dividend == 2147483648L)
+                    return 2147483647;
                 return (int)un_dividend;
             }
             else {
