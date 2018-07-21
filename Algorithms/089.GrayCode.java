@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ArrayList<Integer> grayCode(int n) {
         ArrayList<Integer> v = new ArrayList<Integer>();

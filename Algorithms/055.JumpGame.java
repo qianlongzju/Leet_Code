@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public boolean canJump(int[] A) {
         int n = A.length;

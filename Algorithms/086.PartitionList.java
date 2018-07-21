@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ListNode partition(ListNode head, int x) {
         ListNode leftheadptr = new ListNode(0);

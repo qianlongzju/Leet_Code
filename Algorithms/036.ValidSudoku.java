@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public boolean isValidSudoku(char[][] board) {
         boolean[] used = new boolean[9];

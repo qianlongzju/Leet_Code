@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ArrayList<String> fullJustify(String[] words, int L) {
         ArrayList<String> result = new ArrayList<String>();    

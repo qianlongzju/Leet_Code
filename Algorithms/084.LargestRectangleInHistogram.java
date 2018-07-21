@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int largestRectangleArea(int[] height) {
         if (height.length < 1) {

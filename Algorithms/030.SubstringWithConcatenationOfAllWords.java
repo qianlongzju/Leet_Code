@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public List<Integer> findSubstring(String s, String[] words) {
         ArrayList<Integer> result = new ArrayList<Integer>();

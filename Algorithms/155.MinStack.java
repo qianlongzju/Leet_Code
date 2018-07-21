@@ -1,4 +1,3 @@
-import java.util.Stack;
 class MinStack {
     private Stack<Integer> data;
     private Stack<Integer> min;

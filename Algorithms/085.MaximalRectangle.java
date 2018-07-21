@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int maximalRectangle(char[][] matrix) {
         int m = matrix.length;

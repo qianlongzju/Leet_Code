@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public String countAndSay(int n) {
         ArrayList<Integer> v = new ArrayList<Integer>();

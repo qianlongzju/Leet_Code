@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public RandomListNode copyRandomList(RandomListNode head) {
         Clone(head);

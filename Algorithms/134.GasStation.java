@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int n = gas.length;

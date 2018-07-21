@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public String getPermutation(int n, int k) {
         ArrayList<Integer> s = new ArrayList<Integer>();

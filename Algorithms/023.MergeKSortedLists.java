@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ListNode mergeKLists(List<ListNode> lists) {
         if (lists.size() == 0) {

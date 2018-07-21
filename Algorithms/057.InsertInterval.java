@@ -1,4 +1,3 @@
-import java.util.*;
 /**
  * Definition for an interval.
  * public class Interval {

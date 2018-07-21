@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ListNode detectCycle(ListNode head) {
         if (head == null)

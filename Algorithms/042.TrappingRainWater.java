@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int trap(int[] A) {
         int n = A.length;

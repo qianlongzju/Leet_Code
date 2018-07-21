@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public String simplifyPath(String path) {
             String s = "";

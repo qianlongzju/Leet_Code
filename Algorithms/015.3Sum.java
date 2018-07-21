@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

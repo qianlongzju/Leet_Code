@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public List<List<Integer>> subsetsWithDup(int[] num) {
         Arrays.sort(num);

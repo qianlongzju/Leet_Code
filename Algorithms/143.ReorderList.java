@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public void reorderList(ListNode head) {
         ListNode p = split(head);

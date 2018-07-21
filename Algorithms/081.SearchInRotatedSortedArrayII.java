@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public boolean search(int[] A, int target) {
         int left = 0; 

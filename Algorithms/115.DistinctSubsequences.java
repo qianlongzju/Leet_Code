@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int numDistinct(String S, String T) {
         int n = S.length();

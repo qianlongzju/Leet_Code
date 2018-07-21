@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public ArrayList<String> generateParenthesis(int n) {
         ArrayList<String> result = new ArrayList<String>();

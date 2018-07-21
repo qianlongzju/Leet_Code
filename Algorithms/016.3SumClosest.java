@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public int threeSumClosest(int[] num, int target) {
         Arrays.sort(num);

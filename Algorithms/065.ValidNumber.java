@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public boolean isNumber(String s) {
         int len = s.length();

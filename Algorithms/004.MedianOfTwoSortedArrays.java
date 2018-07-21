@@ -1,4 +1,3 @@
-import java.util.*;
 public class Solution {
     public double findMedianSortedArrays(int A[], int B[]) {
         int total = A.length + B.length;
