@@ -28,16 +28,3 @@ public:
         return result;
     }
 };
-int main() {
-    vector<int> a;
-    a.push_back(2);
-    a.push_back(1);
-    a.push_back(0);
-    a.push_back(-1);
-    Solution s;
-    vector<vector<int> > v = s.fourSum(a, 2);
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i][0] << " " << v[i][1] << " " << v[i][2] << " " << v[i][3] << endl;
-    }
-    return 0;
-}

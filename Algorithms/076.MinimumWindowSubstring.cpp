@@ -47,13 +47,3 @@ public:
         }
     }
 };
-int main() {
-    Solution s;
-    string S = "ADOBECODEBANC";
-    string T = "ABC";
-    cout << s.minWindow(S, T) << endl;
-    cout << "right answer: BANC" << endl;
-    cout << s.minWindow("a", "aa") << endl;
-    cout << "right answer: " << endl;
-    return 0;
-}

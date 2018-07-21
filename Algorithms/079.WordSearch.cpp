@@ -32,28 +32,3 @@ public:
         return result;
     }
 };
-int main() {
-    Solution s;
-    vector<vector<char> > board;
-    vector<char> a, b, c;
-    a.push_back('A');
-    a.push_back('B');
-    a.push_back('C');
-    a.push_back('E');
-    b.push_back('S');
-    b.push_back('F');
-    b.push_back('C');
-    b.push_back('S');
-    c.push_back('A');
-    c.push_back('D');
-    c.push_back('E');
-    c.push_back('E');
-    board.push_back(a);
-    board.push_back(b);
-    board.push_back(c);
-    cout << s.exist(board, "ABCCED") << endl;
-    cout << s.exist(board, "SEE") << endl;
-    cout << s.exist(board, "ABCB") << endl;
-    return 0;
-}
-

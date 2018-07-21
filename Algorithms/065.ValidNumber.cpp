@@ -47,21 +47,3 @@ public:
         return true;
     }
 };
-int main() {
-    Solution s;
-    cout << s.isNumber("0") << " 1" << endl;
-    cout << s.isNumber(" 0.1") << " 1" << endl;
-    cout << s.isNumber("abc") << " 0" << endl;
-    cout << s.isNumber("1 a") << " 0" << endl;
-    cout << s.isNumber("2e10") << " 1" << endl;
-    cout << s.isNumber("e") << " 0" << endl;
-    cout << s.isNumber(".") << " 0" << endl;
-    cout << s.isNumber("1 ") << " 1" << endl;
-    cout << s.isNumber("0e") << " 0" << endl;
-    cout << s.isNumber("1 4") << " 0" << endl;
-    cout << s.isNumber("6e6.5") << " 0" << endl;
-    cout << s.isNumber(" 005047e+6") << " 1" << endl;
-    cout << s.isNumber("2e0") << " 1" << endl;
-    cout << s.isNumber("4e+") << " 0" << endl;
-    return 0;
-}

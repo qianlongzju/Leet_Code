@@ -33,14 +33,3 @@ public:
         }
     }
 };
-int main() {
-    Solution s;
-    cout << s.numDecodings(string("")) << endl;
-    cout << s.numDecodings(string("0")) << endl;
-    cout << s.numDecodings(string("2")) << endl;
-    cout << s.numDecodings(string("20")) << endl;
-    cout << s.numDecodings(string("12")) << endl;
-    cout << s.numDecodings(string("6065812287883668764831544958683283296479682877898293612168136334983851946827579555449329483852397155")) << endl;
-    return 0;
-}
-

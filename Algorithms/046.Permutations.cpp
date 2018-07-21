@@ -91,19 +91,3 @@ public:
     }
     */
 };
-int main() {
-    Solution s;
-    vector<int> in;
-    in.push_back(1);
-    in.push_back(2);
-    in.push_back(3);
-    vector<vector<int> > v;
-    v = s.permute(in);
-    for (int i=0; i < v.size(); ++i) {
-        for (int j=0; j < v[i].size(); j++) {
-            cout << v[i][j] << " ";
-        }
-        cout << endl;
-    }
-    return 0;
-}

@@ -34,11 +34,3 @@ public:
         return pClonedHead->next;
     }
 };
-int main() {
-    Solution s;
-    RandomListNode *a = new RandomListNode(-1);
-    RandomListNode *b = new RandomListNode(1);
-    a->next = b;
-    s.copyRandomList(a);
-    return 0;
-}

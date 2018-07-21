@@ -22,15 +22,3 @@ public:
         return root;
     }
 };
-int main() {
-    TreeNode a(1);
-    TreeNode b(2);
-    TreeNode c(3);
-    TreeNode d(1);
-    TreeNode e(1);
-    a.left = &b;
-    b.left = &c;
-    Solution s;
-    s.flatten(&a);
-    return 0;
-}

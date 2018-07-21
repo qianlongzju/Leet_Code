@@ -20,11 +20,3 @@ public:
         }
     }
 };
-int main() {
-    Solution s;
-    vector<string> v = s.generateParenthesis(2);
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i] << endl;
-    }
-    return 0;
-}

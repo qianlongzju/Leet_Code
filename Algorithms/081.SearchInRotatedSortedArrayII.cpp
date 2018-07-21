@@ -27,13 +27,3 @@ public:
         return false;
     }
 };
-int main() {
-    Solution s;
-    int A[] = {1, 1, 3, 1};
-    cout << s.search(A, 4, 3) << endl;
-    cout << "A" << endl;
-    int B[] = {1, 3, 1, 1, 1};
-    cout << s.search(B, 5, 3) << endl;
-    return 0;
-}
-

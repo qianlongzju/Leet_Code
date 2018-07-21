@@ -18,11 +18,3 @@ public:
         return total;
     }
 };
-int main() {
-    Solution s;
-    int a[] = {0,1,0,2,1,0,1,3,2,1,2,1};
-    cout << s.trap(a, 12) << endl;
-    int b[] = {4, 2, 0, 3, 2, 5};
-    cout << s.trap(b, 6) << endl;
-    return 0;
-}

@@ -42,10 +42,3 @@ public:
     }
     */
 };
-int main() {
-    Solution s;
-    ListNode* head = new ListNode(1);
-    s.sortedListToBST(head);
-
-    return 0;
-}

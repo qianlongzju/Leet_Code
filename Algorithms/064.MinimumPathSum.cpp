@@ -18,13 +18,3 @@ public:
         return grid[i-1][j-1];
     }
 };
-int main(int argc, char const *argv[])
-{
-    vector<vector<int> > v;
-    vector<int> a;
-    a.push_back(0);
-    v.push_back(a);
-    Solution s;
-    cout << s.minPathSum(v) << endl;
-    return 0;
-}

@@ -30,12 +30,3 @@ public:
         return result;
     }
 };
-int main() {
-    Solution s;
-    vector<TreeNode *> v = s.generateTrees(3);
-    for (int i=0; i < v.size(); i++) {
-        printTree(v[i]);
-        cout << endl;
-    }
-    return 0;
-}

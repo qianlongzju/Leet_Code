@@ -26,9 +26,3 @@ public:
         return -1;
     }
 };
-int main() {
-    Solution s;
-    int A[] = {8, 9, 2, 3, 4};
-    cout << s.search(A, 5, 9) << endl;
-    return 0;
-}

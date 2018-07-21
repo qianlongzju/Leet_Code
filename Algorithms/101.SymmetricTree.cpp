@@ -22,8 +22,3 @@ public:
         return isMirror(left->left, right->right) && isMirror(left->right, right->left);
     }
 };
-int main() {
-
-    return 0;
-}
-

@@ -27,33 +27,3 @@ public:
         return result;
     }
 };
-int main() {
-    Solution s;
-    vector<Interval> v;
-    v.push_back(Interval(1, 3));
-    v.push_back(Interval(6, 9));
-    v = s.insert(v, Interval(2, 5));
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i].start << " " << v[i].end << endl;
-    }
-    cout << endl;
-    v.clear();
-    v.push_back(Interval(1, 2));
-    v.push_back(Interval(3, 5));
-    v.push_back(Interval(6, 7));
-    v.push_back(Interval(8, 10));
-    v.push_back(Interval(12, 16));
-    v = s.insert(v, Interval(4, 9));
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i].start << " " << v[i].end << endl;
-    }
-    cout << endl;
-    v.clear();
-    v = s.insert(v, Interval(5, 7));
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i].start << " " << v[i].end << endl;
-    }
-    cout << endl;
-    return 0;
-}
-

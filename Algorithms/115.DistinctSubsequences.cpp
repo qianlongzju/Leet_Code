@@ -22,11 +22,3 @@ public:
         return result[m][n];
     }
 };
-int main() {
-    Solution s;
-    string S = "rabbbit";
-    string T = "rabbit";
-    cout << s.numDistinct(S, T) << endl;
-    return 0;
-}
-

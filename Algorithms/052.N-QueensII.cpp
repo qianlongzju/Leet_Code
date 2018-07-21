@@ -73,11 +73,3 @@ public:
     }
     */
 };
-int main() {
-    Solution s;
-    cout << s.totalNQueens(4) << endl;
-    cout << s.totalNQueens(7) << endl;
-    cout << s.totalNQueens(12) << endl;
-    return 0;
-}
-

@@ -27,16 +27,3 @@ public:
         return result;
     }
 };
-int main() {
-    Solution s;
-    string S = "barfoothefoobarman";
-    vector<string> L;
-    L.push_back("foo");
-    L.push_back("bar");
-    vector<int> result = s.findSubstring(S, L);
-    for (int i=0; i < result.size(); i++)
-        cout << result[i] << " ";
-    cout << endl;
-    return 0;
-}
-

@@ -39,11 +39,3 @@ public:
     }
     */
 };
-int main() {
-    Solution s;
-    vector<string> t = s.letterCombinations("2");
-    for (int i = 0; i < t.size(); i++) {
-        cout << t[i] << endl;
-    }
-    return 0;
-}

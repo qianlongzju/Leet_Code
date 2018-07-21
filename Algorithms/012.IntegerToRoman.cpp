@@ -16,9 +16,3 @@ public:
         return s;
     }
 };
-int main() {
-    Solution s;
-    cout << s.intToRoman(1000) << endl;
-    return 0;
-}
-

@@ -32,13 +32,3 @@ public:
         return closestSum;
     }
 };
-int main() {
-    Solution s;
-    vector<int> v;
-    v.push_back(-1);
-    v.push_back(2);
-    v.push_back(1);
-    v.push_back(-4);
-    cout << s.threeSumClosest(v, 1) << endl;
-    return 0;
-}

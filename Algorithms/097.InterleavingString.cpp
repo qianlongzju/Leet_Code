@@ -30,13 +30,3 @@ public:
         return IL[n][m];
     }
 };
-int main() {
-    Solution s;
-    string s1 = "aabcc";
-    string s2 = "dbbca";
-    string s3 = "aadbbcbcac";
-    cout << s.isInterleave(s1, s2, s3) << endl;
-    s3 = "aadbbbaccc";
-    cout << s.isInterleave(s1, s2, s3) << endl;
-    return 0;
-}

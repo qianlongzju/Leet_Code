@@ -30,16 +30,3 @@ public:
         return true;
     }
 };
-int main() {
-    Solution s;
-    char a[][10] = {"..9748...","7........",".2.1.9...","..7...24.",".64.1.59.",".98...3..","...8.3.2.","........6","...2759.."};
-    vector<vector<char> > board;
-    for (int i=0; i < 9; i++) {
-        vector<char> b;
-        for (int j=0; j < 9; j++) 
-            b.push_back(a[i][j]);
-        board.push_back(b);
-    }
-    cout << s.solveSudoku(board) << endl;
-    return 0;
-}

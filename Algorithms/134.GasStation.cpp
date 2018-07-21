@@ -31,21 +31,3 @@ public:
         }
     }
 };
-int main() {
-    Solution s;
-    vector<int> gas;
-    gas.push_back(2);
-    gas.push_back(4);
-    vector<int> cost;
-    cost.push_back(3);
-    cost.push_back(4);
-    cout << s.canCompleteCircuit(gas, cost) << endl;
-    gas.clear();
-    gas.push_back(1);
-    gas.push_back(2);
-    cost.clear();
-    cost.push_back(2);
-    cost.push_back(1);
-    cout << s.canCompleteCircuit(gas, cost) << endl;
-    return 0;
-}

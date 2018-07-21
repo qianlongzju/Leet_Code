@@ -34,17 +34,3 @@ public:
         return result;
     }
 };
-int main() {
-    Solution s;
-    //string a("PAYPALISHIRING");
-    //cout << a << endl;
-    //cout << s.convert(a, 3) << endl;
-    //cout << "PAHNAPLSIIGYIR" << endl;
-    //string b("ABCD");
-    //cout << s.convert(b, 3) << endl;
-    string c = "PAYPALISHIRING";
-    cout << s.convert(c, 4) << endl;
-    cout << "PINALSIGYAHRPI" << endl;
-
-    return 0;
-}

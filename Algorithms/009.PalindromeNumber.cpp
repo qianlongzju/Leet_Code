@@ -22,12 +22,3 @@ public:
     }
 };
 
-int main() {
-    Solution *s = new Solution();
-    bool flag = s->isPalindrome(1874994781);
-    if (flag) {
-        printf("YES");
-    }
-    return 0;
-}
-

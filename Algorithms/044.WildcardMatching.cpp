@@ -37,15 +37,3 @@ public:
         return i == p.size();
     }
 };
-int main() {
-    Solution s;
-    cout << s.isMatch("hi", "*?") << ",1" << endl;
-    //cout << s.isMatch("aa", "aa") << ",1" << endl;
-    //cout << s.isMatch("aaa", "aa") << ",0" << endl;
-    //cout << s.isMatch("aa", "*") << ",1" << endl;
-    //cout << s.isMatch("aa", "a*") << ",1" << endl;
-    //cout << s.isMatch("ab", "?*") << ",1" << endl;
-    //cout << s.isMatch("aab", "c*a*b") << ",0" << endl;
-    //cout << s.isMatch("aaabbbaabaaaaababaabaaabbabbbbbbbbaabababbabbbaaaaba", "a*******b") << endl;
-    return 0;
-}

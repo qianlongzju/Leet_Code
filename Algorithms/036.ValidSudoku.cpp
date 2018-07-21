@@ -29,19 +29,3 @@ private:
         return used[c-'1'] = true;
     }
 };
-int main() {
-    Solution s;
-    string a[] = {"..5.....6","....14...",".........",".....92..","5....2...",".......3.","...54....","3.....42.","...27.6.."};
-    vector<vector<char> > v;
-    v.push_back(vector<char>(a[0].begin(), a[0].end()));
-    v.push_back(vector<char>(a[1].begin(), a[1].end()));
-    v.push_back(vector<char>(a[2].begin(), a[2].end()));
-    v.push_back(vector<char>(a[3].begin(), a[3].end()));
-    v.push_back(vector<char>(a[4].begin(), a[4].end()));
-    v.push_back(vector<char>(a[5].begin(), a[5].end()));
-    v.push_back(vector<char>(a[6].begin(), a[6].end()));
-    v.push_back(vector<char>(a[7].begin(), a[7].end()));
-    v.push_back(vector<char>(a[8].begin(), a[8].end()));
-    cout << s.isValidSudoku(v) << endl;
-    return 0;
-}

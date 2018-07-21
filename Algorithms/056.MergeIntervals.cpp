@@ -28,20 +28,3 @@ public:
         return result;
     }
 };
-int main() {
-    Solution s;
-    Interval a(1, 3);
-    Interval b(2, 6);
-    Interval c(8, 10);
-    Interval d(15, 18);
-    vector<Interval> v;
-    v.push_back(a);
-    v.push_back(b);
-    v.push_back(c);
-    v.push_back(d);
-    vector<Interval> t = s.merge(v);
-    tr(t, it) {
-        cout << it->start << " " << it->end << endl;
-    }
-    return 0;
-}

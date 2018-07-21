@@ -30,13 +30,3 @@ private:
         getPermutation(s, k, permutation);
     }
 };
-int main() {
-    Solution s;
-    cout << s.getPermutation(3, 1) << endl;
-    cout << s.getPermutation(3, 2) << endl;
-    cout << s.getPermutation(3, 3) << endl;
-    cout << s.getPermutation(3, 4) << endl;
-    cout << s.getPermutation(3, 5) << endl;
-    cout << s.getPermutation(3, 6) << endl;
-    return 0;
-}

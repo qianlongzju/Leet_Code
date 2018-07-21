@@ -19,10 +19,3 @@ public:
         return max(maxLen, n-i);
     }
 };
-int main(int argc, char const *argv[])
-{
-    Solution s;
-    cout << s.lengthOfLongestSubstring("wlrbbmqbhcdarzowkkyhiddqscdxrjmowfrxsjybldbefsarcbynecdyggxxpklorellnmpapqfwkhopkmco"
-) << endl;
-    return 0;
-}

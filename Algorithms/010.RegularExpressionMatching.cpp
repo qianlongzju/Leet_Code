@@ -18,15 +18,3 @@ public:
         return isMatch(s, p+2);
     }
 };
-int main() {
-    Solution s;
-    cout << s.isMatch("aa", "a") << ",0" << endl;
-    cout << s.isMatch("aa", "aa") << ",1" << endl;
-    cout << s.isMatch("aaa", "aa") << ",0" << endl;
-    cout << s.isMatch("aa", "a*") << ",1" << endl;
-    cout << s.isMatch("aa", ".*") << ",1" << endl;
-    cout << s.isMatch("ab", ".*") << ",1" << endl;
-    cout << s.isMatch("aab", "c*a*b") << ",1" << endl;
-    //cout << s.isMatch("aaabbbaabaaaaababaabaaabbabbbbbbbbaabababbabbbaaaaba", "a*******b") << endl;
-    return 0;
-}

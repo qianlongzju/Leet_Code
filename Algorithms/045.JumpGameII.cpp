@@ -24,20 +24,3 @@ public:
         return steps[n-1];
     }
 };
-int main() {
-    int n = 25000-23697+2;
-    int A[n];
-    for (int i=0; i < 25000; i++) {
-        if (25000-i >= 23697)
-            A[i] = 25000-i;
-    }
-    A[n-1] = 23;
-    Solution s;
-    cout << s.jump(A, n) << endl;
-    A[0] = 1;
-    A[1] = 2;
-    A[2] = 3;
-    cout << s.jump(A, 3) << endl;
-    return 0;
-}
-

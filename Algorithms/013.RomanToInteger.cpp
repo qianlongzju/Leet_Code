@@ -18,11 +18,3 @@ public:
         return total;
     }
 };
-int main() {
-    Solution s;
-    cout << s.romanToInt("MCMLIV") << " :1954" << endl;
-    cout << s.romanToInt("MCMXC") << " :1990" << endl;
-    cout << s.romanToInt("MMVIII") << " :2008" << endl;
-    return 0;
-}
-

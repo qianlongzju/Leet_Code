@@ -14,9 +14,3 @@ public:
         return ret > 0? ret:0;
     }
 };
-int main() {
-    Solution s;
-
-    return 0;
-}
-

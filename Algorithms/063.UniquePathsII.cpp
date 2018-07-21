@@ -24,11 +24,3 @@ public:
         return path[m-1][n-1];
     }
 };
-int main(int argc, char const *argv[])
-{
-    vector<vector<int> > obstacleGrid(3, vector<int>(3, 0));
-    obstacleGrid[1][1] = 1;
-    Solution s;
-    cout << s.uniquePathsWithObstacles(obstacleGrid) << endl;
-    return 0;
-}

@@ -30,9 +30,3 @@ public:
             return -result;
     }
 };
-int main() {
-    Solution s;
-    cout << s.atoi(" 1.3") << endl;
-    cout << s.atoi("9223372036854775809") << endl;
-    return 0;
-}

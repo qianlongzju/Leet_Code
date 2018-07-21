@@ -105,19 +105,3 @@ public:
     }
     */
 };
-int main() {
-    Solution s;
-    vector<int> candidates;
-    candidates.push_back(2);
-    candidates.push_back(3);
-    candidates.push_back(6);
-    candidates.push_back(7);
-    vector<vector<int> > v = s.combinationSum(candidates, 7);
-    for (int i = 0; i < v.size(); i++) {
-        for (int j = 0; j < v[i].size(); j++) {
-            cout << v[i][j] << ((j == v[i].size()-1)?"":" ");
-        }
-        cout << endl;
-    }
-    return 0;
-}

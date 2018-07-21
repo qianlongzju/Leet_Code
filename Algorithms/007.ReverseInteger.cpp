@@ -13,9 +13,3 @@ public:
     }
 };
 
-int main() {
-    Solution s;
-    cout << s.reverse(1056389759) << endl;
-    cout << s.reverse(-2147483648) << endl;
-    return 0;
-}

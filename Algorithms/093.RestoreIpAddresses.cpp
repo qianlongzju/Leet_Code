@@ -34,16 +34,3 @@ public:
         return v;
     }
 };
-int main() {
-    Solution s;
-    vector<string> v = s.restoreIpAddresses("25525511135");
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i] << endl;
-    }
-    v = s.restoreIpAddresses("0279245587303");
-    for (int i=0; i < v.size(); i++) {
-        cout << v[i] << endl;
-    }
-    return 0;
-}
-

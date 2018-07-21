@@ -41,10 +41,3 @@ public:
         return s;
     }
 };
-int main() {
-    Solution s;
-    string a("11");
-    string b("1");
-    cout << s.addBinary(a, b) << endl;
-    return 0;
-}

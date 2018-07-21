@@ -55,18 +55,3 @@ public:
         return s;
     }
 };
-int main() {
-    Solution s;
-    //cout << s.simplifyPath("/home/") << endl;
-    //cout << s.simplifyPath("/a/./b/../../c/") << endl;
-    //cout << s.simplifyPath("/foo//bar/") << endl;
-    //cout << s.simplifyPath("/../") << endl;
-    cout << s.simplifyPath("/") << endl;
-    cout << s.simplifyPath("////") << endl;
-    cout << s.simplifyPath("/..") << endl;
-    cout << s.simplifyPath("/.hidden") << endl;
-    cout << s.simplifyPath("/a/./b///../c/../././../d/..//../e/./f/./g/././//.//h///././/..///") << endl;
-
-    return 0;
-}
-

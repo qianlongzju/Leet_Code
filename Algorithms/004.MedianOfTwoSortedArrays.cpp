@@ -24,7 +24,3 @@ private:
             return A[pa - 1];
     }
 };
-int main() {
-    Solution s;
-    return 0;
-}

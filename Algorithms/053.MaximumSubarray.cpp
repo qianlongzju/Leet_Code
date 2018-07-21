@@ -60,9 +60,3 @@ public:
     */
 };
 
-int main() {
-    Solution s;
-    int a[] = {1, 2};
-    cout << s.maxSubArray(a, 2) << endl;
-    return 0;
-}

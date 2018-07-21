@@ -48,15 +48,3 @@ public:
         }
     }
 };
-int main(int argc, char const *argv[])
-{
-    int A[] = {2,0,0};
-    Solution s;
-    s.sortColors(A, 3);
-    for (int i = 0; i < 3; ++i)
-    {
-        cout << A[i];
-    }
-    //cout << A[0]  << A[1] << A[2] << endl;
-    return 0;
-}
