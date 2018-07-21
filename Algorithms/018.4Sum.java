@@ -1,25 +1,25 @@
 public class Solution {
-    public ArrayList<ArrayList<Integer>> fourSum(int[] num, int target) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        HashSet<ArrayList<Integer>> quadplets = new HashSet<ArrayList<Integer>>();
-        ArrayList<Integer> quadplet = new ArrayList<Integer>();
-        Arrays.sort(num);
-        int n = num.length;
+    public List<List<Integer>> fourSum(int[] nums, int target) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        Set<List<Integer>> quadplets = new HashSet<List<Integer>>();
+        List<Integer> quadplet = new ArrayList<Integer>();
+        Arrays.sort(nums);
+        int n = nums.length;
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) {
                 int k = j + 1;
                 int l = n - 1;
                 while (k < l) {
-                    int sum_four = num[i] + num[j] + num[k] + num[l];
+                    int sum_four = nums[i] + nums[j] + nums[k] + nums[l];
                     if (sum_four < target) {
                         k++;
                     } else if (sum_four > target) {
                         l--;
                     } else {
-                        quadplet.add(num[i]);
-                        quadplet.add(num[j]);
-                        quadplet.add(num[k]);
-                        quadplet.add(num[l]);
+                        quadplet.add(nums[i]);
+                        quadplet.add(nums[j]);
+                        quadplet.add(nums[k]);
+                        quadplet.add(nums[l]);
                         quadplets.add(quadplet);
                         quadplet = new ArrayList<Integer>();
                         k++;
@@ -28,7 +28,7 @@ public class Solution {
                 }
             }
         }
-        for (ArrayList<Integer> a:quadplets)
+        for (List<Integer> a:quadplets)
             result.add(a);
         return result;
     }
