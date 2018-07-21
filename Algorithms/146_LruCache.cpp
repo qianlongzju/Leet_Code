@@ -1,21 +1,21 @@
 #include "leetcode.h"
-struct node {
+struct Node {
     int key, value;
-    node *pre, *next;
-    node(int k, int v): key(k),value(v),pre(NULL),next(NULL) {};
+    Node *pre, *next;
+    Node(int k, int v): key(k),value(v),pre(NULL),next(NULL) {};
 };
 
 class LRUCache{
 public:
-    node *head, *tail;
+    Node *head, *tail;
     int capacity;
     int size;
-    map<int, node*> m;
+    map<int, Node*> m;
     LRUCache(int capacity) {
         this->capacity = capacity;
         size = 0; 
-        head = new node(0, 0);
-        tail = new node(0, 0);
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
         head->next = tail;
         tail->pre = head;
         m.clear();
@@ -23,7 +23,7 @@ public:
     
     int get(int key) {
         if (m.find(key) != m.end()) {
-            node *p = m[key];
+            Node *p = m[key];
             p->next->pre = p->pre;
             p->pre->next = p->next;
             p->next = head->next;
@@ -36,9 +36,9 @@ public:
         }    
     }
     
-    void set(int key, int value) {
+    void put(int key, int value) {
        if (m.find(key) != m.end()) {
-            node *p = m[key];
+            Node *p = m[key];
             p->next->pre = p->pre;
             p->pre->next = p->next;
             p->next = head->next;
@@ -47,7 +47,7 @@ public:
             head->next = p;
             p->value = value;
        } else {
-           node *p = new node(key, value);
+           Node *p = new Node(key, value);
            p->next = head->next;
            head->next->pre = p;
            p->pre = head;

@@ -1,32 +1,32 @@
 import java.util.*;
 public class LRUCache {
-    class node {
+    class Node {
         int key, value;
-        node pre, next;
-        node(int k, int v) {
+        Node pre, next;
+        Node(int k, int v) {
             key = k;
             value = v;
             pre = null;
             next = null;
         }
     }
-    public node head, tail;
+    public Node head, tail;
     public int capacity;
     public int size;
-    public HashMap<Integer, node> m;
+    public HashMap<Integer, Node> m;
     public LRUCache(int capacity) {
         this.capacity = capacity;
         size = 0; 
-        head = new node(0, 0);
-        tail = new node(0, 0);
+        head = new Node(0, 0);
+        tail = new Node(0, 0);
         head.next = tail;
         tail.pre = head;
-        m = new HashMap<Integer, node>();
+        m = new HashMap<Integer, Node>();
     }
     
     public int get(int key) {
         if (m.containsKey(key)) {
-            node p = m.get(key);
+            Node p = m.get(key);
             p.next.pre = p.pre;
             p.pre.next = p.next;
             p.next = head.next;
@@ -39,9 +39,9 @@ public class LRUCache {
         }    
     }
     
-    public void set(int key, int value) {
+    public void put(int key, int value) {
        if (m.containsKey(key)) {
-            node p = m.get(key);
+            Node p = m.get(key);
             p.next.pre = p.pre;
             p.pre.next = p.next;
             p.next = head.next;
@@ -50,7 +50,7 @@ public class LRUCache {
             head.next = p;
             p.value = value;
        } else {
-           node p = new node(key, value);
+           Node p = new Node(key, value);
            p.next = head.next;
            head.next.pre = p;
            p.pre = head;
