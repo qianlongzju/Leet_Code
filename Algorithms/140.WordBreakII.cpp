@@ -5,7 +5,7 @@ public:
         vector<bool> f(s.length() + 1, false);
         // path[i][j] 为 true,表示 s[j, i) 是一个合法单词,可以从 j 处切开
         // 第一行未用
-        vector<vector<bool> > prev(s.length()+1, vector<bool>(s.length()));
+        vector<vector<bool>> prev(s.length()+1, vector<bool>(s.length()));
         f[0] = true;
         for (int i = 1; i <= s.length(); ++i) {
             for (int j = i - 1; j >= 0; --j) {
@@ -46,7 +46,7 @@ private:
         if (n == 0 || wordDict.size() == 0)
             return r;
         vector<bool> wb(n, false);
-        vector<vector<bool> > prev(n, vector<bool>(n, false));
+        vector<vector<bool>> prev(n, vector<bool>(n, false));
         for (int i=0; i < n; ++i) {
             if (wb[i] == false && std::find(wordDict.begin(), wordDict.end(), s.substr(0, i+1)) != wordDict.end()) {
                 wb[i] = true;

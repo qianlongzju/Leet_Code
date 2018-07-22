@@ -1,10 +1,10 @@
 class Solution {
 public:
-    int uniquePathsWithObstacles(vector<vector<int> > &obstacleGrid) {
+    int uniquePathsWithObstacles(vector<vector<int>> &obstacleGrid) {
         int m = obstacleGrid.size();
         if (m == 0) return 0;
         int n = obstacleGrid[0].size();
-        vector<vector<int> > path(m, vector<int>(n, 1));
+        vector<vector<int>> path(m, vector<int>(n, 1));
         for (int i = 0; i < m; i ++) {
             for (int j = 0; j < n; j ++) {
                 if (obstacleGrid[i][j] == 1) {

@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<vector<string> > partition(string s) {
-        vector<vector<string> > result;
+    vector<vector<string>> partition(string s) {
+        vector<vector<string>> result;
         vector<string> output; 
         DFS(s, 0, output, result);
         return result;
     }
-    void DFS(string &s, int start, vector<string> &output,
-        vector<vector<string> > &result) {
+    void DFS(string& s, int start, vector<string>& output,
+        vector<vector<string>>& result) {
         if (start == s.size()) {
             result.push_back(output);
             return;
@@ -20,7 +20,7 @@ public:
             }
         }
     }
-    bool isPalindrome(string &s, int start, int end) {
+    bool isPalindrome(string& s, int start, int end) {
         while (start < end) {
             if (s[start] != s[end]) return false;
             start++;

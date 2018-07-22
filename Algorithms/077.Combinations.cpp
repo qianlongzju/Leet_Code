@@ -1,12 +1,12 @@
 class Solution {
 public:
-    vector<vector<int> > combine(int n, int k) {
-        vector<vector<int> > result;
+    vector<vector<int>> combine(int n, int k) {
+        vector<vector<int>> result;
         vector<int> path;
         DFS(result, path, n, k, 1);
         return result;
     }
-    void DFS(vector<vector<int> > &result,
+    void DFS(vector<vector<int>> &result,
             vector<int> path, 
             int n, int k, int min) {
         if (path.size() == k) {
@@ -20,13 +20,13 @@ public:
         }
     }
     /*
-    vector<vector<int> > combine(int n, int k) {
-        vector<vector<int> > result;
+    vector<vector<int>> combine(int n, int k) {
+        vector<vector<int>> result;
         vector<int> path;
         combine(result, path, n, k, 1);
         return result;
     }
-    void combine(vector<vector<int> > &result,
+    void combine(vector<vector<int>> &result,
             vector<int> path, 
             int n, int k, int min) {
         if (path.size() == k) {
@@ -42,8 +42,8 @@ public:
     }
     */
     /*
-    vector<vector<int> > combine(int n, int k) {
-        vector<vector<int> > result;
+    vector<vector<int>> combine(int n, int k) {
+        vector<vector<int>> result;
         for (int i=0; i < pow(2, n); i++) {
             vector<int> v;
             int j = i;

@@ -1,7 +1,7 @@
 class Solution {
 public:
     // 广搜。从上下左右四个边界往里走,凡是能碰到的'O',都是跟边界接壤的,应该保留
-    void solve(vector<vector<char>> &board) {
+    void solve(vector<vector<char>>& board) {
         int m = board.size();
         if (m == 0)
             return;
@@ -23,7 +23,7 @@ public:
             }
         }
     }
-    void bfs(vector<vector<char> > &board, int i, int j) {
+    void bfs(vector<vector<char>> &board, int i, int j) {
         int n = board[0].size();
         queue<int> q;
         visit(board, i, j, q);
@@ -37,7 +37,7 @@ public:
             visit(board, ii, jj+1, q);
         }
     }
-    void visit(vector<vector<char> > &board, int i, int j, queue<int> &q) {
+    void visit(vector<vector<char>> &board, int i, int j, queue<int> &q) {
         int m = board.size();
         int n = board[0].size();
         if (i < 0 || j < 0 || i >= m || j >= n || board[i][j] != 'O')

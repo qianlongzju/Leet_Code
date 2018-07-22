@@ -42,7 +42,7 @@ public class Solution {
     */
     /*
     public List<List<Integer>> combine(int n, int k) {
-        List<List<Integer> > result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         for (int i=0; i < Math.pow(2, n); i++) {
             List<Integer> v = new ArrayList<>();
             int j = i;

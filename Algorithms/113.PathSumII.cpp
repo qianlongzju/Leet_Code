@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<vector<int> > pathSum(TreeNode *root, int sum) {
-        vector<vector<int> > result;
+    vector<vector<int>> pathSum(TreeNode *root, int sum) {
+        vector<vector<int>> result;
         vector<int> path;
         path_sum(root, sum, path, result);
         return result;
     }
     void path_sum(TreeNode *root, int sum, vector<int> &path, 
-            vector<vector<int> > &result) {
+            vector<vector<int>> &result) {
         if (root == NULL) {
             return;
         }
@@ -22,13 +22,13 @@ public:
         path.pop_back();
     }
     /*
-    vector<vector<int> > pathSum(TreeNode *root, int sum) {
+    vector<vector<int>> pathSum(TreeNode *root, int sum) {
         vector<int> path;
         return path_sum(root, sum, path);
     }
-    vector<vector<int> > path_sum(TreeNode *root, int sum, vector<int> path) {
-        vector<vector<int> > v;
-        vector<vector<int> > p;
+    vector<vector<int>> path_sum(TreeNode *root, int sum, vector<int> path) {
+        vector<vector<int>> v;
+        vector<vector<int>> p;
         if (root == NULL) {
             return v;
         }

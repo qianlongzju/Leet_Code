@@ -32,7 +32,7 @@ public:
             num.push_back(i);
         }
         int result = 0;
-        vector<vector<int> > permutations;
+        vector<vector<int>> permutations;
         permute(num, 0, permutations);
         for (int i = 0; i < permutations.size(); i++) {
             if (isValid(permutations[i])) {
@@ -55,7 +55,7 @@ public:
         return true;
     }
     void permute(vector<int> &num, int index,
-            vector<vector<int> > &result) {
+            vector<vector<int>> &result) {
         if (num.size() == index) {
             result.push_back(num);
             return;

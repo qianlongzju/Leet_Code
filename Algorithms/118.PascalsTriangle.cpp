@@ -1,7 +1,7 @@
 class Solution {
 public:
-    vector<vector<int> > generate(int numRows) {
-        vector<vector<int> > result;
+    vector<vector<int>> generate(int numRows) {
+        vector<vector<int>> result;
         if (numRows == 0) {
             return result;
         }

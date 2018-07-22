@@ -1,11 +1,11 @@
 class Solution {
 public:
-    int maximalRectangle(vector<vector<char> > &matrix) {
+    int maximalRectangle(vector<vector<char>> &matrix) {
         int m = matrix.size();
         if (m == 0)
             return 0;
         int n = matrix[0].size();
-        vector<vector<int> > heights(m, vector<int>(n, 0));
+        vector<vector<int>> heights(m, vector<int>(n, 0));
         for (int i=0; i < m; ++i) {
             for (int j=0; j < n; ++j) {
                 if (matrix[i][j] == '0')

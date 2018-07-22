@@ -1,12 +1,12 @@
 class Solution {
 public:
-    vector<vector<string> > solveNQueens(int n) {
+    vector<vector<string>> solveNQueens(int n) {
         vector<int> num(n, 0);
-        vector<vector<string> > result;
+        vector<vector<string>> result;
         solveNQueens(n, num, result, 0);
         return result;
     }
-    void solveNQueens(int n, vector<int> &num, vector<vector<string> > &result, int level) {
+    void solveNQueens(int n, vector<int> &num, vector<vector<string>> &result, int level) {
         if (level == n) {
             result.push_back(getBoard(num));
             return;
@@ -42,13 +42,13 @@ public:
         return board;
     }
     /*
-    vector<vector<string> > solveNQueens(int n) {
+    vector<vector<string>> solveNQueens(int n) {
         vector<int> num(n, 0);
-        vector<vector<string> > result;
+        vector<vector<string>> result;
         solveNQueens(n, num, result);
         return result;
     }
-    void solveNQueens(int n, vector<int> &num, vector<vector<string> > &result) {
+    void solveNQueens(int n, vector<int> &num, vector<vector<string>> &result) {
         for (int i=0; i < n; ++i) {
             if (num[i] != 0)
                 continue;
@@ -89,13 +89,13 @@ public:
     */
     /*
     // naive solution: tle
-    vector<vector<string> > solveNQueens(int n) {
+    vector<vector<string>> solveNQueens(int n) {
         vector<int> num;
         for (int i = 0; i < n; i++) {
             num.push_back(i);
         }
-        vector<vector<string> > result;
-        vector<vector<int> > permutations;
+        vector<vector<string>> result;
+        vector<vector<int>> permutations;
         permute(num, 0, permutations);
         for (int i = 0; i < permutations.size(); i++) {
             if (isValid(permutations[i])) {
@@ -133,7 +133,7 @@ public:
         return result;
     }
     void permute(vector<int> &num, int index,
-            vector<vector<int> > &result) {
+            vector<vector<int>> &result) {
         if (num.size() == index) {
             result.push_back(num);
             return;

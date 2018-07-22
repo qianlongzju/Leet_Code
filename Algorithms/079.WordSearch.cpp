@@ -1,10 +1,10 @@
 class Solution {
 public:
     // dfs
-    bool exist(vector<vector<char> > &board, string word) {
+    bool exist(vector<vector<char>> &board, string word) {
         int m = board.size();
         int n = board[0].size();
-        vector<vector<bool> > visited(m, vector<bool>(n, false));
+        vector<vector<bool>> visited(m, vector<bool>(n, false));
         for (int i=0; i < m; ++i) {
             for (int j=0; j < n; ++j) {
                 if (dfs(0, i, j, word, board, visited))
@@ -14,7 +14,7 @@ public:
         return false;
     }
     bool dfs(int index, int i, int j, string &word, 
-            vector<vector<char> > &board, vector<vector<bool> > &visited) {
+            vector<vector<char>> &board, vector<vector<bool>> &visited) {
         if (index == word.size())
             return true;
         if (i < 0 || j < 0 || i >= board.size() || j >= board[0].size())

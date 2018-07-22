@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<vector<int> > subsetsWithDup(vector<int> &S) {
+    vector<vector<int>> subsetsWithDup(vector<int> &S) {
         sort(S.begin(), S.end());
-        vector<vector<int> > results;
+        vector<vector<int>> results;
         vector<int> current;
         subsetsHelper(results, current, S, 0);
         return results;
     }
-    void subsetsHelper(vector<vector<int> > &result, vector<int> &current,
+    void subsetsHelper(vector<vector<int>> &result, vector<int> &current,
             vector<int> &S, int pos) {
         result.push_back(current);
         for (int i = pos; i < S.size(); i++) {
@@ -18,11 +18,11 @@ public:
         }
     }
     /*
-    vector<vector<int> > subsetsWithDup(vector<int> &S) {
+    vector<vector<int>> subsetsWithDup(vector<int> &S) {
         sort(S.begin(), S.end());        
         int n = S.size();
-        vector<vector<int> > result;
-        set<vector<int> > uniqueResult;
+        vector<vector<int>> result;
+        set<vector<int>> uniqueResult;
         for (int i=0; i < pow(2, n); i++) {
             vector<int> v;
             int j = i;
@@ -36,7 +36,7 @@ public:
             }
             uniqueResult.insert(v);
         }
-        for (set<vector<int> >::iterator it=uniqueResult.begin(); it != uniqueResult.end(); it++) {
+        for (set<vector<int>>::iterator it=uniqueResult.begin(); it != uniqueResult.end(); it++) {
             result.push_back(*it);
         }
         return result;

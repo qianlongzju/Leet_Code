@@ -1,9 +1,9 @@
 class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
-        vector<vector<int> > result;
+        vector<vector<int>> result;
         sort(nums.begin(), nums.end());
-        set<vector<int> > quadplets;
+        set<vector<int>> quadplets;
         int n = nums.size();
         for (int i = 0; i < n; i++) {
             for (int j = i+1; j < n; j++) {

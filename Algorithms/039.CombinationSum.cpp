@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target) {
         sort(candidates.begin(), candidates.end());
-        vector<vector<int> > result;
+        vector<vector<int>> result;
         vector<int> path;
         DFS(result, path, candidates, target, 0);
         return result;
     }
-    void DFS(vector<vector<int> > &result, vector<int> path, 
+    void DFS(vector<vector<int>> &result, vector<int> path, 
             vector<int> &candidates, int target, int level) {
         if (target == 0) {
             result.push_back(path);
@@ -21,8 +21,8 @@ public:
         }
     }
     /*
-    vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-        vector<vector<int> > result;
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target) {
+        vector<vector<int>> result;
         sort(candidates.begin(), candidates.end());
         int index[target];
         index[0] = candidates.size()-1;
@@ -31,7 +31,7 @@ public:
     }
     
     void solve(int target, vector<int> &candidates, int index[], 
-            int n, vector<vector<int> > &result) {
+            int n, vector<vector<int>> &result) {
         if (target < 0)
             return ;
         if (target == 0) {
@@ -49,8 +49,8 @@ public:
     }
     */
     /*
-    vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-        vector<vector<int> > result;
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target) {
+        vector<vector<int>> result;
         sort(candidates.begin(), candidates.end());
         int index[target];
         index[0] = 0;
@@ -59,7 +59,7 @@ public:
     }
     
     void solve(int target, int sum, vector<int> &candidates, int index[], 
-            int n, vector<vector<int> > &result) {
+            int n, vector<vector<int>> &result) {
         if (sum > target)
             return;
         if (sum == target) {
@@ -77,8 +77,8 @@ public:
     }
      for further thoughts on
      http://leetcode.com/2010/09/print-all-combinations-of-number-as-sum.html
-    vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
-        vector<vector<int> > result;
+    vector<vector<int>> combinationSum(vector<int> &candidates, int target) {
+        vector<vector<int>> result;
         sort(candidates.begin(), candidates.end());
         int index[target];
         index[0] = -1;
@@ -87,7 +87,7 @@ public:
     }
     
     void solve(int target, int sum, vector<int> &candidates, int index[], 
-            int n, vector<vector<int> > &result) {
+            int n, vector<vector<int>> &result) {
         if (sum > target)
             return;
         if (sum == target) {

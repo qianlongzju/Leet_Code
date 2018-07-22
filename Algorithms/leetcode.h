@@ -29,7 +29,7 @@ typedef vector<vi> vvi;
 typedef vector<string> vs;
 typedef pair<int, int> ii;
 typedef vector<ii> vii;
-typedef vector< pair<double,ii> > vdii;
+typedef vector<pair<double,ii>> vdii;
 
 #define sz(a) int((a).size())
 #define pb push_back
