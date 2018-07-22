@@ -9,14 +9,14 @@
  * }
  */
 public class Solution {
-    public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         if (root == null) {
             return result;
         }
-        ArrayList<Integer> v = new ArrayList<Integer>();
-        ArrayList<TreeNode> stack = new ArrayList<TreeNode>();
-        ArrayList<TreeNode> next_level_stack = new ArrayList<TreeNode>();
+        List<Integer> v = new ArrayList<>();
+        List<TreeNode> stack = new ArrayList<>();
+        List<TreeNode> next_level_stack = new ArrayList<>();
         stack.add(root);
         while (stack.size() != 0) {
             TreeNode p = stack.get(0);
@@ -30,9 +30,9 @@ public class Solution {
             }
             if (stack.size() == 0) {
                 stack = next_level_stack;
-                next_level_stack = new ArrayList<TreeNode>();
+                next_level_stack = new ArrayList<>();
                 result.add(0, v);
-                v = new ArrayList<Integer>();
+                v = new ArrayList<>();
             }
         }
         return result;
