@@ -14,6 +14,8 @@ public:
         }
         if (un_divisor == 1) {
             if (positive) {
+                if (un_dividend == 2147483648L)
+                    return 2147483647;
                 return un_dividend;
             }
             else {

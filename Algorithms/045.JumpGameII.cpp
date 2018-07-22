@@ -1,6 +1,7 @@
 class Solution {
 public:
-    int jump(int A[], int n) {
+    int jump(vector<int>& nums) {
+        int n = nums.size();
         int maxIndex = 0;
         int steps[n];
         for (int i=0; i < n; i++) {
@@ -8,15 +9,15 @@ public:
         }
         steps[0] = 0;
         for (int i=0; i < n && i <= maxIndex; i++) {
-            for (int j=maxIndex+1; j <= i+A[i] && j < n; j++) {
+            for (int j=maxIndex+1; j <= i+nums[i] && j < n; j++) {
                 if (steps[i]+1 < steps[j]) {
                     steps[j] = steps[i] + 1;
                 }
             }
-            if (i+A[i] < maxIndex) {
+            if (i+nums[i] < maxIndex) {
                 continue;
             }
-            maxIndex = i + A[i];
+            maxIndex = i + nums[i];
             if (maxIndex >= n-1) {
                 break;
             }
