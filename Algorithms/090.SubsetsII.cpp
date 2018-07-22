@@ -21,9 +21,6 @@ public:
     vector<vector<int> > subsetsWithDup(vector<int> &S) {
         sort(S.begin(), S.end());        
         int n = S.size();
-        //for (int i=0; i < n; i++)
-        //    cout << S[i] << " ";
-        //cout << endl;
         vector<vector<int> > result;
         set<vector<int> > uniqueResult;
         for (int i=0; i < pow(2, n); i++) {

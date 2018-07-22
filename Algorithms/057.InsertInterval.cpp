@@ -1,7 +1,6 @@
 class Solution {
 public:
     vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         vector<Interval> result;
         int i = 0;
         while (i < intervals.size()) {

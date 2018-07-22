@@ -52,10 +52,6 @@ public:
         vector<vector<int> > result;
         set<vector<int> > temp;
         sort(candidates.begin(), candidates.end());
-        //for (int i = 0; i < candidates.size(); i++) {
-        //    cout << candidates[i] << (i == candidates.size()-1 ? "" : " ");
-        //}
-        //cout << endl;
         int index[target+2];
         index[0] = candidates.size();
         solve(target, candidates, index, 0, temp);
@@ -110,8 +106,8 @@ public:
             solve(target, sum + candidates[i], candidates, index, n+1, result);
         }
     }
-     for further thoughts on
-     http://leetcode.com/2010/09/print-all-combinations-of-number-as-sum.html
+    // for further thoughts on
+    // http://leetcode.com/2010/09/print-all-combinations-of-number-as-sum.html
     vector<vector<int> > combinationSum(vector<int> &candidates, int target) {
         vector<vector<int> > result;
         sort(candidates.begin(), candidates.end());

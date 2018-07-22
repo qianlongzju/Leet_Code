@@ -17,7 +17,6 @@ public:
         if (bucketRange < 1)
             bucketRange = 1;
         int bucketLen = int(((A - B)*1.0 / bucketRange) + 0.5) + 1;
-        //cout << bucketLen << endl;
         for (int i = 0; i < 2*n; i++)
             buckets[i] = -1;
         for (int i = 0; i < n; i++) {

@@ -10,7 +10,6 @@ public:
                 if (s == "..") {
                     if (stk.empty()) {
                         ;
-                        //stk.push(s);
                     } else {
                         stk.pop();
                     }
@@ -45,10 +44,8 @@ public:
             s = stk.top() + "/" + s;
             stk.pop();
         }
-        //cout << s << endl;
         if (s.size() > 1)
             s = s.substr(0, s.size()-1);
-            //s.erase(s.end()-1, s.end());
         if (s == "..") 
             s = "";
         s = "/" + s;

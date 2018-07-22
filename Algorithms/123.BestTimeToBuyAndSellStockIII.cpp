@@ -38,14 +38,6 @@ public:
                 max = temp;
             }
         }
-        //for (int i=0; i < n; i++) {
-        //    cout << leftToRight[i]; //<< endl;;
-        //}
-        //cout << endl;
-        //for (int i=0; i < n; i++) {
-        //    cout << rightToLeft[i];// << endl;;
-        //}
-        //cout << endl;
         if (rightToLeft[0] > max) {
             max = rightToLeft[0];
         }

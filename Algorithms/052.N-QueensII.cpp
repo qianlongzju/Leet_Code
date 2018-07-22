@@ -1,7 +1,6 @@
 class Solution {
 public:
     int totalNQueens(int n) {
-        //vector<int> num(n, 0);
         int num[n];
         memset(num, 0, sizeof(num));
         int result = 0;
