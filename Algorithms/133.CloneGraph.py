@@ -24,7 +24,6 @@ class Solution:
                     mapping[neighbor] = copyNeighbor
                     copyCurr.neighbors.append(copyNeighbor)
         return copyNode
-
     ## dfs
     #mapping = {}
     #def cloneGraph(self, node):
