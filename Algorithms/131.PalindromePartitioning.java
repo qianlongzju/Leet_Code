@@ -1,14 +1,14 @@
 public class Solution {
-    public ArrayList<ArrayList<String>> partition(String s) {
-        ArrayList<ArrayList<String>> result = new ArrayList<ArrayList<String>>();
-        ArrayList<String> output = new ArrayList<String>();
+    public List<List<String>> partition(String s) {
+        List<List<String>> result = new ArrayList<List<String>>();
+        List<String> output = new ArrayList<>();
         DFS(s, 0, output, result);
         return result;
     }
-    void DFS(String s, int start, ArrayList<String> output,
-        ArrayList<ArrayList<String> > result) {
+    void DFS(String s, int start, List<String> output,
+        List<List<String>> result) {
         if (start == s.length()) {
-            result.add((ArrayList<String>)output.clone());
+            result.add(new ArrayList<>(output));
             return;
         }
         for (int i = start; i < s.length(); i++) {
