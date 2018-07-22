@@ -20,6 +20,8 @@
 #include "UndirectedGraphNode.h"
 #include "Interval.h"
 #include "PrintTree.h"
+#include "RandomListNode.h"
+#include "TreeLinkNode.h"
 
 /*
 typedef vector<int> vi;
