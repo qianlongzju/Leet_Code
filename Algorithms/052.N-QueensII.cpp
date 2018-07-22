@@ -1,39 +1,39 @@
 class Solution {
 public:
     int totalNQueens(int n) {
-        int num[n];
-        memset(num, 0, sizeof(num));
+        int nums[n];
+        memset(nums, 0, sizeof(nums));
         int result = 0;
-        solveNQueens(0, n, num, result);
+        solveNQueens(0, n, nums, result);
         return result;
     }
-    void solveNQueens(int index, int n, int *num, int& result) {
+    void solveNQueens(int index, int n, int *nums, int& result) {
         if (index == n) {
             result ++;
             return;
         }
         for (int j=1; j <= n; ++j) {
-            num[index] = j;
-            if (isValid(num, index))
-                solveNQueens(index+1, n, num, result);
+            nums[index] = j;
+            if (isValid(nums, index))
+                solveNQueens(index+1, n, nums, result);
         }
     }
-    bool isValid(int *num, int index) {
+    bool isValid(int *nums, int index) {
         for (int i=0; i < index; ++i) {
-            if (num[i] == num[index] || abs(num[i] - num[index]) == abs(i - index))
+            if (nums[i] == nums[index] || abs(nums[i] - nums[index]) == abs(i - index))
                 return false;
         }
         return true;
     }
     /*
     int totalNQueens(int n) {
-        vector<int> num;
+        vector<int> nums;
         for (int i = 0; i < n; i++) {
-            num.push_back(i);
+            nums.push_back(i);
         }
         int result = 0;
         vector<vector<int>> permutations;
-        permute(num, 0, permutations);
+        permute(nums, 0, permutations);
         for (int i = 0; i < permutations.size(); i++) {
             if (isValid(permutations[i])) {
                 result ++;
@@ -54,20 +54,20 @@ public:
         }
         return true;
     }
-    void permute(vector<int>& num, int index,
+    void permute(vector<int>& nums, int index,
             vector<vector<int>>& result) {
-        if (num.size() == index) {
-            result.push_back(num);
+        if (nums.size() == index) {
+            result.push_back(nums);
             return;
         }
-        for (int i=index; i < num.size(); ++i) {
-            int temp = num[i];
-            num[i] = num[index];
-            num[index] = temp;
-            permute(num, index+1, result);
-            temp = num[i];
-            num[i] = num[index];
-            num[index] = temp;
+        for (int i=index; i < nums.size(); ++i) {
+            int temp = nums[i];
+            nums[i] = nums[index];
+            nums[index] = temp;
+            permute(nums, index+1, result);
+            temp = nums[i];
+            nums[i] = nums[index];
+            nums[index] = temp;
         }
     }
     */

@@ -1,16 +1,16 @@
 class Solution:
-    # @param num, a list of integer
+    # @param nums, a list of integer
     # @return an integer
-    def findPeakElement(self, num):
-        return self.findPeakElementInterval(num, 0, len(num)-1)
+    def findPeakElement(self, nums):
+        return self.findPeakElementInterval(nums, 0, len(nums)-1)
 
-    def findPeakElementInterval(self, num, start, end):
+    def findPeakElementInterval(self, nums, start, end):
         if start == end:
             return start
         mid = start + (end - start)/2
-        if (mid == 0 or num[mid] > num[mid-1]) and (mid+1 > end or num[mid] > num[mid+1]):
+        if (mid == 0 or nums[mid] > nums[mid-1]) and (mid+1 > end or nums[mid] > nums[mid+1]):
             return mid
-        elif (mid == 0 or num[mid] > num[mid-1]) and (mid+1 > end or num[mid] < num[mid+1]):
-            return self.findPeakElementInterval(num, mid+1, end)
+        elif (mid == 0 or nums[mid] > nums[mid-1]) and (mid+1 > end or nums[mid] < nums[mid+1]):
+            return self.findPeakElementInterval(nums, mid+1, end)
         else:
-            return self.findPeakElementInterval(num, start, end-1)
+            return self.findPeakElementInterval(nums, start, end-1)

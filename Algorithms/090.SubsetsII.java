@@ -1,9 +1,9 @@
 public class Solution {
-    public List<List<Integer>> subsetsWithDup(int[] num) {
-        Arrays.sort(num);
+    public List<List<Integer>> subsetsWithDup(int[] nums) {
+        Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         List<Integer> current = new ArrayList<>();
-        subsetsHelper(result, current, num, 0);
+        subsetsHelper(result, current, nums, 0);
         return result;
     }
     private void subsetsHelper(List<List<Integer>> result, List<Integer> current, int[] S, int pos) {

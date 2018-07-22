@@ -22,10 +22,3 @@ class Solution:
                 #p.next, p.next.next, ins.next =  p.next.next, ins.next, p.next
                 p.next.next, p.next,  ins.next =  ins.next, p.next.next, p.next
         return headptr.next
-
-if __name__ == '__main__':
-    S = Solution()
-    #head = ListNode(3)
-    #head.next = ListNode(5)
-    head, head.next = ListNode(3), ListNode(5)
-    S.reverseBetween(head, 1, 2)

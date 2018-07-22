@@ -22,12 +22,3 @@ class Solution:
         k -= ((k-1)/p)*p
         s.remove(a)
         self.kth_permutation(s, k, permutation)
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.getPermutation(3, 1)
-    print s.getPermutation(3, 2)
-    print s.getPermutation(3, 3)
-    print s.getPermutation(3, 4)
-    print s.getPermutation(3, 5)
-    print s.getPermutation(3, 6)

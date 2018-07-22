@@ -1,37 +1,37 @@
 class Solution {
 public:
     vector<vector<string>> solveNQueens(int n) {
-        vector<int> num(n, 0);
+        vector<int> nums(n, 0);
         vector<vector<string>> result;
-        solveNQueens(n, num, result, 0);
+        solveNQueens(n, nums, result, 0);
         return result;
     }
-    void solveNQueens(int n, vector<int>& num, vector<vector<string>>& result, int level) {
+    void solveNQueens(int n, vector<int>& nums, vector<vector<string>>& result, int level) {
         if (level == n) {
-            result.push_back(getBoard(num));
+            result.push_back(getBoard(nums));
             return;
         }
         for (int j=1; j <= n; ++j) {
-            num[level] = j;
-            if (isValid(num, level))
-                solveNQueens(n, num, result, level+1);
+            nums[level] = j;
+            if (isValid(nums, level))
+                solveNQueens(n, nums, result, level+1);
         }
     }
-    bool isValid(vector<int>& num, int index) {
+    bool isValid(vector<int>& nums, int index) {
         for (int i=0; i < index; ++i) {
-            if (num[i] == num[index])
+            if (nums[i] == nums[index])
                 return false;
-            if (abs(num[i] - num[index]) == (index - i))
+            if (abs(nums[i] - nums[index]) == (index - i))
                 return false;
         }
         return true;
     }
-    vector<string> getBoard(vector<int>& num) {
+    vector<string> getBoard(vector<int>& nums) {
         vector<string> board;
-        for (int i=0; i < num.size(); i++) {
+        for (int i=0; i < nums.size(); i++) {
             string s = "";
-            for (int j=0; j < num.size(); j++) {
-                if (j+1 == num[i]) {
+            for (int j=0; j < nums.size(); j++) {
+                if (j+1 == nums[i]) {
                     s += "Q";
                 } else {
                     s += ".";
@@ -43,40 +43,40 @@ public:
     }
     /*
     vector<vector<string>> solveNQueens(int n) {
-        vector<int> num(n, 0);
+        vector<int> nums(n, 0);
         vector<vector<string>> result;
-        solveNQueens(n, num, result);
+        solveNQueens(n, nums, result);
         return result;
     }
-    void solveNQueens(int n, vector<int>& num, vector<vector<string>>& result) {
+    void solveNQueens(int n, vector<int>& nums, vector<vector<string>>& result) {
         for (int i=0; i < n; ++i) {
-            if (num[i] != 0)
+            if (nums[i] != 0)
                 continue;
             for (int j=1; j <= n; ++j) {
-                num[i] = j;
-                if (isValid(num, i))
-                    solveNQueens(n, num, result);
+                nums[i] = j;
+                if (isValid(nums, i))
+                    solveNQueens(n, nums, result);
             }
-            num[i] = 0;
+            nums[i] = 0;
             return;
         }
-        result.push_back(getBoard(num));
+        result.push_back(getBoard(nums));
     }
-    bool isValid(vector<int>& num, int index) {
+    bool isValid(vector<int>& nums, int index) {
         for (int i=0; i < index; ++i) {
-            if (num[i] == num[index])
+            if (nums[i] == nums[index])
                 return false;
-            if (abs(num[i] - num[index]) == (index - i))
+            if (abs(nums[i] - nums[index]) == (index - i))
                 return false;
         }
         return true;
     }
-    vector<string> getBoard(vector<int>& num) {
+    vector<string> getBoard(vector<int>& nums) {
         vector<string> board;
-        for (int i=0; i < num.size(); i++) {
+        for (int i=0; i < nums.size(); i++) {
             string s = "";
-            for (int j=0; j < num.size(); j++) {
-                if (j+1 == num[i]) {
+            for (int j=0; j < nums.size(); j++) {
+                if (j+1 == nums[i]) {
                     s += "Q";
                 } else {
                     s += ".";
@@ -90,13 +90,13 @@ public:
     /*
     // naive solution: tle
     vector<vector<string>> solveNQueens(int n) {
-        vector<int> num;
+        vector<int> nums;
         for (int i = 0; i < n; i++) {
-            num.push_back(i);
+            nums.push_back(i);
         }
         vector<vector<string>> result;
         vector<vector<int>> permutations;
-        permute(num, 0, permutations);
+        permute(nums, 0, permutations);
         for (int i = 0; i < permutations.size(); i++) {
             if (isValid(permutations[i])) {
                 result.push_back(getSolution(permutations[i]));
@@ -132,20 +132,20 @@ public:
         }
         return result;
     }
-    void permute(vector<int>& num, int index,
+    void permute(vector<int>& nums, int index,
             vector<vector<int>>& result) {
-        if (num.size() == index) {
-            result.push_back(num);
+        if (nums.size() == index) {
+            result.push_back(nums);
             return;
         }
-        for (int i=index; i < num.size(); ++i) {
-            int temp = num[i];
-            num[i] = num[index];
-            num[index] = temp;
-            permute(num, index+1, result);
-            temp = num[i];
-            num[i] = num[index];
-            num[index] = temp;
+        for (int i=index; i < nums.size(); ++i) {
+            int temp = nums[i];
+            nums[i] = nums[index];
+            nums[index] = temp;
+            permute(nums, index+1, result);
+            temp = nums[i];
+            nums[i] = nums[index];
+            nums[index] = temp;
         }
     }
     */

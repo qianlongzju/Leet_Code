@@ -24,7 +24,3 @@ class Solution:
             return self.find_kth(A, B[pb:], k - pb)
         else:
             return A[pa - 1]
-
-if __name__ == '__main__':
-    s = Solution()
-    print s.findMedianSortedArrays([], [2, 3])

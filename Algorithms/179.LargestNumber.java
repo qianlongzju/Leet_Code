@@ -1,15 +1,15 @@
 public class Solution {
-    public String largestNumber(int[] num) {
-        List<Integer> new_num = new ArrayList<>();
-        for (int i=0; i < num.length; i++) {
-            new_num.add(num[i]);
+    public String largestNumber(int[] nums) {
+        List<Integer> new_nums = new ArrayList<>();
+        for (int i=0; i < nums.length; i++) {
+            new_nums.add(nums[i]);
         }
-        Collections.sort(new_num, new cmp());
-        if (new_num.get(0) == 0)
+        Collections.sort(new_nums, new cmp());
+        if (new_nums.get(0) == 0)
             return "0";
         String result = "";
-        for (int i = 0; i < new_num.size(); i++) {
-            result += new_num.get(i);
+        for (int i = 0; i < new_nums.size(); i++) {
+            result += new_nums.get(i);
         }
         return result;
     }

@@ -1,11 +1,11 @@
 __author__ = 'qianlong'
 class Solution:
-    # @param num, a list of integers
+    # @param nums, a list of integers
     # @return an integer
-    def majorityElement(self, num):
+    def majorityElement(self, nums):
         previous = None
         count = 0
-        for current in num:
+        for current in nums:
             if count == 0:
                 previous = current
                 count += 1

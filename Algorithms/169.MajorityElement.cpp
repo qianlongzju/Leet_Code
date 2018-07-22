@@ -1,14 +1,14 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& num) {
+    int majorityElement(vector<int>& nums) {
         int previous;
         int count = 0;
-        for (int i = 0; i < num.size(); i++) {
+        for (int i = 0; i < nums.size(); i++) {
             if (count == 0) {
-                previous = num[i];
+                previous = nums[i];
                 count ++;
             } else {
-                if (previous == num[i]) {
+                if (previous == nums[i]) {
                     count ++;
                 } else {
                     count --;

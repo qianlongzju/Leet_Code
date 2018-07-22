@@ -1,11 +1,11 @@
 class Solution:
     # @return a string
-    def convertToTitle(self, num):
+    def convertToTitle(self, nums):
         s = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
         length = len(s)
         result = ""
-        while num > 0:
-                num -= 1
-                result = s[num%length] + result
-                num /= length
+        while nums > 0:
+                nums -= 1
+                result = s[nums%length] + result
+                nums /= length
         return result

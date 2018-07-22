@@ -1,9 +1,9 @@
 class Solution:
-    # @param num, a list of integers
+    # @param nums, a list of integers
     # @return a string
-    def largestNumber(self, num):
-        num.sort(cmp=cmp)
-        return str(int("".join([str(i) for i in num])))
+    def largestnumsber(self, nums):
+        nums.sort(cmp=cmp)
+        return str(int("".join([str(i) for i in nums])))
 
 def cmp(x, y):
     xx = int(str(x) + str(y))

@@ -19,9 +19,3 @@ class Solution:
             return False
         return (self.validBST(root.left, Min, root.val) 
             and self.validBST(root.right, root.val, Max))
-
-if __name__ == '__main__':
-    root = TreeNode(0)
-    root.right = TreeNode(-1)
-    s = Solution()
-    print s.isValidBST(root)

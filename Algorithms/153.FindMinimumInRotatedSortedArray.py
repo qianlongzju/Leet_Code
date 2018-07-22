@@ -1,23 +1,23 @@
 class Solution:
-    # @param num, a list of integer
+    # @param nums, a list of integer
     # @return an integer
-    def findMin(self, num):
-        start, end = 0, len(num)-1
-        while start < end and num[start] > num[end]:
+    def findMin(self, nums):
+        start, end = 0, len(nums)-1
+        while start < end and nums[start] > nums[end]:
             mid = start + (end - start)/2
-            if num[mid] > num[end]:
+            if nums[mid] > nums[end]:
                 start = mid + 1
             else:
                 end = mid
-        return num[start]
-    #def findMin(self, num):
-    #    return self.findMin_interval(num, 0, len(num) - 1)
-    #def findMin_interval(self, num, start, end):
+        return nums[start]
+    #def findMin(self, nums):
+    #    return self.findMin_interval(nums, 0, len(nums) - 1)
+    #def findMin_interval(self, nums, start, end):
     #    if start == end:
-    #        return num[start]
-    #    if num[start] < num[end]:
-    #        return num[start]
+    #        return nums[start]
+    #    if nums[start] < nums[end]:
+    #        return nums[start]
     #    mid = start + (end - start) / 2
-    #    if num[mid] >= num[start]:
-    #        return self.findMin_interval(num, mid+1, end)
-    #    return self.findMin_interval(num, start, mid)
+    #    if nums[mid] >= nums[start]:
+    #        return self.findMin_interval(nums, mid+1, end)
+    #    return self.findMin_interval(nums, start, mid)
