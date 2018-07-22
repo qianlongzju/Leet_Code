@@ -1,3 +1,12 @@
+/**
+ * Definition for an interval.
+ * struct Interval {
+ *     int start;
+ *     int end;
+ *     Interval() : start(0), end(0) {}
+ *     Interval(int s, int e) : start(s), end(e) {}
+ * };
+ */
 class Solution {
 public:
     static bool lesser(const Interval& a, const Interval& b) {
@@ -9,7 +18,7 @@ public:
         if (intervals.size() <= 1) {
             return intervals;
         }
-        sort(all(intervals), lesser);
+        sort(intervals.begin(), intervals.end(), lesser);
         vector<Interval> result;
         Interval v = intervals[0];
         int i = 1;
