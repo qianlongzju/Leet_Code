@@ -8,9 +8,8 @@
  * }
  */
 public class Solution {
-    public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
-        ArrayList<Interval> result = new ArrayList<Interval>();
+    public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
+        List<Interval> result = new ArrayList<Interval>();
         int i = 0;
         while (i < intervals.size()) {
             if (newInterval.start > intervals.get(i).end) {
@@ -33,6 +32,5 @@ public class Solution {
             i ++;
         }
         return result;
-        
     }
 }
