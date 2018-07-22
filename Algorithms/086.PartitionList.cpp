@@ -1,10 +1,10 @@
 class Solution {
 public:
     ListNode *partition(ListNode *head, int x) {
-        ListNode* leftheadptr = new ListNode(0);
-        ListNode* rightheadptr = new ListNode(0);
-        ListNode* left = leftheadptr;
-        ListNode* right = rightheadptr;
+        ListNode *leftheadptr = new ListNode(0);
+        ListNode *rightheadptr = new ListNode(0);
+        ListNode *left = leftheadptr;
+        ListNode *right = rightheadptr;
         while (head != NULL) {
             if (head->val < x) {
                 left->next = head;

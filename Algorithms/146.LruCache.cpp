@@ -9,7 +9,7 @@ public:
     Node *head, *tail;
     int capacity;
     int size;
-    map<int, Node*> m;
+    map<int, Node *> m;
     LRUCache(int capacity) {
         this->capacity = capacity;
         size = 0; 

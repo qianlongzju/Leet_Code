@@ -4,7 +4,7 @@ public:
         vector<int> v;
         if (root == NULL)
             return v;
-        stack<TreeNode*> stack;
+        stack<TreeNode *> stack;
         stack.push(root);
         TreeNode *prevNode = NULL;
         while (!stack.empty()) {

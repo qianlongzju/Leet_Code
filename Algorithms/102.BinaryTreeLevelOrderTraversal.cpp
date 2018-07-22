@@ -6,11 +6,11 @@ public:
             return result;
         }
         vector<int> v;
-        vector<TreeNode*> stack;
-        vector<TreeNode*> next_level_stack;
+        vector<TreeNode *> stack;
+        vector<TreeNode *> next_level_stack;
         stack.push_back(root);
         while (!stack.empty()) {
-            TreeNode* p = stack.front();
+            TreeNode *p = stack.front();
             stack.erase(stack.begin());
             v.push_back(p->val);
             if (p->left != NULL) {

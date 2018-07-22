@@ -5,9 +5,9 @@ public:
         unordered_map<UndirectedGraphNode *, UndirectedGraphNode *> map;
         return dfs(node, map);
     }
-    UndirectedGraphNode *dfs(UndirectedGraphNode* node, unordered_map<UndirectedGraphNode *, UndirectedGraphNode *>& map) {
+    UndirectedGraphNode *dfs(UndirectedGraphNode *node, unordered_map<UndirectedGraphNode *, UndirectedGraphNode *>& map) {
         if (map.find(node) != map.end()) return map[node];
-        UndirectedGraphNode* copyNode = new UndirectedGraphNode(node->label);
+        UndirectedGraphNode *copyNode = new UndirectedGraphNode(node->label);
         map[node] = copyNode;
         for (int i = 0; i < node->neighbors.size(); i++) {
             copyNode->neighbors.push_back(dfs(node->neighbors[i], map));

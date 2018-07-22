@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> inorderTraversal(TreeNode *root) {
         vector<int> v;
-        stack<TreeNode*> stack;
+        stack<TreeNode *> stack;
         TreeNode *p = root;
         while (!stack.empty() || p != NULL) {
             if (p != NULL) {

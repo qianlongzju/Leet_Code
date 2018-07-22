@@ -2,7 +2,7 @@ class Solution {
 public:
     TreeNode *sortedListToBST(ListNode *head) {
         int length = 0;
-        ListNode* p = head;
+        ListNode *p = head;
         while (p != NULL) {
             length ++;
             p = p->next;
@@ -10,7 +10,7 @@ public:
         return sortedListToBST(head, 0, length-1);
     }
 
-    TreeNode* sortedListToBST(ListNode* list, int start, int end) {
+    TreeNode *sortedListToBST(ListNode *list, int start, int end) {
         if (start > end) return NULL;
         int mid = start + (end - start) / 2;
         TreeNode *leftChild = sortedListToBST(list, start, mid-1);
@@ -28,13 +28,13 @@ public:
         if (head->next == NULL) {
             return new TreeNode(head->val);
         }
-        ListNode* slow = head;
-        ListNode* fast = head->next->next;
+        ListNode *slow = head;
+        ListNode *fast = head->next->next;
         while (fast != NULL && fast->next != NULL) {
             fast = fast->next->next;
             slow = slow->next;
         }
-        TreeNode* root = new TreeNode(slow->next->val);
+        TreeNode *root = new TreeNode(slow->next->val);
         root->right = sortedListToBST(slow->next->next);
         slow->next = NULL;
         root->left = sortedListToBST(head);

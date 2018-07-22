@@ -1,11 +1,11 @@
 class Solution {
 public:
     void reorderList(ListNode *head) {
-        ListNode* p = split(head);
+        ListNode *p = split(head);
         p = reverse(p);
         head = merge(head, p);
     }
-    ListNode* split(ListNode *head) {
+    ListNode *split(ListNode *head) {
         if (head == NULL) 
             return head;
         ListNode *slow = head;
@@ -18,7 +18,7 @@ public:
         slow->next = NULL;
         return p;
     }
-    ListNode* reverse(ListNode *head) { 
+    ListNode *reverse(ListNode *head) { 
         ListNode *headptr = new ListNode(0);
         while (head != NULL) {
             ListNode *tmp = head->next;
@@ -28,7 +28,7 @@ public:
         }
         return headptr->next;
     }
-    ListNode* merge(ListNode *p, ListNode *q) {
+    ListNode *merge(ListNode *p, ListNode *q) {
         ListNode *head = new ListNode(0);
         ListNode *tmp = head;
         while (p != NULL && q != NULL) {

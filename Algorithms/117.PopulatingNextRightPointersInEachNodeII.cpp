@@ -3,10 +3,10 @@ public:
     void connect(TreeLinkNode *root) {
         if (root == NULL) return;
         while (root != NULL) {
-            TreeLinkNode* start = nextLevelFirstNode(root);
-            TreeLinkNode* curr_node = start;
+            TreeLinkNode *start = nextLevelFirstNode(root);
+            TreeLinkNode *curr_node = start;
             while (curr_node != NULL) {
-                TreeLinkNode* next_node = nextLevelNextNode(root, curr_node);
+                TreeLinkNode *next_node = nextLevelNextNode(root, curr_node);
                 curr_node->next = next_node;
                 curr_node = next_node;
             }
@@ -15,13 +15,13 @@ public:
     }
 
 private:
-    TreeLinkNode* nextLevelFirstNode(TreeLinkNode *root) {
+    TreeLinkNode *nextLevelFirstNode(TreeLinkNode *root) {
         if (root == NULL) return NULL;
         if (root->left != NULL) return root->left;
         return nextLevelNextNode(root, root->left);
     }
 
-    TreeLinkNode* nextLevelNextNode(TreeLinkNode* root, TreeLinkNode* curr_node) {
+    TreeLinkNode *nextLevelNextNode(TreeLinkNode *root, TreeLinkNode *curr_node) {
         if (root->left == curr_node && root->right != NULL) {
             return root->right;
         }

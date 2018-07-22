@@ -6,7 +6,7 @@ public:
         }
         return isMirror(root->left, root->right);
     }
-    bool isMirror(TreeNode* left, TreeNode* right) {
+    bool isMirror(TreeNode *left, TreeNode *right) {
         if (left == NULL && right != NULL) {
             return false;
         }

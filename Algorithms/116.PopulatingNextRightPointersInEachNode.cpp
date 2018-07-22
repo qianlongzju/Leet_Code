@@ -28,7 +28,7 @@ public:
         TreeLinkNode *previous = NULL;
         q.push(root);
         while (!q.empty()) {
-            TreeLinkNode* p = q.front();
+            TreeLinkNode *p = q.front();
             if (previous != NULL) {
                 previous->next = p;
             }

@@ -19,7 +19,7 @@ public:
                 break;
             }
         }
-        TreeNode* root = new TreeNode(rootVal);
+        TreeNode *root = new TreeNode(rootVal);
         root->left = buildTreeDriver(preorder, preStart+1, preStart+rootIndex-inStart, inorder, inStart, rootIndex-1);
         root->right = buildTreeDriver(preorder, preStart+rootIndex-inStart+1, preEnd, inorder, rootIndex+1, inEnd);
         return root;

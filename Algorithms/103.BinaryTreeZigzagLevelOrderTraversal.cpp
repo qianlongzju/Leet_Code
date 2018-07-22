@@ -6,12 +6,12 @@ public:
             return result;
         }
         vector<int> v;
-        vector<TreeNode*> stack;
-        vector<TreeNode*> next_level_stack;
+        vector<TreeNode *> stack;
+        vector<TreeNode *> next_level_stack;
         stack.push_back(root);
         bool flag = false;
         while (!stack.empty()) {
-            TreeNode* p = stack.front();
+            TreeNode *p = stack.front();
             stack.erase(stack.begin());
             if (flag) {
                 v.insert(v.begin(), p->val);
