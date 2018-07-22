@@ -1,13 +1,3 @@
-/**
- * Definition for binary tree
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
 public class BSTIterator {
     private List<TreeNode> path;
     public BSTIterator(TreeNode root) {
@@ -35,9 +25,3 @@ public class BSTIterator {
         return result.val;
     }
 }
-
-/**
- * Your BSTIterator will be called like this:
- * BSTIterator i = new BSTIterator(root);
- * while (i.hasNext()) v[f()] = i.next();
- */
