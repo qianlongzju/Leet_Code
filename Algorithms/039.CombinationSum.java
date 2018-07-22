@@ -2,14 +2,14 @@ public class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        ArrayList<Integer> path = new ArrayList<Integer>();
+        List<Integer> path = new ArrayList<>();
         DFS(result, path, candidates, target, 0);
         return result;
     }
-    private void DFS(List<List<Integer>> result, ArrayList<Integer> path,
+    private void DFS(List<List<Integer>> result, List<Integer> path,
             int[] candidates, int target, int level) {
         if (target == 0) {
-            result.add((ArrayList<Integer>)path.clone());
+            result.add(new ArrayList<>(path));
             return;
         }
         for (int i = level; i < candidates.length; i++) {
@@ -20,8 +20,8 @@ public class Solution {
         }
     }
     /*
-    public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    public List<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
+        List<ArrayList<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(candidates);
         int[] index = new int[target+2];
         index[0] = candidates.length - 1;
@@ -34,7 +34,7 @@ public class Solution {
         if (target < 0)
             return ;
         if (target == 0) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            ArrayList<Integer> v = new ArrayList<>();
             for (int i = n; i >= 1; i--) {
                 v.add(candidates[index[i]]);
             }
@@ -48,8 +48,8 @@ public class Solution {
     }
     */
     /*
-    public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<ArrayList<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(candidates);
         int[] index = new int[target+2];
         index[0] = 0;
@@ -58,11 +58,11 @@ public class Solution {
     }
     
     void solve(int target, int sum, int[] candidates, int index[], 
-            int n, ArrayList<ArrayList<Integer>> result) {
+            int n, List<List<Integer>> result) {
         if (target < sum)
             return ;
         if (target == sum) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            List<Integer> v = new ArrayList<>();
             for (int i = 1; i <= n; i++) {
                 v.add(candidates[index[i]]);
             }

@@ -1,7 +1,7 @@
 public class Solution {
-    public ArrayList<String> restoreIpAddresses(String s) {
+    public List<String> restoreIpAddresses(String s) {
         int n = s.length();
-        ArrayList<String> v = new ArrayList<String>();
+        List<String> v = new ArrayList<>();
         String temp = "";
         for (int i=1; i <= 3 && i < n; i++) {
             int a = Integer.parseInt(s.substring(0, i));

@@ -2,12 +2,12 @@ public class Solution {
     public List<List<Integer>> subsetsWithDup(int[] num) {
         Arrays.sort(num);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<Integer> current = new ArrayList<Integer>();
+        List<Integer> current = new ArrayList<>();
         subsetsHelper(result, current, num, 0);
         return result;
     }
     private void subsetsHelper(List<List<Integer>> result, List<Integer> current, int[] S, int pos) {
-        result.add((List)((ArrayList)current).clone());
+        result.add(new ArrayList<>(current));
         for (int i = pos; i < S.length; i++) {
             if (i != pos && S[i] == S[i-1]) continue;
             current.add(S[i]);
@@ -16,13 +16,13 @@ public class Solution {
         }
     }
     /*
-    public ArrayList<ArrayList<Integer>> subsetsWithDup(int[] S) {
+    public List<List<Integer>> subsetsWithDup(int[] S) {
         Arrays.sort(S);        
         int n = S.length;
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        HashSet<ArrayList<Integer>> uniqueResult = new HashSet<ArrayList<Integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        Set<List<Integer>> uniqueResult = new HashSet<List<Integer>>();
         for (int i=0; i < Math.pow(2, n); i++) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            List<Integer> v = new ArrayList<>();
             int j = i;
             int k = 0;
             while (j != 0) {
@@ -34,7 +34,7 @@ public class Solution {
             }
             uniqueResult.add(v);
         }
-        for (ArrayList<Integer> a:uniqueResult) {
+        for (List<Integer> a:uniqueResult) {
             result.add(a);
         }
         return result;

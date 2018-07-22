@@ -23,7 +23,7 @@ public class Solution {
     }
     void bfs(char[][] board, int i, int j) {
         int n = board[0].length;
-        LinkedList<Integer> q = new LinkedList<Integer>();
+        List<Integer> q = new LinkedList<>();
         visit(board, i, j, q);
         while (!q.isEmpty()) {
             int x = q.remove();
@@ -35,7 +35,7 @@ public class Solution {
             visit(board, ii, jj+1, q);
         }
     }
-    void visit(char[][] board, int i, int j, LinkedList<Integer> q) {
+    void visit(char[][] board, int i, int j, List<Integer> q) {
         int m = board.length;
         int n = board[0].length;
         if (i < 0 || j < 0 || i >= m || j >= n || board[i][j] != 'O')

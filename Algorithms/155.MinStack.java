@@ -2,8 +2,8 @@ class MinStack {
     private Stack<Integer> data;
     private Stack<Integer> min;
     public MinStack() {
-        data = new Stack<Integer>();
-        min = new Stack<Integer>();
+        data = new Stack<>();
+        min = new Stack<>();
     }
     public void push(int x) {
         data.push(x);

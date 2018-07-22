@@ -20,7 +20,7 @@ public class LRUCache {
         tail = new Node(0, 0);
         head.next = tail;
         tail.pre = head;
-        m = new HashMap<Integer, Node>();
+        m = new HashMap<>();
     }
     
     public int get(int key) {

@@ -1,6 +1,6 @@
 public class Solution {
-    public ArrayList<Integer> spiralOrder(int[][] matrix) {
-        ArrayList<Integer> elements = new ArrayList<Integer>();
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> elements = new ArrayList<>();
         if (matrix.length == 0) return elements;
         int m = matrix.length, n = matrix[0].length;
         int row = 0, col = -1;
@@ -21,8 +21,8 @@ public class Solution {
         return elements;
     }
     /*
-    public ArrayList<Integer> spiralOrder(int[][] matrix) {
-        ArrayList<Integer> result = new ArrayList<Integer>();
+    public List<Integer> spiralOrder(int[][] matrix) {
+        List<Integer> result = new ArrayList<>();
         int m = matrix.length;
         if (m == 0) {
             return result;

@@ -9,7 +9,7 @@
  */
 public class Solution {
     public List<Interval> insert(List<Interval> intervals, Interval newInterval) {
-        List<Interval> result = new ArrayList<Interval>();
+        List<Interval> result = new ArrayList<>();
         int i = 0;
         while (i < intervals.size()) {
             if (newInterval.start > intervals.get(i).end) {

@@ -1,7 +1,7 @@
 public class Solution {
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        ArrayList<Integer> path = new ArrayList<Integer>();
+        List<Integer> path = new ArrayList<>();
         DFS(result, path, n, k, 1);
         return result;
     }
@@ -19,15 +19,15 @@ public class Solution {
         }
     }
     /*
-    public ArrayList<ArrayList<Integer>> combine(int n, int k) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> path = new ArrayList<Integer>();
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<Integer> path = new ArrayList<>();
         combine(n, k, 1, path, result);
         return result;
     }
-    void combine(int n, int k, int min, ArrayList<Integer> path, 
-            ArrayList<ArrayList<Integer>> result) {
-        ArrayList<Integer> clone_path = (ArrayList<Integer>)path.clone();
+    void combine(int n, int k, int min, List<Integer> path, 
+            List<List<Integer>> result) {
+        List<Integer> clone_path = new ArrayList<>(path);
         if (clone_path.size() == k) {
             result.add(clone_path);
             return;
@@ -41,11 +41,10 @@ public class Solution {
     }
     */
     /*
-    public ArrayList<ArrayList<Integer>> combine(int n, int k) {
-        
-        ArrayList<ArrayList<Integer> > result = new ArrayList<ArrayList<Integer>>();
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer> > result = new ArrayList<List<Integer>>();
         for (int i=0; i < Math.pow(2, n); i++) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            List<Integer> v = new ArrayList<>();
             int j = i;
             int p = 1;
             int q = 0;

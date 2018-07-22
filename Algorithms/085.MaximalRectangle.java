@@ -27,8 +27,8 @@ public class Solution {
         if (height.length < 1) {
             return 0;
         }
-        Stack<Integer> heights = new Stack<Integer>();
-        Stack<Integer> indexes = new Stack<Integer>();
+        Stack<Integer> heights = new Stack<>();
+        Stack<Integer> indexes = new Stack<>();
         heights.push(height[0]);
         indexes.push(0);
         int largestArea = height[0];

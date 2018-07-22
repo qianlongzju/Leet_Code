@@ -3,9 +3,9 @@ public class Solution {
         int mapping_size = 4;
         long seq_len = 10;
         int v = 0;
-        Set<Integer> keys = new HashSet<Integer>();
-        Set<String> result = new HashSet<String>();
-        List<String> result2 = new ArrayList<String>();
+        Set<Integer> keys = new HashSet<>();
+        Set<String> result = new HashSet<>();
+        List<String> result2 = new ArrayList<>();
         for (int i=0; i < s.length(); i ++) {
             int c = 0;
             if (s.charAt(i) == 'A')

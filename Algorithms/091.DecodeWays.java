@@ -1,11 +1,11 @@
 public class Solution {
     public int numDecodings(String s) {
-        HashMap<Integer, Integer> m = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> m = new HashMap<>();
         if (s.length() == 0)
             return 0;
         return numDecodings(s, 0, m);
     }
-    private int numDecodings(String s, int index, HashMap<Integer, Integer> m) {
+    private int numDecodings(String s, int index, Map<Integer, Integer> m) {
         if (m.get(index) != null) {
             return m.get(index);
         }

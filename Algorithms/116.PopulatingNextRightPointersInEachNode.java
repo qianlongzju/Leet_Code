@@ -22,8 +22,8 @@ public class Solution {
         if (root == null) {
             return ;
         }
-        Queue<TreeLinkNode> q = new LinkedList<TreeLinkNode>();
-        Queue<TreeLinkNode> next_level_q = new LinkedList<TreeLinkNode>();
+        Queue<TreeLinkNode> q = new LinkedList<>();
+        Queue<TreeLinkNode> next_level_q = new LinkedList<>();
         TreeLinkNode previous = null;
         q.add(root);
         while (q.size() != 0) {
@@ -41,7 +41,7 @@ public class Solution {
             if (q.size() == 0) {
                 p.next = null;
                 q = next_level_q;
-                next_level_q = new LinkedList<TreeLinkNode>();
+                next_level_q = new LinkedList<>();
                 previous = null;
             }
         }

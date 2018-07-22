@@ -1,7 +1,7 @@
 public class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> v = new ArrayList<Integer>();
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        List<Integer> v = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
         TreeNode p = root;
         while (!stack.empty() || p != null) {
             if (p != null) {
@@ -20,7 +20,7 @@ public class Solution {
     /*
     // recursive version
     public List<Integer> preorderTraversal(TreeNode root) {
-        List<Integer> v = new ArrayList<Integer>();
+        List<Integer> v = new ArrayList<>();
         if (root == null) {
             return v;
         }

@@ -1,6 +1,6 @@
 public class Solution {
     public int evalRPN(String[] tokens) {
-        Stack<Integer> stk = new Stack<Integer>();
+        Stack<Integer> stk = new Stack<>();
         for (int i=0; i < tokens.length; ++i) {
             if (tokens[i].equals("+")) {
                 int a = stk.peek();

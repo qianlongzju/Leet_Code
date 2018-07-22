@@ -2,12 +2,12 @@ public class Solution {
     public List<List<Integer>> subsets(int[] S) {
         Arrays.sort(S);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<Integer> current = new ArrayList<Integer>();
+        List<Integer> current = new ArrayList<>();
         subsetsHelper(result, current, S, 0);
         return result;
     }
     private void subsetsHelper(List<List<Integer>> result, List<Integer> current, int[] S, int pos) {
-        result.add((List)((ArrayList)current).clone());
+        result.add(new ArrayList<>(current));
         for (int i = pos; i < S.length; i++) {
             current.add(S[i]);
             subsetsHelper(result, current, S, i+1);
@@ -15,12 +15,12 @@ public class Solution {
         }
     }
     /*
-    public ArrayList<ArrayList<Integer>> subsets(int[] S) {
+    public List<List<Integer>> subsets(int[] S) {
         Arrays.sort(S);        
         int n = S.length;
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         for (int i=0; i < Math.pow(2, n); i++) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            List<Integer> v = new ArrayList<>();
             int j = i;
             int k = 0;
             while (j != 0) {

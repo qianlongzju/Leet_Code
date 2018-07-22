@@ -1,9 +1,9 @@
 public class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> v = new ArrayList<Integer>();
+        List<Integer> v = new ArrayList<>();
         if (root == null)
             return v;
-        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Stack<TreeNode> stack = new Stack<>();
         stack.push(root);
         TreeNode prevNode = null;
         while (!stack.empty()) {
@@ -32,7 +32,7 @@ public class Solution {
     /*
     // recursive version
     public List<Integer> postorderTraversal(TreeNode root) {
-        List<Integer> v = new ArrayList<Integer>();
+        List<Integer> v = new ArrayList<>();
         if (root == null) {
             return v;
         }

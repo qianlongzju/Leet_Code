@@ -11,8 +11,6 @@
  */
 public class Solution {
     public ListNode sortList(ListNode head) {
-        // IMPORTANT: Please reset any member data you declared, as
-        // the same Solution instance will be reused for each test case.
         int totalLength = genLength(head);
         if (totalLength == 0 || totalLength == 1) 
             return head;

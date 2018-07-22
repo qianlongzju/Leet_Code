@@ -1,6 +1,6 @@
 public class Solution {
     public ArrayList<String> generateParenthesis(int n) {
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
         String s = "";
         generateParenthesis(n, 0, 0, s, result);
         return result;

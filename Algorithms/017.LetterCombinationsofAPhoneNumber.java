@@ -1,7 +1,7 @@
 public class Solution {
     public List<String> letterCombinations(String digits) {
         String[] digitStrings = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        List<String> result = new ArrayList<String>();
+        List<String> result = new ArrayList<>();
         String phone = "";
         DFS(result, phone, digits, digitStrings, 0);
         return result;
@@ -20,9 +20,9 @@ public class Solution {
         }
     }
     /*
-    public ArrayList<String> letterCombinations(String digits) {
+    public List<String> letterCombinations(String digits) {
         String[] digitStrings = {"abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-        ArrayList<String> letters = new ArrayList<String>();
+        List<String> letters = new ArrayList<>();
         letters.add("");
         for (int i=0; i < digits.length(); i++){
             while (true){

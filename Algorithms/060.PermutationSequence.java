@@ -1,6 +1,6 @@
 public class Solution {
     public String getPermutation(int n, int k) {
-        ArrayList<Integer> s = new ArrayList<Integer>();
+        List<Integer> s = new ArrayList<>();
         for (int i=1; i <= n; i++) {
             s.add(i);
         }
@@ -13,7 +13,7 @@ public class Solution {
         }
         return result;
     }
-    private String getPermutation(ArrayList<Integer> s, int k) {
+    private String getPermutation(List<Integer> s, int k) {
         if (s.size() == 1) {
             return s.get(0) + "";
         }

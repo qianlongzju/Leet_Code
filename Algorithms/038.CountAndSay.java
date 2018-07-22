@@ -1,7 +1,7 @@
 public class Solution {
     public String countAndSay(int n) {
-        ArrayList<Integer> v = new ArrayList<Integer>();
-        ArrayList<Integer> w = new ArrayList<Integer>();
+        List<Integer> v = new ArrayList<>();
+        List<Integer> w = new ArrayList<>();
         String result = "";
         v.add(1);
         while (--n > 0) {
@@ -20,7 +20,7 @@ public class Solution {
             w.add(count);
             w.add(v.get(v.size()-1));
             v = w;
-            w = new ArrayList<Integer>();
+            w = new ArrayList<>();
         }
         for (int i = 0; i < v.size(); ++i)
         {

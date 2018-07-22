@@ -2,7 +2,7 @@ public class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        ArrayList<Integer> path = new ArrayList<Integer>();
+        List<Integer> path = new ArrayList<>();
         DFS(result, path, candidates, target, 0);
         return result;
     }
@@ -23,19 +23,19 @@ public class Solution {
     /*
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         Arrays.sort(candidates);
-        HashSet<List<Integer>> set_result = new HashSet<List<Integer>>();
+        Set<List<Integer>> set_result = new HashSet<List<Integer>>();
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        ArrayList<Integer> path = new ArrayList<Integer>();
+        List<Integer> path = new ArrayList<>();
         DFS(set_result, path, candidates, target, 0, 0);
         for (List<Integer> a: set_result) {
             result.add(a);
         }
         return result;
     }
-    private void DFS(HashSet<List<Integer>> result, ArrayList<Integer> path,
+    private void DFS(Set<List<Integer>> result, List<Integer> path,
             int[] candidates, int target, int level, int sum) {
         if (sum == target) {
-            result.add((ArrayList<Integer>)path.clone());
+            result.add(new ArrayList<>(path));
         }
         if (sum > target) return;
         for (int i = level; i < candidates.length; i++) {
@@ -46,25 +46,25 @@ public class Solution {
     }
     */
     /*
-    public ArrayList<ArrayList<Integer>> combinationSum2(int[] candidates, int target) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        HashSet<ArrayList<Integer>> temp = new HashSet<ArrayList<Integer>>();
+    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        Set<List<Integer>> temp = new HashSet<List<Integer>>();
         Arrays.sort(candidates);
         int[] index = new int[target+2];
         index[0] = candidates.length;
         solve(target, candidates, index, 0, temp);
-        for (ArrayList<Integer> a:temp) {
+        for (List<Integer> a:temp) {
             result.add(a);
         }
         return result;
     }
     
     void solve(int target, int[] candidates, int index[], 
-            int n, HashSet<ArrayList<Integer>> result) {
+            int n, Set<List<Integer>> result) {
         if (target < 0)
             return ;
         if (target == 0) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            List<Integer> v = new ArrayList<>();
             for (int i = n; i >= 1; i--) {
                 v.add(candidates[index[i]]);
             }
@@ -78,8 +78,8 @@ public class Solution {
     }
     */
     /*
-    public ArrayList<ArrayList<Integer>> combinationSum(int[] candidates, int target) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
         Arrays.sort(candidates);
         int[] index = new int[target+2];
         index[0] = 0;
@@ -88,11 +88,11 @@ public class Solution {
     }
     
     void solve(int target, int sum, int[] candidates, int index[], 
-            int n, ArrayList<ArrayList<Integer>> result) {
+            int n, List<List<Integer>> result) {
         if (target < sum)
             return ;
         if (target == sum) {
-            ArrayList<Integer> v = new ArrayList<Integer>();
+            List<Integer> v = new ArrayList<>();
             for (int i = 1; i <= n; i++) {
                 v.add(candidates[index[i]]);
             }

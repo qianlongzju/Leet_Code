@@ -9,10 +9,10 @@
  */
 class Solution {
     public List<Integer> largestValues(TreeNode root) {
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         if (root == null) return result;
-        List<TreeNode> cur_level = new ArrayList<TreeNode>();
-        List<TreeNode> next_level = new ArrayList<TreeNode>();
+        List<TreeNode> cur_level = new ArrayList<>();
+        List<TreeNode> next_level = new ArrayList<>();
         cur_level.add(root);
         int maximum = root.val;
         while(cur_level.size() != 0) {
@@ -25,7 +25,7 @@ class Solution {
                 result.add(maximum);
                 if (next_level.size() == 0) break;
                 cur_level = next_level;
-                next_level = new ArrayList<TreeNode>();
+                next_level = new ArrayList<>();
                 maximum = cur_level.get(0).val;
             }
         }

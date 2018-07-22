@@ -9,12 +9,12 @@
  */
 
 public class BSTIterator {
-	private ArrayList<TreeNode> path;
+    private List<TreeNode> path;
     public BSTIterator(TreeNode root) {
-    	path = new ArrayList<TreeNode>();
+        path = new ArrayList<>();
         while (root != null) {
-        	path.add(root);
-        	root = root.left;
+            path.add(root);
+            root = root.left;
         }
     }
 
@@ -29,8 +29,8 @@ public class BSTIterator {
         path.remove(path.size()-1);
         TreeNode temp = result.right;
         while (temp != null) {
-        	path.add(temp);
-        	temp = temp.left;
+            path.add(temp);
+            temp = temp.left;
         }
         return result.val;
     }

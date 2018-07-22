@@ -1,6 +1,5 @@
 public class Solution {
     public String minWindow(String S, String T) {
-        // Note: The Solution object is instantiated only once and is reused by each test case.
         int[] needToFind = new int[256];
         int[] hasFound = new int[256];
         for (int i=0; i < 256; ++i) {

@@ -1,6 +1,6 @@
 class Solution {
     public int rob(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> map = new HashMap<>();
         return rob(nums, 0, map);
     }
     private int rob(int[] nums, int index, Map<Integer, Integer> map) {

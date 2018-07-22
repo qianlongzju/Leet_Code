@@ -2,7 +2,7 @@ public class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
         Set<List<Integer>> quadplets = new HashSet<List<Integer>>();
-        List<Integer> quadplet = new ArrayList<Integer>();
+        List<Integer> quadplet = new ArrayList<>();
         Arrays.sort(nums);
         int n = nums.length;
         for (int i = 0; i < n; i++) {

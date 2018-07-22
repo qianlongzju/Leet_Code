@@ -2,15 +2,15 @@ public class Solution {
     public List<List<Integer>> permuteUnique(int[] num) {
         Arrays.sort(num);
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        ArrayList<Integer> permutation = new ArrayList<Integer>();
+        List<Integer> permutation = new ArrayList<>();
         boolean[] isVisited = new boolean[num.length];
         DFS(result, permutation, num, isVisited);
         return result;
     }
-    private void DFS(List<List<Integer>> result, ArrayList<Integer> permutation,
+    private void DFS(List<List<Integer>> result, List<Integer> permutation,
                         int[] num, boolean[] isVisited) {
         if (permutation.size() == num.length) {
-            result.add((ArrayList<Integer>)permutation.clone());
+            result.add(new ArrayList<>(permutation));
             return;
         }
         for (int i = 0; i < num.length; i++) {
@@ -24,10 +24,10 @@ public class Solution {
         }
     }
     /*
-    public ArrayList<ArrayList<Integer>> permuteUnique(int[] num) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        HashSet<ArrayList<Integer>> uniqueResult = new HashSet<ArrayList<Integer>>();
-        ArrayList<Integer> temp = new ArrayList<Integer>();
+    public List<List<Integer>> permuteUnique(int[] num) {
+        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        Set<List<Integer>> uniqueResult = new HashSet<List<Integer>>();
+        List<Integer> temp = new ArrayList<>();
         if (num.length == 1) {
             temp.add(num[0]);
             result.add(temp);
@@ -37,15 +37,15 @@ public class Solution {
         for (int i=0; i < sub.length; i++) {
             sub[i] = num[i+1];
         }
-        ArrayList<ArrayList<Integer>> v = permuteUnique(sub);
+        List<List<Integer>> v = permuteUnique(sub);
         for (int i=0; i < v.size(); ++i) {
             for (int j=0; j <= v.get(i).size(); j++) {
-                temp = (ArrayList<Integer>)v.get(i).clone();
+                temp = new ArrayList<>(v.get(i));
                 temp.add(j, num[0]);
                 uniqueResult.add(temp);
             }
         }
-        for (ArrayList<Integer> a:uniqueResult) {
+        for (List<Integer> a:uniqueResult) {
             result.add(a);
         }
         return result;

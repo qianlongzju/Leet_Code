@@ -1,6 +1,6 @@
 public class Solution {
     public int longestValidParentheses(String s) {
-        Stack<Integer> stk = new Stack<Integer>();
+        Stack<Integer> stk = new Stack<>();
         char[] ss = new char[s.length()];
         for (int i = 0; i < s.length(); ++i) {
             ss[i] = '#';

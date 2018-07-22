@@ -11,8 +11,8 @@ public class Solution {
                 return result + (numerator / denominator);
             result += (numerator / denominator) + ".";
             numerator %= denominator;
-            ArrayList<Long> reminders = new ArrayList<Long>();
-            ArrayList<Long> numerators = new ArrayList<Long>();
+            List<Long> reminders = new ArrayList<>();
+            List<Long> numerators = new ArrayList<>();
             numerators.add(numerator);
             numerator *= 10;
             while (numerator != 0) {

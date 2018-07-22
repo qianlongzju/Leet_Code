@@ -2,8 +2,8 @@ class MyStack {
     List<Integer> a, b;
     /** Initialize your data structure here. */
     public MyStack() {
-        a = new ArrayList<Integer>();
-        b = new ArrayList<Integer>();
+        a = new ArrayList<>();
+        b = new ArrayList<>();
     }
     
     /** Push element x onto stack. */
@@ -19,7 +19,7 @@ class MyStack {
     public int pop() {
         if (b.size() != 0) {
             a = b;
-            b = new ArrayList<Integer>();
+            b = new ArrayList<>();
         }
         int t;
         while (a.size() > 1) {
@@ -36,7 +36,7 @@ class MyStack {
     public int top() {
         if (b.size() != 0) {
             a = b;
-            b = new ArrayList<Integer>();
+            b = new ArrayList<>();
         }
         int t;
         while (a.size() > 1) {

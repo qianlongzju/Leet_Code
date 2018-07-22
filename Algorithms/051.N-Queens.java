@@ -29,7 +29,7 @@ class Solution {
         return true;
     }
     List<String> getBoard(int[] num) {
-        List<String> board = new ArrayList<String>();
+        List<String> board = new ArrayList<>();
         for (int i=0; i < num.length; i++) {
             String s = "";
             for (int j=0; j < num.length; j++) {

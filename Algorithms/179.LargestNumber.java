@@ -1,6 +1,6 @@
 public class Solution {
     public String largestNumber(int[] num) {
-        List<Integer> new_num = new ArrayList<Integer>();
+        List<Integer> new_num = new ArrayList<>();
         for (int i=0; i < num.length; i++) {
             new_num.add(num[i]);
         }

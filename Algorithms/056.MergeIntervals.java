@@ -19,7 +19,7 @@ public class Solution {
                 return a.start - b.start;
             }
         });
-        List<Interval> result = new ArrayList<Interval>();
+        List<Interval> result = new ArrayList<>();
         Interval v = intervals.get(0);
         int i = 1;
         while (i < intervals.size()) {

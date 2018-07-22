@@ -20,9 +20,9 @@ public class Solution {
             }
             if (stack.size() == 0) {
                 stack = next_level_stack;
-                next_level_stack = new ArrayList<TreeNode>();
+                next_level_stack = new ArrayList<>();
                 result.add(v);
-                v = new ArrayList<Integer>();
+                v = new ArrayList<>();
             }
         }
         return result;
