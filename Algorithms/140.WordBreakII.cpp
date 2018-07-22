@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<string> wordBreak(string s, unordered_set<string>& wordDict) {
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
         // 长度为 n 的字符串有 n+1 个隔板
         vector<bool> f(s.length() + 1, false);
         // path[i][j] 为 true,表示 s[j, i) 是一个合法单词,可以从 j 处切开
@@ -9,7 +9,7 @@ public:
         f[0] = true;
         for (int i = 1; i <= s.length(); ++i) {
             for (int j = i - 1; j >= 0; --j) {
-                if (f[j] && wordDict.find(s.substr(j, i - j)) != wordDict.end()) {
+                if (f[j] && std::find(wordDict.beign(), wordDict.end(), s.substr(j, i - j)) != wordDict.end()) {
                     f[i] = true;
                     prev[i][j] = true;
                 }
@@ -22,8 +22,8 @@ public:
     }
 private:
     // DFS 遍历树,生成路径
-    void gen_path(const string &s, const vector<vector<bool> > &prev,
-            int cur, vector<string> &path, vector<string> &result) {
+    void gen_path(const string& s, const vector<vector<bool>>& prev,
+            int cur, vector<string>& path, vector<string>& result) {
         if (cur == 0) {
             string tmp;
             for (auto iter = path.rbegin(); iter != path.rend(); ++iter)
@@ -40,21 +40,21 @@ private:
         }
     }
     /*
-    vector<string> wordBreak(string s, unordered_set<string> &dict) {
+    vector<string> wordBreak(string s, vector<string>& wordDict) {
         vector<string> r;
         int n = s.size();
-        if (n == 0 || dict.size() == 0)
+        if (n == 0 || wordDict.size() == 0)
             return r;
         vector<bool> wb(n, false);
         vector<vector<bool> > prev(n, vector<bool>(n, false));
         for (int i=0; i < n; ++i) {
-            if (wb[i] == false && dict.find(s.substr(0, i+1)) != dict.end()) {
+            if (wb[i] == false && std::find(wordDict.begin(), wordDict.end(), s.substr(0, i+1)) != wordDict.end()) {
                 wb[i] = true;
                 prev[0][i] = true;
             }
             if (wb[i] == true) {
                 for (int j=i+1; j < n; ++j) {
-                    if (dict.find(s.substr(i+1, (j+1)-(i+1))) != dict.end()) {
+                    if (std::find(wordDict.begin(), wordDict.end(), s.substr(i+1, (j+1)-(i+1))) != wordDict.end()) {
                         wb[j] = true;
                         prev[i][j] = true;
                     }
@@ -69,8 +69,8 @@ private:
         }
         return r;
     }
-    void buildPaths(int cur, string &s, vector<vector<bool> > &prev,
-            vector<string> &path, set<string> &result, vector<bool> &wb) {
+    void buildPaths(int cur, string& s, vector<vector<bool>>& prev,
+            vector<string>& path, set<string>& result, vector<bool>& wb) {
         if (cur == (s.size()-1)) {
             if (path.size() != 0) { 
                 string p;

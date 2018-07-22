@@ -1,5 +1,5 @@
 public class Solution {
-    public List<String> wordBreak(String s, Set<String> wordDict) {
+    public List<String> wordBreak(String s, List<String> wordDict) {
         // 长度为 n 的字符串有 n+1 个隔板
         int n = s.length();
         boolean[] f = new boolean[n+1];
