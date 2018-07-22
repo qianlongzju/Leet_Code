@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<Interval> insert(vector<Interval> &intervals, Interval newInterval) {
+    vector<Interval> insert(vector<Interval>& intervals, Interval newInterval) {
         vector<Interval> result;
         int i = 0;
         while (i < intervals.size()) {

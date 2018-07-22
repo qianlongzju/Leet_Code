@@ -7,7 +7,7 @@ public:
         return result;
     }
     void generateParenthesis(int n, int left, int right, string s,
-            vector<string> &result) {
+            vector<string>& result) {
         if (left == n && right == n) {
             result.push_back(s);
             return;

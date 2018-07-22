@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool solveSudoku(vector<vector<char>> &board) {
+    bool solveSudoku(vector<vector<char>>& board) {
         for (int i=0; i < 9; ++i) {
             for (int j=0; j < 9; ++j) {
                 if (board[i][j] == '.') {
@@ -16,7 +16,7 @@ public:
         }
         return true;
     }
-    bool isValid(vector<vector<char>> &board, int x, int y) {
+    bool isValid(vector<vector<char>>& board, int x, int y) {
         for (int i=0; i < 9; i++)
             if (i != x && board[i][y] == board[x][y])
                 return false;

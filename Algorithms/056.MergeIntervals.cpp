@@ -14,7 +14,7 @@ public:
             return a.end < b.end;
         return a.start < b.start;
     }
-    vector<Interval> merge(vector<Interval> &intervals) {
+    vector<Interval> merge(vector<Interval>& intervals) {
         if (intervals.size() <= 1) {
             return intervals;
         }

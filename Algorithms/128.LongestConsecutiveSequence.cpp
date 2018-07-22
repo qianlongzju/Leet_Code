@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int longestConsecutive(vector<int> &num) {
+    int longestConsecutive(vector<int>& num) {
         unordered_set<int> m;
         for (auto i: num)
             m.insert(i);

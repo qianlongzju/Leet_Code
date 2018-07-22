@@ -1,17 +1,17 @@
 int buckets[10000000];
 class Solution {
 public:
-    int maximumGap(vector<int> &num) {
-        int n = num.size();
+    int maximumGap(vector<int>& nums) {
+        int n = nums.size();
         if (n < 2)
             return 0;
-        int A = num[0];
-        int B = num[0];
+        int A = nums[0];
+        int B = nums[0];
         for (int i=0; i < n; i++) {
-            if (num[i] > A) 
-                A = num[i];
-            if (num[i] < B) 
-                B = num[i];
+            if (nums[i] > A) 
+                A = nums[i];
+            if (nums[i] < B) 
+                B = nums[i];
         }
         int bucketRange = int(((A - B)*1.0 / (n - 1)) + 0.5);
         if (bucketRange < 1)
@@ -20,16 +20,16 @@ public:
         for (int i = 0; i < 2*n; i++)
             buckets[i] = -1;
         for (int i = 0; i < n; i++) {
-            int loc = int(((num[i] - B)*1.0 / bucketRange) + 0.5);
+            int loc = int(((nums[i] - B)*1.0 / bucketRange) + 0.5);
             if (buckets[loc*2] == -1) {
-                buckets[loc*2] = num[i];
-                buckets[loc*2+1] = num[i];
+                buckets[loc*2] = nums[i];
+                buckets[loc*2+1] = nums[i];
                 continue;
             }
-            if (buckets[loc*2] > num[i])
-                buckets[loc*2] = num[i];
-            if (buckets[loc*2+1] < num[i])
-                buckets[loc*2+1] = num[i];
+            if (buckets[loc*2] > nums[i])
+                buckets[loc*2] = nums[i];
+            if (buckets[loc*2+1] < nums[i])
+                buckets[loc*2+1] = nums[i];
         }
         int maxGap = 0;
         int i = 0; 

@@ -5,7 +5,7 @@ public:
         maxPathSum(root, max_path_sum); 
         return max_path_sum;
     }
-    int maxPathSum(TreeNode *root, int &max_path_sum) {
+    int maxPathSum(TreeNode *root, int& max_path_sum) {
         if (root == NULL) return 0;
         int left = maxPathSum(root->left, max_path_sum);
         int right = maxPathSum(root->right, max_path_sum);

@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int threeSumClosest(vector<int> &num, int target) {
+    int threeSumClosest(vector<int>& num, int target) {
         sort(num.begin(), num.end());
         int n = num.size();
         int lowestGap = INT_MAX;

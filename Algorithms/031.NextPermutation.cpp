@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void nextPermutation(vector<int> &num) {
+    void nextPermutation(vector<int>& num) {
         for (int i=num.size()-1; i > 0; i--) {
             if (num[i] <= num[i-1]) {
                 continue;

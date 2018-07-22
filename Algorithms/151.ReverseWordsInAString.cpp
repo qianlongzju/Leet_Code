@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void reverseWords(string &s) {
+    void reverseWords(string& s) {
         // remove beginning spaces
         while (!s.empty() && s.front() == ' ')
             s.erase(s.begin());

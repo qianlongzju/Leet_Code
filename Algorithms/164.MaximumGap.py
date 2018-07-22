@@ -1,22 +1,22 @@
 class Solution:
-    # @param num, a list of integer
+    # @param nums, a list of integer
     # @return an integer
-    def maximumGap(self, num):
-        if len(num) < 2:
+    def maximumGap(self, nums):
+        if len(nums) < 2:
             return 0
-        A = max(num)
-        B = min(num)
-        bucketRange = max(1, int(math.ceil((A - B) / (len(num) - 1))))
+        A = max(nums)
+        B = min(nums)
+        bucketRange = max(1, int(math.ceil((A - B) / (len(nums) - 1))))
         bucketLen = int(math.ceil((A - B) / bucketRange))
         buckets = [None] * (bucketLen + 1)
-        for number in num:
-            loc = int(math.ceil((number - B) / bucketRange))
+        for numsber in nums:
+            loc = int(math.ceil((numsber - B) / bucketRange))
             bucket = buckets[loc]
             if bucket:
-                bucket['min'] = min(bucket['min'], number)
-                bucket['max'] = max(bucket['max'], number)
+                bucket['min'] = min(bucket['min'], numsber)
+                bucket['max'] = max(bucket['max'], numsber)
             else:
-                bucket = {'min':number, 'max':number}
+                bucket = {'min':numsber, 'max':numsber}
                 buckets[loc] = bucket
         maxGap = 0
         for i in range(len(buckets)):

@@ -7,7 +7,7 @@ public:
         solveNQueens(0, n, num, result);
         return result;
     }
-    void solveNQueens(int index, int n, int *num, int &result) {
+    void solveNQueens(int index, int n, int *num, int& result) {
         if (index == n) {
             result ++;
             return;
@@ -54,8 +54,8 @@ public:
         }
         return true;
     }
-    void permute(vector<int> &num, int index,
-            vector<vector<int>> &result) {
+    void permute(vector<int>& num, int index,
+            vector<vector<int>>& result) {
         if (num.size() == index) {
             result.push_back(num);
             return;

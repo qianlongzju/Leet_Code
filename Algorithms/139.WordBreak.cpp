@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool wordBreak(string s, vector<string> &wordDict) {
+    bool wordBreak(string s, vector<string>& wordDict) {
         int n = s.size();
         bool wb[n];
         memset(wb, false, n);

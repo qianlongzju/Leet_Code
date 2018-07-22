@@ -7,7 +7,7 @@ public:
         DFS(result, phone, digits, digitStrings, 0);
         return result;
     }
-    void DFS(vector<string> &result, string phone, string digits, string digitStrings[], int level) {
+    void DFS(vector<string>& result, string phone, string digits, string digitStrings[], int level) {
         if (level == digits.size()) {
             if (level != 0) result.push_back(phone);
             return;

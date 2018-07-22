@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int candy(vector<int> &ratings) {
+    int candy(vector<int>& ratings) {
         if (ratings.size() == 1)
             return 1;
         vector<int> result(ratings.size(), 0);

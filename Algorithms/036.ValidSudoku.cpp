@@ -1,6 +1,6 @@
 class Solution {
 public:
-    bool isValidSudoku(vector<vector<char>> &board) {
+    bool isValidSudoku(vector<vector<char>>& board) {
         bool used[9];
         for (int i=0; i < 9; ++i) {
             fill(used, used+9, false);

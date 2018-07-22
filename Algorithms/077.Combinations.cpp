@@ -6,7 +6,7 @@ public:
         DFS(result, path, n, k, 1);
         return result;
     }
-    void DFS(vector<vector<int>> &result,
+    void DFS(vector<vector<int>>& result,
             vector<int> path, 
             int n, int k, int min) {
         if (path.size() == k) {
@@ -26,7 +26,7 @@ public:
         combine(result, path, n, k, 1);
         return result;
     }
-    void combine(vector<vector<int>> &result,
+    void combine(vector<vector<int>>& result,
             vector<int> path, 
             int n, int k, int min) {
         if (path.size() == k) {

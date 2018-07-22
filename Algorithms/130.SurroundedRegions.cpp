@@ -23,7 +23,7 @@ public:
             }
         }
     }
-    void bfs(vector<vector<char>> &board, int i, int j) {
+    void bfs(vector<vector<char>>& board, int i, int j) {
         int n = board[0].size();
         queue<int> q;
         visit(board, i, j, q);
@@ -37,7 +37,7 @@ public:
             visit(board, ii, jj+1, q);
         }
     }
-    void visit(vector<vector<char>> &board, int i, int j, queue<int> &q) {
+    void visit(vector<vector<char>>& board, int i, int j, queue<int>& q) {
         int m = board.size();
         int n = board[0].size();
         if (i < 0 || j < 0 || i >= m || j >= n || board[i][j] != 'O')

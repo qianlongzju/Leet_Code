@@ -6,7 +6,7 @@ public:
         solveNQueens(n, num, result, 0);
         return result;
     }
-    void solveNQueens(int n, vector<int> &num, vector<vector<string>> &result, int level) {
+    void solveNQueens(int n, vector<int>& num, vector<vector<string>>& result, int level) {
         if (level == n) {
             result.push_back(getBoard(num));
             return;
@@ -17,7 +17,7 @@ public:
                 solveNQueens(n, num, result, level+1);
         }
     }
-    bool isValid(vector<int> &num, int index) {
+    bool isValid(vector<int>& num, int index) {
         for (int i=0; i < index; ++i) {
             if (num[i] == num[index])
                 return false;
@@ -26,7 +26,7 @@ public:
         }
         return true;
     }
-    vector<string> getBoard(vector<int> &num) {
+    vector<string> getBoard(vector<int>& num) {
         vector<string> board;
         for (int i=0; i < num.size(); i++) {
             string s = "";
@@ -48,7 +48,7 @@ public:
         solveNQueens(n, num, result);
         return result;
     }
-    void solveNQueens(int n, vector<int> &num, vector<vector<string>> &result) {
+    void solveNQueens(int n, vector<int>& num, vector<vector<string>>& result) {
         for (int i=0; i < n; ++i) {
             if (num[i] != 0)
                 continue;
@@ -62,7 +62,7 @@ public:
         }
         result.push_back(getBoard(num));
     }
-    bool isValid(vector<int> &num, int index) {
+    bool isValid(vector<int>& num, int index) {
         for (int i=0; i < index; ++i) {
             if (num[i] == num[index])
                 return false;
@@ -71,7 +71,7 @@ public:
         }
         return true;
     }
-    vector<string> getBoard(vector<int> &num) {
+    vector<string> getBoard(vector<int>& num) {
         vector<string> board;
         for (int i=0; i < num.size(); i++) {
             string s = "";
@@ -132,8 +132,8 @@ public:
         }
         return result;
     }
-    void permute(vector<int> &num, int index,
-            vector<vector<int>> &result) {
+    void permute(vector<int>& num, int index,
+            vector<vector<int>>& result) {
         if (num.size() == index) {
             result.push_back(num);
             return;

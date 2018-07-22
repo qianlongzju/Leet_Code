@@ -1,6 +1,6 @@
 class Solution {
 public:
-    vector<vector<int>> permuteUnique(vector<int> &num) {
+    vector<vector<int>> permuteUnique(vector<int>& num) {
         sort(num.begin(), num.end());
         vector<vector<int>> result;
         vector<int> permutation;
@@ -8,7 +8,7 @@ public:
         DFS(result, permutation, num, isVisited);
         return result;
     }
-    void DFS(vector<vector<int>> &result, vector<int> permutation, vector<int> &num, vector<bool> &isVisited) {
+    void DFS(vector<vector<int>>& result, vector<int>& permutation, vector<int>& num, vector<bool>& isVisited) {
         if (permutation.size() == num.size()) {
             result.push_back(permutation);
             return;
@@ -24,7 +24,7 @@ public:
         }
     }
     /*
-    vector<vector<int>> permuteUnique(vector<int> &num) {
+    vector<vector<int>> permuteUnique(vector<int>& num) {
         vector<vector<int>> result;
         set<vector<int>> uniqueResult;
         vector<int> temp;

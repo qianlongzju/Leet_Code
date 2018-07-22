@@ -21,7 +21,7 @@ private:
         return nextLevelNextNode(root, root->left);
     }
 
-    TreeLinkNode* nextLevelNextNode(TreeLinkNode* &root, TreeLinkNode* curr_node) {
+    TreeLinkNode* nextLevelNextNode(TreeLinkNode* root, TreeLinkNode* curr_node) {
         if (root->left == curr_node && root->right != NULL) {
             return root->right;
         }

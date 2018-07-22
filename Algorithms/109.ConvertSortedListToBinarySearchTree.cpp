@@ -10,7 +10,7 @@ public:
         return sortedListToBST(head, 0, length-1);
     }
 
-    TreeNode* sortedListToBST(ListNode* &list, int start, int end) {
+    TreeNode* sortedListToBST(ListNode* list, int start, int end) {
         if (start > end) return NULL;
         int mid = start + (end - start) / 2;
         TreeNode *leftChild = sortedListToBST(list, start, mid-1);

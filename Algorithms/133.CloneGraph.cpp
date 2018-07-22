@@ -5,7 +5,7 @@ public:
         unordered_map<UndirectedGraphNode *, UndirectedGraphNode *> map;
         return dfs(node, map);
     }
-    UndirectedGraphNode *dfs(UndirectedGraphNode* node, unordered_map<UndirectedGraphNode *, UndirectedGraphNode *> &map) {
+    UndirectedGraphNode *dfs(UndirectedGraphNode* node, unordered_map<UndirectedGraphNode *, UndirectedGraphNode *>& map) {
         if (map.find(node) != map.end()) return map[node];
         UndirectedGraphNode* copyNode = new UndirectedGraphNode(node->label);
         map[node] = copyNode;

@@ -6,8 +6,8 @@ public:
         path_sum(root, sum, path, result);
         return result;
     }
-    void path_sum(TreeNode *root, int sum, vector<int> &path, 
-            vector<vector<int>> &result) {
+    void path_sum(TreeNode *root, int sum, vector<int>& path, 
+            vector<vector<int>>& result) {
         if (root == NULL) {
             return;
         }

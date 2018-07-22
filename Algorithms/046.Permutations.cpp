@@ -1,13 +1,13 @@
 class Solution {
 public:
-    vector<vector<int>> permute(vector<int> &num) {
+    vector<vector<int>> permute(vector<int>& num) {
         vector<vector<int>> result;
         vector<int> permutation;
         vector<bool> isVisited(num.size(), false);
         DFS(result, permutation, num, isVisited);
         return result;
     }
-    void DFS(vector<vector<int>> &result, vector<int> permutation, vector<int> &num, vector<bool> &isVisited) {
+    void DFS(vector<vector<int>>& result, vector<int>& permutation, vector<int>& num, vector<bool>& isVisited) {
         if (permutation.size() == num.size()) {
             result.push_back(permutation);
             return;
@@ -22,13 +22,13 @@ public:
         }
     }
     /*
-    vector<vector<int>> permute(vector<int> &num) {
+    vector<vector<int>> permute(vector<int>& num) {
         vector<vector<int>> result;
         permute(num, 0, result);
         return result;
     }
-    void permute(vector<int> &num, int index,
-            vector<vector<int>> &result) {
+    void permute(vector<int>& num, int index,
+            vector<vector<int>>& result) {
         if (num.size() == index) {
             result.push_back(num);
             return;
@@ -45,7 +45,7 @@ public:
     }
     */
     /*
-    vector<vector<int>> permute(vector<int> &num) {
+    vector<vector<int>> permute(vector<int>& num) {
         vector<vector<int>> result;
         vector<int> temp;
         if (num.size() == 1) {
@@ -70,7 +70,7 @@ public:
         }
         return result;
     }
-    vector<vector<int>> permute(vector<int> &num) {
+    vector<vector<int>> permute(vector<int>& num) {
         vector<vector<int>> result;
         vector<int> temp;
         if (num.size() == 1) {

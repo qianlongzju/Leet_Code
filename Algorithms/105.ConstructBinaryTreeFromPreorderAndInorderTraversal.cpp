@@ -1,9 +1,9 @@
 class Solution {
 public:
-    TreeNode *buildTree(vector<int> &preorder, vector<int> &inorder) {
+    TreeNode *buildTree(vector<int>& preorder, vector<int>& inorder) {
         return buildTreeDriver(preorder, 0, preorder.size()-1, inorder, 0, inorder.size()-1);
     }
-    TreeNode *buildTreeDriver(vector<int> &preorder, int preStart, int preEnd, vector<int> &inorder, int inStart, int inEnd) {
+    TreeNode *buildTreeDriver(vector<int>& preorder, int preStart, int preEnd, vector<int>& inorder, int inStart, int inEnd) {
         if (preStart > preEnd) {
             return NULL;
         }

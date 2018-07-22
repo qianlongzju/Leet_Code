@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int maximalRectangle(vector<vector<char>> &matrix) {
+    int maximalRectangle(vector<vector<char>>& matrix) {
         int m = matrix.size();
         if (m == 0)
             return 0;
@@ -24,7 +24,7 @@ public:
         }
         return maxArea;
     }
-    int largestRectangleArea(vector<int> &height) {
+    int largestRectangleArea(vector<int>& height) {
         if (height.size() == 0) {
             return 0;
         }

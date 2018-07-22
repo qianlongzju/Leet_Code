@@ -6,7 +6,7 @@ public:
             return 0;
         return numDecodings(s, 0, m);
     }
-    int numDecodings(string s, int index, map<int, int> &m) {
+    int numDecodings(string s, int index, map<int, int>& m) {
         if (m.find(index) != m.end()) {
             return m[index];
         }

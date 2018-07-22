@@ -1,6 +1,6 @@
 class Solution {
     public:
-        string largestNumber(vector<int> &num) {
+        string largestNumber(vector<int>& num) {
             sort(num.begin(), num.end(), cmp);
             if (num[0] == 0)
                 return "0";

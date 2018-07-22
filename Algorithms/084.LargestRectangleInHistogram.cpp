@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int largestRectangleArea(vector<int> &height) {
+    int largestRectangleArea(vector<int>& height) {
         if (height.size() == 0) {
             return 0;
         }
