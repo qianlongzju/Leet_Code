@@ -1,9 +1,9 @@
-class TreeLinkNode:
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-        self.next = None
+# class TreeLinkNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+#         self.next = None
 class Solution:
     # @param root, a tree link node
     # @return nothing
@@ -31,14 +31,3 @@ class Solution:
             if root.left: return root, root.left
             if root.right: return root, root.right
         return root, None
-
-A = TreeLinkNode(1)
-B = TreeLinkNode(2)
-C = TreeLinkNode(3)
-D = TreeLinkNode(4)
-E = TreeLinkNode(5)
-A.left, A.right = B, C
-B.left = D
-C.right = E
-S = Solution()
-S.connect(A)
