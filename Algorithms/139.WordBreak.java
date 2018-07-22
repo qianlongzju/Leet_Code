@@ -1,5 +1,5 @@
 public class Solution {
-    public boolean wordBreak(String s, Set<String> wordDict) {
+    public boolean wordBreak(String s, List<String> wordDict) {
         int n = s.length();
         boolean[] wb = new boolean[n];
         for (int i = 0; i < n; i++) {
