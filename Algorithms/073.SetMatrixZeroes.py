@@ -1,7 +1,9 @@
-class Solution:
-    # @param matrix, a list of lists of integers
-    # RETURN NOTHING, MODIFY matrix IN PLACE.
+class Solution(object):
     def setZeroes(self, matrix):
+        """
+        :type matrix: List[List[int]]
+        :rtype: void Do not return anything, modify matrix in-place instead.
+        """
         M = len(matrix)
         N = len(matrix[0])
         setFirstRowZeroes = False
@@ -33,4 +35,3 @@ class Solution:
         if setFirstColZeroes:
             for i in range(M):
                 matrix[i][0] = 0
-        return matrix
