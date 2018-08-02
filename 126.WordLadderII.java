@@ -1,12 +1,12 @@
 public class Solution {
     public List<List<String>> findLadders(String start, String end, Set<String> dict) {
         List<List<String>> result = new ArrayList<List<String>>();
-        LinkedList<String> q = new LinkedList<String>();
+        List<String> q = new LinkedList<>();
         q.add(start);
-        HashSet<String> visited = new HashSet<String>();
+        Set<String> visited = new HashSet<>();
         visited.add(start);
-        HashMap<String, ArrayList<String>> m = new HashMap<String, ArrayList<String>>();
-        HashMap<String, Integer> level = new HashMap<String, Integer>();
+        Map<String, List<String>> m = new HashMap<>();
+        Map<String, Integer> level = new HashMap<>();
         level.put(start, 1);
         int maxLevel = -1;
         while (!q.isEmpty()) {
@@ -25,14 +25,14 @@ public class Solution {
                     if (temp.equals(end)) {
                         maxLevel = level.get(tmp);
                         if (!m.containsKey(end)) {
-                            m.put(end, new ArrayList<String>());
+                            m.put(end, new ArrayList<>());
                         }
                         m.get(end).add(tmp);
                     } else if (dict.contains(temp)) {
                         if (!visited.contains(temp)) {
                             q.add(temp);
                             visited.add(temp);
-                            m.put(temp,  new ArrayList<String>());
+                            m.put(temp,  new ArrayList<>());
                             m.get(temp).add(tmp);
                             level.put(temp,  level.get(tmp) + 1);
                         } else if (level.get(tmp)+1 == level.get(temp)) {
@@ -42,14 +42,14 @@ public class Solution {
                 }
             }
         }
-        ArrayList<String> path = new ArrayList<String>();
+        List<String> path = new ArrayList<>();
         buildPaths(start, end, m, path, result);
         return result;
     }
-    void buildPaths(String start, String end, HashMap<String, ArrayList<String>> m, 
-            ArrayList<String> path, List<List<String>> result) {
+    void buildPaths(String start, String end, Map<String, List<String>> m, 
+            List<String> path, List<List<String>> result) {
         if (end.equals(start)) {
-            ArrayList<String> clone = (ArrayList<String>)path.clone();
+            List<String> clone = new ArrayList<>(path);
             clone.add(0, start);
             result.add(clone);
             return;
@@ -61,4 +61,3 @@ public class Solution {
         path.remove(0);
     }
 }
-

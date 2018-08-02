@@ -7,7 +7,7 @@ class Solution:
     def generateTreesHelper(self, start, end):
         result = []
         if start > end:
-            result.append(None)
+            #result.append(None)
             return result
         root = None
         if start == end:
