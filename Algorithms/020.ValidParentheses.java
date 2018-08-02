@@ -1,7 +1,7 @@
 public class Solution {
     public boolean isValid(String s) {
         Stack<Character> v = new Stack<>();
-        Map<Character, Character> map = new HashMap<>() {{
+        Map<Character, Character> map = new HashMap<Character, Character>() {{
             put('(', ')'); put('{', '}'); put('[', ']');
         }};
         for (Character c: s.toCharArray()) {

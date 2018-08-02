@@ -37,7 +37,7 @@ def main(path):
     for f in sorted(os.listdir(path)):
         if f in passed:
             continue
-        if not f.split(".")[0].isnumeric():
+        if not unicode(f, 'utf-8').split(".")[0].isnumeric():
             continue
         if f.endswith("py") or f.endswith("cpp") or f.endswith("java"):
             p = os.path.join(path, f)

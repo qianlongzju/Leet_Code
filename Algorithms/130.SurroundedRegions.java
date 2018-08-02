@@ -26,7 +26,7 @@ public class Solution {
         List<Integer> q = new LinkedList<>();
         visit(board, i, j, q);
         while (!q.isEmpty()) {
-            int x = q.remove();
+            int x = q.remove(0);
             int ii = x / n;
             int jj = x % n;
             visit(board, ii-1, jj, q);

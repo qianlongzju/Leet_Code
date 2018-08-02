@@ -6,10 +6,9 @@ public class Solution {
         return result;
     }
     private void DFS(List<List<Integer>> result,
-            ArrayList<Integer> path,
-            int n, int k, int min) {
+            List<Integer> path, int n, int k, int min) {
         if (path.size() == k) {
-            result.add((List<Integer>)path.clone());
+            result.add(new ArrayList<>(path));
             return;
         }
         for (int i = min; i <= n; i++) {

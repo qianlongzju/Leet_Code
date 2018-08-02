@@ -6,10 +6,10 @@ public class Solution {
         DFS(result, path, candidates, target, 0);
         return result;
     }
-    private void DFS(List<List<Integer>> result, ArrayList<Integer> path,
+    private void DFS(List<List<Integer>> result, List<Integer> path,
             int[] candidates, int target, int level) {
         if (target == 0) {
-            result.add((ArrayList<Integer>)path.clone());
+            result.add(new ArrayList<>(path));
             return;
         }
         for (int i = level; i < candidates.length; i++) {

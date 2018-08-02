@@ -9,7 +9,7 @@ public:
         f[0] = true;
         for (int i = 1; i <= s.length(); ++i) {
             for (int j = i - 1; j >= 0; --j) {
-                if (f[j] && std::find(wordDict.beign(), wordDict.end(), s.substr(j, i - j)) != wordDict.end()) {
+                if (f[j] && std::find(wordDict.begin(), wordDict.end(), s.substr(j, i - j)) != wordDict.end()) {
                     f[i] = true;
                     prev[i][j] = true;
                 }

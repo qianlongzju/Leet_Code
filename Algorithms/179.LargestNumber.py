@@ -1,7 +1,7 @@
 class Solution:
     # @param nums, a list of integers
     # @return a string
-    def largestnumsber(self, nums):
+    def largestNumber(self, nums):
         nums.sort(cmp=cmp)
         return str(int("".join([str(i) for i in nums])))
 
