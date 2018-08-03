@@ -7,7 +7,7 @@ public class Solution {
         while (i*10 <= x) {
             i *= 10;
         }
-        while (x >= 10) {
+        while (x > 0) {
             if (x/i == x%10) {
                 x = x % (int)i;
                 x /= 10;
