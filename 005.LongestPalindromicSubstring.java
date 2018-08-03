@@ -1,6 +1,8 @@
 public class Solution {
     public String longestPalindrome(String s) {
         int length = s.length();
+        if (length == 0)
+            return "";
         boolean[][] table = new boolean[length][length];
         int maxLen = 1;
         int maxIndex = 0;

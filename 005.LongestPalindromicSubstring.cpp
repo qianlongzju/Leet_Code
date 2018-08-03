@@ -2,6 +2,8 @@ class Solution {
 public:
     string longestPalindrome(string s) {
         int length = s.size();
+        if (length == 0)
+            return "";
         bool table[length][length];
         int maxLen = 1;
         int maxIndex = 0;
