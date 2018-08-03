@@ -15,13 +15,13 @@ public:
     }
 
 private:
-    TreeLinkNode *nextLevelFirstNode(TreeLinkNode *root) {
+    TreeLinkNode *nextLevelFirstNode(TreeLinkNode * &root) {
         if (root == NULL) return NULL;
         if (root->left != NULL) return root->left;
         return nextLevelNextNode(root, root->left);
     }
 
-    TreeLinkNode *nextLevelNextNode(TreeLinkNode *root, TreeLinkNode *curr_node) {
+    TreeLinkNode *nextLevelNextNode(TreeLinkNode * &root, TreeLinkNode *curr_node) {
         if (root->left == curr_node && root->right != NULL) {
             return root->right;
         }
