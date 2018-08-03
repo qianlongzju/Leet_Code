@@ -19,5 +19,3 @@ class Solution:
         parent.left = left
         parent.right = self.sortedSubListToBST(mid+1, end)
         return parent
-
-
