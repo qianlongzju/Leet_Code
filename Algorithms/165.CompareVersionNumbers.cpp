@@ -4,17 +4,13 @@ public:
         vector<string> tokens1 = split(version1, '.');
         vector<string> tokens2 = split(version2, '.');
 
-        int length = 0;
-        if (tokens1.size() > tokens2.size())
-            length = tokens1.size();
-        else
-            length = tokens2.size();
+        int length = max(tokens1.size(), tokens2.size());
         for (int i = 0; i < length; i++) {
             int a = 0, b = 0;
             if (i < tokens1.size())
-                a = atoi(tokens1[i]);
+                a = stoi(tokens1[i]);
             if (i < tokens2.size())
-                b = atoi(tokens2[i]);
+                b = stoi(tokens2[i]);
             if (a > b)
                 return 1;
             if (a < b)
