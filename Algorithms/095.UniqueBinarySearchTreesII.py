@@ -2,14 +2,16 @@ class Solution:
     # @param {integer} n
     # @return {TreeNode[]}
     def generateTrees(self, n):
-        return self.generateTreesHelper(1, n)
+        result = self.generateTreesHelper(1, n)
+        if len(result) == 1 and result[0] == None:
+            return []
+        return result
 
     def generateTreesHelper(self, start, end):
         result = []
         if start > end:
-            #result.append(None)
+            result.append(None)
             return result
-        root = None
         if start == end:
             root = TreeNode(start)
             result.append(root)
@@ -24,4 +26,3 @@ class Solution:
                     root.right = right[k]
                     result.append(root)
         return result
-

@@ -1,14 +1,18 @@
 public class Solution {
     public List<TreeNode> generateTrees(int n) {
-        return generateTreesSub(1, n);    
+        List<TreeNode> result = generateTreesSub(1, n);    
+        if (result.size() == 1 && result.get(0) == null) {
+            return new ArrayList();
+        }
+        return result;
     }
     private List<TreeNode> generateTreesSub(int start, int end) {
-        List<TreeNode> result = new ArrayList<TreeNode>();
+        List<TreeNode> result = new ArrayList<>();
         if (start > end) {
             result.add(null);
             return result;
         }
-        TreeNode root = null;
+        TreeNode root;
         if (start == end) {
             root = new TreeNode(start);
             result.add(root);

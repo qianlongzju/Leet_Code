@@ -1,7 +1,12 @@
 class Solution {
 public:
     vector<TreeNode *> generateTrees(int n) {
-        return generateTreesSub(1, n);    
+        vector<TreeNode *> result = generateTreesSub(1, n);    
+        if (result.size() == 1 && result[0] == NULL) {
+            result.pop_back();
+            return result;
+        }
+        return result;
     }
     vector<TreeNode *> generateTreesSub(int start, int end) {
         vector<TreeNode *> result;
@@ -9,7 +14,7 @@ public:
             result.push_back(NULL);
             return result;
         }
-        TreeNode* root;
+        TreeNode *root;
         if (start == end) {
             root = new TreeNode(start);
             result.push_back(root);
