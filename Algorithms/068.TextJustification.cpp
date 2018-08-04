@@ -1,21 +1,22 @@
-public class Solution {
-    public ArrayList<String> fullJustify(String[] words, int L) {
-        ArrayList<String> result = new ArrayList<String>();    
+class Solution {
+public:
+    vector<string> fullJustify(vector<string>& words, int maxWidth) {
+        vector<string> result;    
         int start = 0;
         int length = 0;
         int count = 0;
-        String s = "";
-        String space = " ";
+        string s = "";
+        string space = " ";
         int i;
-        for (i=0; i < words.length; ++i) {
-            if (length + count + words[i].length() > L) {
+        for (i=0; i < words.size(); ++i) {
+            if (length + count + words[i].length() > maxWidth) {
                 if (count == 1) {
                     s = words[start];
-                    while (s.length() < L) {
+                    while (s.size() < maxWidth) {
                         s += space;
                     }
                 } else {
-                    int numSpace = L - length;
+                    int numSpace = maxWidth - length;
                     s = "";
                     for (int j=start; j < i-1; j++) {
                         s += words[j];
@@ -29,7 +30,7 @@ public class Solution {
                     }
                     s += words[i-1];
                 }
-                result.add(s);
+                result.push_back(s);
                 length = words[i].length();
                 start = i;
                 count = 1;
@@ -39,14 +40,13 @@ public class Solution {
             }
         } 
         s = words[start];
-        for (int j=start+1; j < i; j++) {
+        for (int j=start+1; j < words.size(); j++) {
             s += space + words[j];
         }
-        while (s.length() < L) {
+        while (s.length() < maxWidth) {
             s += space;
         }
-        result.add(s);
+        result.push_back(s);
         return result;
-        
     }
-}
+};
