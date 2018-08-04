@@ -1,4 +1,3 @@
-#include "leetcode.h"
 class Solution {
 public:
     bool isScramble(string s1, string s2) {
@@ -31,10 +30,3 @@ public:
         return false;
     }
 };
-int main() {
-    Solution s;
-    cout << s.isScramble("rgeat", "great") << endl;
-    cout << s.isScramble("rgate", "great") << endl;
-    return 0;
-}
-
