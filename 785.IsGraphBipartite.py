@@ -8,6 +8,7 @@ class Solution(object):
         for i in range(len(graph)):
             if color[i] == 0 and not self.dfs(graph, color, i):
                 return False
+        return True
 
     def dfs(self, graph, color, i):
         color[i] = 1
