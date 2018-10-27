@@ -1,16 +1,15 @@
 class Solution:
     # @return a list of lists of integers
     def combine(self, n, k):
-        self.result = []
-        self.path = []
-        self.DFS(n, k, 1)
-        return self.result
+        result, path = [], []
+        def _dfs(level):
+            if len(path) == k:
+                result.append(path[:])
+                return
+            for i in range(level, n+1):
+                path.append(i)
+                _dfs(i+1)
+                path.pop()
+        _dfs(1)
+        return result
 
-    def DFS(self, n, k, level):
-        if len(self.path) == k:
-            self.result.append(self.path[:])
-            return
-        for i in range(level, n+1):
-            self.path.append(i)
-            self.DFS(n, k, i+1)
-            self.path.pop()

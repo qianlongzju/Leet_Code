@@ -4,17 +4,16 @@ class Solution:
     # @return a list of lists of integers
     def combinationSum(self, candidates, target):
         candidates.sort()
-        self.result = []
-        self.comb = []
-        self.DFS(candidates, target, 0)
-        return self.result
+        result, comb = [], []
+        def _dfs(candidates, target, level):
+            if target == 0:
+                result.append(comb[:])
+                return
+            for i in range(level, len(candidates)):
+                if candidates[i] > target: break
+                comb.append(candidates[i])
+                _dfs(candidates, target-candidates[i], i)
+                comb.pop()
+        _dfs(candidates, target, 0)
+        return result
     
-    def DFS(self, candidates, target, level):
-        if target == 0:
-            self.result.append(self.comb[:])
-            return
-        for i in range(level, len(candidates)):
-            if candidates[i] > target: break
-            self.comb.append(candidates[i])
-            self.DFS(candidates, target-candidates[i], i)
-            self.comb.pop()

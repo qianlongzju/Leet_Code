@@ -3,22 +3,20 @@ class Solution:
     # @param target, integer
     # @return a list of lists of integers
     def combinationSum2(self, candidates, target):
+        def _dfs(candidates, target, level):
+            if target == 0:
+                result.append(comb[:])
+                return
+            for i in range(level, len(candidates)):
+                if i != level and candidates[i] == candidates[i-1]: continue
+                if candidates[i] > target: break
+                comb.append(candidates[i])
+                _dfs(candidates, target-candidates[i], i+1)
+                comb.pop()
         candidates.sort()
-        self.result = []
-        self.comb = []
-        self.DFS(candidates, target, 0)
-        return self.result
-    
-    def DFS(self, candidates, target, level):
-        if target == 0:
-            self.result.append(self.comb[:])
-            return
-        for i in range(level, len(candidates)):
-            if i != level and candidates[i] == candidates[i-1]: continue
-            if candidates[i] > target: break
-            self.comb.append(candidates[i])
-            self.DFS(candidates, target-candidates[i], i+1)
-            self.comb.pop()
+        result, comb = [], []
+        _dfs(candidates, target, 0)
+        return result
 
 s = Solution()
 candidates = [1, 1]
