@@ -37,3 +37,31 @@ class Solution:
 
         return f[m][n]
 
+    def isMatch_recursively(self, s, p):
+        """
+        :type s: str
+        :type p: str
+        :rtype: bool
+        """
+        if p == s:
+            return True
+        if s == '':
+            return p == '' or (len(p) >= 2 and p[-1] == '*' and self.isMatch(s, p[:-2]))
+        if p == '':
+            return s == ''
+        if p[-1] == s[-1] or p[-1] == '.':
+            return self.isMatch(s[:-1], p[:-1])
+        if p[-1] == '*':
+            if self.isMatch(s, p[:-2]):
+                return True
+            if self.isMatch(s, p[:-1]):
+                return True
+            for i in range(len(s)-1, -1, -1):
+                if s[i] == p[-2] or p[-2] == '.':
+                    if self.isMatch(s[:i], p[:-1]):
+                        return True
+                else:
+                    break
+            return False
+        return False
+
