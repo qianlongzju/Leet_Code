@@ -3,6 +3,7 @@ class Solution:
     # @return nothing
     def connect(self, root):
         if not root: return
+        old_root = root
         while root:
             start = self.nextLevelFirstNode(root)
             curr_node = start
@@ -11,6 +12,7 @@ class Solution:
                 curr_node.next = next_node
                 curr_node = next_node
             root = start
+        return old_root
 
     def nextLevelFirstNode(self, root):
         if not root: return None

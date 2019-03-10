@@ -1,3 +1,11 @@
+"""
+# Definition for a Node.
+class Node(object):
+    def __init__(self, val, next, random):
+        self.val = val
+        self.next = next
+        self.random = random
+"""
 class Solution:
     # @param head, a RandomListNode
     # @return a RandomListNode
@@ -8,7 +16,7 @@ class Solution:
 
     def Clone(self, head):
         while head:
-            clonedNode = RandomListNode(head.label)
+            clonedNode = Node(head.val, None, None)
             clonedNode.next = head.next
             head.next = clonedNode
             head = clonedNode.next
@@ -21,7 +29,7 @@ class Solution:
             head = clonedNode.next
 
     def restore(self, head):
-        pClonedHead = RandomListNode(-1)
+        pClonedHead = Node(-1, None, None)
         pClonedNode = pClonedHead
         while head:
             pClonedNode.next = head.next
@@ -29,4 +37,3 @@ class Solution:
             head.next = pClonedNode.next
             head = head.next
         return pClonedHead.next
-

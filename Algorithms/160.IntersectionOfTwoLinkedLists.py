@@ -15,7 +15,7 @@ class Solution:
                 diff -= 1
                 headB = headB.next
         while headA and headB:
-            if headA.val == headB.val:
+            if headA == headB:
                 return headA
             headA = headA.next
             headB = headB.next
