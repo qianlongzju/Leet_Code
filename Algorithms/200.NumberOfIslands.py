@@ -4,26 +4,34 @@ class Solution(object):
         :type grid: List[List[str]]
         :rtype: int
         """
+        if len(grid) == 0:
+            return 0
+        row, col = len(grid), len(grid[0])
+        def dfs(x, y):
+            grid[x][y] = '-1'
+            for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                xx, yy = x + dx, y + dy
+                if 0 <= xx < row and 0 <= yy < col and grid[xx][yy] == '1':
+                    dfs(xx, yy)
+
+        def bfs(x, y):
+            q, visited = [(x, y)], {(x, y)}
+            step = 0
+            while q:
+                step += 1
+                size = len(q)
+                for i in range(size):
+                    x, y = q.pop(0)
+                    grid[x][y] = '-1'
+                    for dx, dy in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                        xx, yy = x + dx, y + dy
+                        if 0 <= xx < row and 0 <= yy < col and grid[xx][yy] == '1' and (xx, yy) not in visited:
+                            q.append((xx, yy))
+                            visited.add((xx, yy))
         count = 0
-        for i in range(len(grid)):
-            for j in range(len(grid[i])):
-                if grid[i][j] == '1':
-                    self.dfs(grid, i, j)
+        for x in range(row):
+            for y in range(col):
+                if grid[x][y] == '1':
+                    bfs(x, y)
                     count += 1
         return count
-    
-    def dfs(self, grid, i, j):
-        grid[i][j] = '0'
-        for a in range(-1, 2):
-            b = 0
-            ii = i + a
-            jj = j + b
-            if ii >= 0 and jj >= 0 and ii < len(grid) and jj < len(grid[i]) and grid[ii][jj] == '1':
-                self.dfs(grid, ii, jj)
-        for b in range(-1, 2):
-            a = 0
-            ii = i + a
-            jj = j + b
-            if ii >= 0 and jj >= 0 and ii < len(grid) and jj < len(grid[i]) and grid[ii][jj] == '1':
-                self.dfs(grid, ii, jj)
-        

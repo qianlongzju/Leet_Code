@@ -3,6 +3,7 @@ class Solution:
     # @return nothing
     def connect(self, root):
         if not root: return
+        old_root = root
         while root:
             curr_node = root
             while curr_node:
@@ -12,6 +13,7 @@ class Solution:
                     curr_node.right.next = curr_node.next.left if curr_node.next else None
                 curr_node = curr_node.next
             root = root.left
+        return old_root
 
     # not constant extra space
     #def connect(self, root):
