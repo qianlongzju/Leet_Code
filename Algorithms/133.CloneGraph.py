@@ -1,9 +1,14 @@
-class Solution:
-    # @param node, a undirected graph node
-    # @return a undirected graph node
+"""
+# Definition for a Node.
+class Node(object):
+    def __init__(self, val, neighbors):
+        self.val = val
+        self.neighbors = neighbors
+"""
+class Solution(object):
     def cloneGraph(self, node):
         if not node: return None
-        copyNode = UndirectedGraphNode(node.label)
+        copyNode = Node(node.val, [])
         mapping = {node: copyNode}
         queue = [node]
         while queue:
@@ -13,21 +18,25 @@ class Solution:
                 if neighbor in mapping:
                     copyCurr.neighbors.append(mapping[neighbor])
                 else:
-                    copyNeighbor = UndirectedGraphNode(neighbor.label)
+                    copyNeighbor = Node(neighbor.val, [])
                     queue.append(neighbor)
                     mapping[neighbor] = copyNeighbor
                     copyCurr.neighbors.append(copyNeighbor)
         return copyNode
-    ## dfs
-    #mapping = {}
-    #def cloneGraph(self, node):
-    #    if not node: return None
-    #    return self.dfs(node)
 
-    #def dfs(self, node):
-    #    if node in self.mapping: return self.mapping[node]
-    #    copyNode = UndirectedGraphNode(node.label)
-    #    self.mapping[node] = copyNode
-    #    for neighbor in node.neighbors:
-    #        copyNode.neighbors.append(self.dfs(neighbor))
-    #    return copyNode
+    def cloneGraph_dfs(self, node):
+        """
+        :type node: Node
+        :rtype: Node
+        """
+        self.mapping = {}
+        if not node: return None
+        return self.dfs(node)
+
+    def dfs(self, node):
+        if node in self.mapping: return self.mapping[node]
+        copyNode = Node(node.val, [])
+        self.mapping[node] = copyNode
+        for neighbor in node.neighbors:
+            copyNode.neighbors.append(self.dfs(neighbor))
+        return copyNode

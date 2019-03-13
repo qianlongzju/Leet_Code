@@ -6,13 +6,12 @@ class Solution(object):
         :rtype: int
         """
         m = {}
-        return self.findTargetSumWaysInterval(nums, 0, len(nums)-1, S, m)
-    
-    def findTargetSumWaysInterval(self, nums, start, end, S, m):
-        if start > end:
-            return S == 0
-        if (start, S) in m:
-            return m[(start, S)]
-        t = self.findTargetSumWaysInterval(nums, start+1, end, S+nums[start], m) + self.findTargetSumWaysInterval(nums, start+1, end, S-nums[start], m)
-        m[(start, S)] = t
-        return t
+        def dfs(i, S):
+            if i >= len(nums):
+                return S == 0
+            if (i, S) in m:
+                return m[(i, S)]
+            t = dfs(i+1, S+nums[i]) + dfs(i+1, S-nums[i])
+            m[(i, S)] = t
+            return t
+        return dfs(0, S)
