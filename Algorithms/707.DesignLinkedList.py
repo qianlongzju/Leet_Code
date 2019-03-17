@@ -1,15 +1,15 @@
-class MyLinkedList(object):
+class Node(object):
+    def __init__(self, val):
+        self.val = val
+        self.next = None
 
-    def ListNode(object):
-        def __init__(self, val):
-            self.val = val
-            self.next = None
-            
+class MyLinkedList(object):
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        self.dummyHead = ListNode(-1)
+        self.head = Node(-1)
+        self.size = 0
 
     def get(self, index):
         """
@@ -17,24 +17,16 @@ class MyLinkedList(object):
         :type index: int
         :rtype: int
         """
-        if index < 0 or index >= self.length():
+        if index < 0 or index >= self.size:
             return -1
-        node = self.dummyHead
+        node = self.head
         i = -1
         while node:
             if i == index:
                 break
             node = node.next
             i += 1
-        #self.p()
         return node.val
-       
-    def p(self):
-        node = self.dummyHead.next
-        while node:
-            print node.val,
-            node = node.next
-        print()
 
     def addAtHead(self, val):
         """
@@ -42,28 +34,22 @@ class MyLinkedList(object):
         :type val: int
         :rtype: void
         """
-        node = ListNode(val)
-        node.next = self.dummyHead.next
-        self.dummyHead.next = node
-        
-    def length(self):
-        node = self.dummyHead.next
-        length = 0
-        while node:
-            node = node.next
-            length += 1
-        return length
-        
+        self.size += 1
+        node = Node(val)
+        node.next = self.head.next
+        self.head.next = node
+
     def addAtTail(self, val):
         """
         Append a node of value val to the last element of the linked list.
         :type val: int
         :rtype: void
         """
-        node = self.dummyHead
+        self.size += 1
+        node = self.head
         while node.next:
             node = node.next
-        node.next = ListNode(val)
+        node.next = Node(val)
 
     def addAtIndex(self, index, val):
         """
@@ -72,22 +58,22 @@ class MyLinkedList(object):
         :type val: int
         :rtype: void
         """
-        if index < 0 or index > self.length():
+        if index < 0 or index > self.size:
             return -1
-        if index == self.length():
+        if index == self.size:
             self.addAtTail(val)
             return
-        node = self.dummyHead
-        i = -1
+        self.size += 1
+        node = self.head
+        i = 0
         while node:
-            if i + 1 == index:
+            if i == index:
                 break
             node = node.next
             i += 1
-        new_node = ListNode(val)
+        new_node = Node(val)
         new_node.next = node.next
         node.next = new_node
-        
 
     def deleteAtIndex(self, index):
         """
@@ -95,17 +81,17 @@ class MyLinkedList(object):
         :type index: int
         :rtype: void
         """
-        if index < 0 or index >= self.length():
-            return 
-        node = self.dummyHead
-        i = -1
+        if index < 0 or index >= self.size:
+            return
+        self.size -= 1
+        node = self.head
+        i = 0
         while node:
-            if i + 1 == index:
+            if i == index:
                 break
             node = node.next
             i += 1
         node.next = node.next.next
-
 
 # Your MyLinkedList object will be instantiated and called as such:
 # obj = MyLinkedList()

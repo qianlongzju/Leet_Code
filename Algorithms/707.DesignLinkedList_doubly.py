@@ -3,8 +3,8 @@ class Node(object):
         self.val = val
         self.next = None
         self.prev = None
-        
-class MyLinkedList(object):
+
+class MyLinkedList(object):            
     def __init__(self):
         """
         Initialize your data structure here.
@@ -22,8 +22,8 @@ class MyLinkedList(object):
         """
         if index < 0 or index >= self.size:
             return -1
-        node = self.head
-        i = -1
+        node = self.head.next
+        i = 0
         while node:
             if i == index:
                 return node.val
@@ -61,21 +61,20 @@ class MyLinkedList(object):
         """
         if index < 0 or index > self.size:
             return -1
-        self.size += 1
         if index == self.size:
             self.addAtTail(val)
             return
+        self.size += 1
         node = self.head
-        i = -1
+        i = 0
         while node:
-            if i + 1 == index:
+            if i == index:
                 break
             node = node.next
             i += 1
         new_node = Node(val)
         new_node.next, node.next.prev = node.next, new_node
         node.next, new_node.prev = new_node, node
-
 
     def deleteAtIndex(self, index):
         """
@@ -87,14 +86,17 @@ class MyLinkedList(object):
             return
         self.size -= 1
         node = self.head
-        i = -1
+        i = 0
         while node:
-            if i + 1 == index:
+            if i == index:
                 break
             node = node.next
             i += 1
-        node.next, node.next.next.prev = node.next.next, node
-
+        node.next.next.prev = node
+        node.next = node.next.next
+        # TODO Important
+        #node.next, node.next.next.prev = node.next.next, node
+        
 # Your MyLinkedList object will be instantiated and called as such:
 # obj = MyLinkedList()
 # param_1 = obj.get(index)
