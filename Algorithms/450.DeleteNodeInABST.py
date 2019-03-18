@@ -14,40 +14,28 @@ class Solution(object):
         """
         node, parent = root, None
         while node:
-            if key == node.val:
-                if node.left == None and node.right == None:
-                    if parent == None:
-                        return None
-                    elif parent.left == node:
-                        parent.left = None
-                    else:
-                        parent.right = None
-                    return root
-                elif node.left == None and node.right != None:
-                    if parent == None:
-                        return node.right
-                    if parent.left == node:
-                        parent.left = node.right
-                    else:
-                        parent.right = node.right
-                    return root
-                elif node.left != None and node.right == None:
-                    if parent == None:
-                        return node.left
-                    if parent.left == node:
-                        parent.left = node.left
-                    else:
-                        parent.right = node.left
-                    return root
-                else:
-                    parent, x_node = node, node.right
-                    while x_node.left:
-                        parent = x_node
-                        x_node = x_node.left
-                    node.val, x_node.val = x_node.val, node.val
-                    node = x_node
-            elif key > node.val:
+            if key > node.val:
                 parent, node = node, node.right
-            else:
+            elif key < node.val:
                 parent, node = node, node.left
+            else:
+                if node.left != None and node.right != None:
+                    min_parent, min_node = node, node.right
+                    while min_node.left:
+                        min_parent, min_node = min_node, min_node.left
+                    node.val, min_node.val = min_node.val, node.val
+                    parent, node = min_parent, min_node
+
+                child = None
+                if node.left:
+                    child = node.left
+                elif node.right:
+                    child = node.right
+                if parent == None:
+                    return child
+                elif parent.left == node:
+                    parent.left = child
+                else:
+                    parent.right = child
+                return root
         return root
