@@ -1,33 +1,31 @@
+# Definition for singly-linked list.
+# class ListNode(object):
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
 class Solution(object):
     def sortList(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
         """
-        totalLength = self.genLength(head)
-        if totalLength == 0 or totalLength == 1:
+        if head == None or head.next == None:
             return head
-        leftLength = totalLength / 2
+        slow, fast = head, head.next
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        rightHead = slow.next
+        slow.next = None
         leftHead = head
-        rightHead = self.getRightHead(head, leftLength)
         leftHead = self.sortList(leftHead)
         rightHead = self.sortList(rightHead)
         return self.merge(leftHead, rightHead)
-    
-    def getRightHead(self, head, leftLength):
-        rightHead = head
-        i = 1
-        while i < leftLength:
-            rightHead = rightHead.next
-            i += 1
-        p = rightHead.next
-        rightHead.next = None
-        rightHead = p
-        return rightHead
-    
+
     def merge(self, leftHead, rightHead):
-        headptr = ListNode(0)
-        p = headptr
+        dummyHead = ListNode(0)
+        p = dummyHead
         while leftHead and rightHead:
             if leftHead.val < rightHead.val:
                 p.next = leftHead
@@ -40,12 +38,4 @@ class Solution(object):
             p.next = leftHead
         if rightHead:
             p.next = rightHead
-        return headptr.next
-        
-    def genLength(self, head):
-        p = head
-        n = 0
-        while p:
-            n += 1
-            p = p.next
-        return n
+        return dummyHead.next
