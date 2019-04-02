@@ -1,19 +1,20 @@
-class Solution:
-    # @param candidates, a list of integers
-    # @param target, integer
-    # @return a list of lists of integers
+class Solution(object):
     def combinationSum(self, candidates, target):
+        """
+        :type candidates: List[int]
+        :type target: int
+        :rtype: List[List[int]]
+        """
         candidates.sort()
         result, comb = [], []
-        def _dfs(candidates, target, level):
+        def dfs(target, level):
             if target == 0:
                 result.append(comb[:])
                 return
             for i in range(level, len(candidates)):
                 if candidates[i] > target: break
                 comb.append(candidates[i])
-                _dfs(candidates, target-candidates[i], i)
+                dfs(target-candidates[i], i)
                 comb.pop()
-        _dfs(candidates, target, 0)
+        dfs(target, 0)
         return result
-    
