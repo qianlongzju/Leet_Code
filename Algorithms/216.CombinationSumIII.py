@@ -1,21 +1,22 @@
 class Solution(object):
-    def combinationSum2(self, candidates, target):
+    def combinationSum3(self, k, n):
         """
-        :type candidates: List[int]
-        :type target: int
+        :type k: int
+        :type n: int
         :rtype: List[List[int]]
         """
-        candidates.sort()
+        candidates = range(1, 10)
         result, comb = [], []
         def dfs(target, level):
-            if target == 0:
+            if len(comb) > k:
+                return
+            if target == 0 and len(comb) == k:
                 result.append(comb[:])
                 return
             for i in range(level, len(candidates)):
-                if i != level and candidates[i] == candidates[i-1]: continue
                 if candidates[i] > target: break
                 comb.append(candidates[i])
                 dfs(target-candidates[i], i+1)
                 comb.pop()
-        dfs(target, 0)
+        dfs(n, 0)
         return result
