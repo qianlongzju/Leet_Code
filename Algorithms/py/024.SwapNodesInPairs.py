@@ -2,16 +2,11 @@ class Solution:
     # @param a ListNode
     # @return a ListNode
     def swapPairs(self, head):
-        dummyHead = ListNode(1)
-        dummyHead.next = head
-        prev = dummyHead
-        p = head
-        while p and p.next:
-            q = p.next
-            r = p.next.next
-            prev.next = q
-            q.next = p
-            p.next = r
-            prev= p
-            p = r
-        return dummyHead.next
+        dummy= ListNode(1)
+        dummy.next = head
+        prev, cur = dummy, head
+        while cur and cur.next:
+            q, r = cur.next, cur.next.next
+            prev.next, q.next, cur.next = q, cur, r
+            prev, cur = cur, r
+        return dummy.next
