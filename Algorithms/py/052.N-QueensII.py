@@ -1,23 +1,26 @@
-class Solution:
-    # @param {integer} n
-    # @return {integer}
+class Solution(object):
     def totalNQueens(self, n):
-        num, self.result = [0] * n, 0
+        """
+        :type n: int
+        :rtype: int
+        """
+        num, result = [-1] * n, []
+        col, pie, na = set(), set(), set()
         def _dfs(level):
             if level == n:
-                self.result += 1
+                result.append(num)
                 return
             for i in range(n):
-                num[level] = i+1
-                if _isValid(level):
-                    _dfs(level+1)
+                if i in col or level + i in pie or level - i in na:
+                    continue
+                num[level] = i
+                col.add(i)
+                pie.add(level + i)
+                na.add(level - i)
+                _dfs(level+1)
+                col.remove(i)
+                pie.remove(level + i)
+                na.remove(level - i)
 
-        def _isValid(level):
-            for i in range(level):
-                if num[level] == num[i]:
-                    return False
-                if abs(num[level] - num[i]) == (level - i):
-                    return False
-            return True
         _dfs(0)
-        return self.result
+        return len(result)
