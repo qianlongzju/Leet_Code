@@ -13,7 +13,8 @@ class Solution(object):
             n = -n
         result = 1.0
         while n:
-            if n % 2: result *= x
+            if n & 1: 
+                result *= x
             n /= 2
             x *= x
         return result if positive else 1/result
