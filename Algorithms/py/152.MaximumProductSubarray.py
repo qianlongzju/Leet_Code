@@ -2,8 +2,9 @@ class Solution:
     # @param A, a list of integers
     # @return an integer
     def maxProduct(self, A):
-        mx, mn, result = A[0], A[0], A[0]
+        mx, mn, result = (A[0], ) * 3
         for i in range(1, len(A)):
-            mx, mn = max(A[i], A[i] * mx, A[i] * mn), min(A[i], A[i] * mx, A[i] * mn)
+            a, b = A[i] * mx, A[i] * mn
+            mx, mn = max(A[i], a, b), min(A[i], a, b)
             result = max(mx, result)
         return result

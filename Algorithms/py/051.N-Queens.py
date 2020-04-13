@@ -14,8 +14,6 @@ class Solution:
                 col.add(i)
                 pie.add(level + i)
                 na.add(level - i)
-                #if _isValid(level):
-                #    _dfs(level+1)
                 _dfs(level+1)
                 col.remove(i)
                 pie.remove(level + i)
@@ -35,3 +33,31 @@ class Solution:
 
         _dfs(0)
         return result
+    def solveNQueens(self, n):
+        """
+        :type n: int
+        :rtype: List[List[str]]
+        """
+        self.result = []
+        self.dfs(n, 0, 0, 0, 0, [])
+        return self.result
+
+    def getBoard(self, nums, n):
+        board = []
+        for num in nums:
+            i = 0
+            while num:
+                num >>= 1
+                i += 1
+            board.append("." * (i-1) + "Q" + "." * (n - i))
+        return board
+
+    def dfs(self, n, row, cols, pie, na, nums):
+        if row == n:
+            self.result.append(self.getBoard(nums, n))
+            return
+        bits = (~(cols | pie | na)) & ((1 << n) - 1)
+        while bits:
+            p = bits & -bits
+            self.dfs(n, row + 1, cols | p, (pie | p) << 1, (na | p) >> 1, nums + [p])
+            bits &= bits - 1
