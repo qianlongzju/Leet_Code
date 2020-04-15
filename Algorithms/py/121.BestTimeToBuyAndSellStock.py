@@ -22,3 +22,26 @@ class Solution:
             profit[i][2] = profit[i-1][1] + prices[i]
             res = max(res, profit[i][0],  profit[i][2])
         return res
+
+    def maxProfit(self, prices):
+        if not prices:
+            return 0
+        dp_i_0, dp_i_1 = 0, -sys.maxint
+        for i in range(len(prices)):
+            dp_i_0 = max(dp_i_0, dp_i_1 + prices[i])
+            dp_i_1 = max(dp_i_1, -prices[i])
+        return dp_i_0
+
+    def maxProfit(self, prices):
+        if not prices:
+            return 0
+        n = len(prices)
+        dp = [[0] * 2 for _ in range(n)]
+        for i in range(n):
+            if i == 0:
+                dp[i][0] = 0
+                dp[i][1] = -prices[i]
+                continue
+            dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
+            dp[i][1] = max(dp[i-1][1], -prices[i])
+        return dp[n - 1][0]
