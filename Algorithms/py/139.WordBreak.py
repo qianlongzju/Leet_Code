@@ -17,3 +17,12 @@ class Solution(object):
                         wb[j] = True
                     if j == n-1 and wb[j]:return True
         return False
+    def wordBreak(self, s: str, wordDict: List[str]) -> bool:
+        n = len(s)
+        dp = [False] * (n+1)
+        dp[0] = True
+        for i in range(n+1):
+            for j in range(i, n+1):
+                if dp[i] and s[i:j] in wordDict:
+                    dp[j] = True
+        return dp[-1]

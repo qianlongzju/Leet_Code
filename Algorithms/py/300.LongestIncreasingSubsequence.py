@@ -4,15 +4,17 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        if len(nums) == 0:
+        n = len(nums)
+        if n == 0:
             return 0
-        length_list = [1] * len(nums)
-        for i in range(len(nums)):
-            smaller = [length_list[j] for j in range(0, i) if nums[j] < nums[i]]
-            if len(smaller) == 0:
-                continue
-            length_list[i] = max(smaller) + 1
-        return max(length_list)
+        length_list = [1] * n
+        result = 0
+        for i in range(n):
+            for j in range(0, i):
+                if nums[j] < nums[i]:
+                    length_list[i] = max(length_list[i], length_list[j]+1)
+            result = max(result, length_list[i])
+        return result
 
 
     def lengthOfLIS(self, nums):

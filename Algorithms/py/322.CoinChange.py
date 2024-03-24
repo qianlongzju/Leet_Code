@@ -5,20 +5,35 @@ class Solution(object):
         :type amount: int
         :rtype: int
         """
-        if amount <= 0:
+        if amount == 0:
             return 0
         coins = sorted(coins)
-        table = [0] * amount
-        for coin in coins:
-            if coin > amount:
+        table = [-1] * (amount + 1)
+        table[0] = 0
+        for i in range(amount+1):
+            for coin in coins:
+                if i < coin:
+                    break
+                if table[i-coin] != -1:
+                    if table[i] == -1:
+                        table[i] = table[i-coin] + 1
+                    else:
+                        table[i] = min(table[i], table[i-coin] + 1)
+        return table[-1]
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        if amount == 0:
+            return 0
+        coins = sorted(coins)
+        table = [-1] * (amount + 1)
+        table[0] = 0
+        for i in range(amount+1):
+            if table[i] == -1:
                 continue
-            table[coin-1] = 1
-        for i in range(amount):
-            if table[i] != 0:
-                continue
-            l = [table[i-coins[j]] for j in range(len(coins))
-                    if i >= coins[j] and table[i-coins[j]] != 0]
-            if len(l) == 0:
-                continue
-            table[i] = min(l) + 1
+            for coin in coins:
+                if i+coin > amount:
+                    break
+                if table[i+coin] != -1:
+                    table[i+coin] = min(table[i+coin], table[i] + 1)
+                else:
+                    table[i+coin] = table[i] + 1
         return table[-1]
