@@ -45,3 +45,18 @@ class Solution:
             dp[i][0] = max(dp[i-1][0], dp[i-1][1] + prices[i])
             dp[i][1] = max(dp[i-1][1], -prices[i])
         return dp[n - 1][0]
+
+    def maxProfit(self, prices):
+        """
+        :type prices: List[int]
+        :rtype: int
+        """
+        if len(prices) < 2:
+            return 0
+        min_price = prices[0]
+        profit = 0
+        for price in prices[1:]:
+            if price > min_price:
+                profit = max(price-min_price, profit)
+            min_price = min(price, min_price)
+        return profit

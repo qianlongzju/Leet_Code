@@ -1,29 +1,17 @@
 class Solution:
-    # @param string s
-    # @param integer numRows
-    # @return string
-    def convert(self, s, numRows):
-        """
-        :type s: str
-        :type numRows: int
-        :rtype: str
-        """
+    def convert(self, s: str, numRows: int) -> str:
         if numRows == 1:
             return s
         result = [[] for i in range(numRows)]
-        i, j = 0, 0
-        direction = 0
+        i = 0
+        direction = 1
         for k in range(len(s)):
             result[i].append(s[k])
-            if direction == 0:
-                i += 1
-            else:
-                i -= 1
-                j += 1
+            i += direction
             if i == numRows-1:
-                direction = 1
+                direction = -1
             elif i == 0:
-                direction = 0
+                direction = 1
         return "".join(["".join(row) for row in result])
 
     def convert_1(self, s, numRows):

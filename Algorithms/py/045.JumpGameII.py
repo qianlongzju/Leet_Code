@@ -13,3 +13,16 @@ class Solution:
                 return steps[-1]
             i += 1
 
+    def jump(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        n = len(nums)
+        steps = [n-1]*n
+        steps[0] = 0
+        for i in range(n):
+            for j in range(i+1, min(i+nums[i]+1, n)):
+                steps[j] = min(steps[j], steps[i] + 1)
+        #print(steps)
+        return steps[-1]

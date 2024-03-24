@@ -25,11 +25,9 @@ class Solution(object):
     def rotate_old(self, nums, k):
         k %= len(nums)
         self.reverse(nums)
-        print nums
         nums[:k] = self.reverse(nums[:k])
         print nums
         nums[k:] = self.reverse(nums[k:])
-        print nums
 
     def reverse(self, nums):
         i, j = 0, len(nums)-1
@@ -38,3 +36,18 @@ class Solution(object):
             i += 1
             j -= 1
         return nums
+    def rotate(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: None Do not return anything, modify nums in-place instead.
+        """
+        def reverse(i, j):
+            while i < j:
+                nums[i], nums[j] = nums[j], nums[i]
+                i, j = i+1, j-1
+        n = len(nums)
+        k %= n
+        reverse(0, n-1)
+        reverse(0, k-1)
+        reverse(k, n -1)
