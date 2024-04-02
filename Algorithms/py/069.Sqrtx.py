@@ -12,7 +12,7 @@ class Solution:
             else:
                 i = mid + 1
 
-    def mySqrt_1(self, x):
+    def mySqrt(self, x):
         if not x: return x
         last = 0
         result = x

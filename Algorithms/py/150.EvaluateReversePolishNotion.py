@@ -1,7 +1,5 @@
 class Solution:
-    # @param tokens, a list of string
-    # @return an integer
-    def evalRPN(self, tokens):
+    def evalRPN(self, tokens: List[str]) -> int:
         stack = []
         for c in tokens:
             if c in ['+', '-', '*', '/']:
@@ -14,7 +12,7 @@ class Solution:
                 elif c == '*':
                     stack.append(b * a)
                 elif c == '/':
-                    stack.append((abs(b) / abs(a)) * (1 if a * b > 0 else -1))
+                    stack.append((abs(b) // abs(a)) * (1 if a * b > 0 else -1))
             else:
                 stack.append(int(c))
         return stack.pop()

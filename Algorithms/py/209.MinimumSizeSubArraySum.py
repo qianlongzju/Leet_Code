@@ -1,17 +1,12 @@
-class Solution(object):
-    def minSubArrayLen(self, s, nums):
-        """
-        :type s: int
-        :type nums: List[int]
-        :rtype: int
-        """
+class Solution:
+    def minSubArrayLen(self, target: int, nums: List[int]) -> int:
         min_length = None
         start = 0
         total = 0
         for i in range(len(nums)):
             total += nums[i]
-            if total >= s:
-                while start < i and total-nums[start] >= s:
+            if total >= target:
+                while start < i and total-nums[start] >= target:
                     total -= nums[start]
                     start += 1
                 if min_length == None:

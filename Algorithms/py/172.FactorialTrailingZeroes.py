@@ -4,6 +4,6 @@ class Solution:
         a = 5
         count = 0
         while a <= n:
-        	count += n/a
-        	a *= 5
+            count += n//a
+            a *= 5
         return count

@@ -1,6 +1,5 @@
 class Solution:
-    # @return a string
-    def longestPalindrome(self, s):
+    def longestPalindrome(self, s: str) -> str:
         def _expandAroundCenter(left, right):
             while left >= 0 and right < len(s) and s[left] == s[right]:
                 left -= 1
@@ -13,6 +12,6 @@ class Solution:
             len2 = _expandAroundCenter(i, i + 1)
             length = max(len1, len2)
             if length > end - start:
-                start = i - (length - 1) / 2
-                end = i + length / 2
+                start = i - (length - 1) // 2
+                end = i + length // 2
         return s[start: end + 1]

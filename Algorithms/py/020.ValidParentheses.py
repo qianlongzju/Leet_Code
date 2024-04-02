@@ -7,5 +7,5 @@ class Solution:
             if c in mapping:
                 stk.append(c)
             else:
-                if not stk or mapping[stk.pop()] != c: return False
+                if not stk or mapping[stk.pop(-1)] != c: return False
         return not stk

@@ -7,10 +7,11 @@ class Solution:
         while (x / div) >= 10:
             div *= 10
         while x != 0:
-            l = x / div
+            l = x // div
             r = x % 10
             if l != r:
                 return False
-            x = (x % div) / 10
-            div /= 100
+            x = (x % div) // 10
+            div //= 100
         return True
+

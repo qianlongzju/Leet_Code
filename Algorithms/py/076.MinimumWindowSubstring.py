@@ -1,13 +1,8 @@
-class Solution(object):
-    def minWindow(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: str
-        """
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
         needToFind, hasFound = [0] * 256, [0] * 256
-        for i in range(len(t)):
-            needToFind[ord(t[i])] += 1
+        for c in t:
+            needToFind[ord(c)] += 1
         count, begin, end, startIndex = 0, 0, 0, 0
         minLength = len(s)
         while end < len(s):

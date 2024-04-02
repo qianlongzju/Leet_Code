@@ -1,22 +1,17 @@
-class Solution(object):
-    def insert(self, intervals, newInterval):
-        """
-        :type intervals: List[Interval]
-        :type newInterval: Interval
-        :rtype: List[Interval]
-        """
+class Solution:
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         result = []
         i = 0
         while i < len(intervals):
-            if newInterval.start > intervals[i].end:
+            if newInterval[0] > intervals[i][1]:
                 result.append(intervals[i])
-            elif newInterval.end < intervals[i].start:
+            elif newInterval[1] < intervals[i][0]:
                 break
             else:
-                if newInterval.end < intervals[i].end:
-                    newInterval.end = intervals[i].end
-                if newInterval.start > intervals[i].start:
-                    newInterval.start = intervals[i].start
+                if newInterval[1] < intervals[i][1]:
+                    newInterval[1] = intervals[i][1]
+                if newInterval[0] > intervals[i][0]:
+                    newInterval[0] = intervals[i][0]
             i += 1
         result.append(newInterval);
         result.extend(intervals[i:])

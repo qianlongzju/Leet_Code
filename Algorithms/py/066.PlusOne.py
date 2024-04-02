@@ -5,7 +5,7 @@ class Solution:
         p = 1
         for i in range(len(digits)-1, -1, -1):
             digits[i] += p
-            p = digits[i] / 10
+            p = digits[i] // 10
             digits[i] %= 10
             if p == 0:
                 return digits

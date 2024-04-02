@@ -7,14 +7,12 @@ class Solution(object):
         """
         if n == 0:
             return 1.0
-        positive = True
         if n < 0:
-            positive = False
-            n = -n
+            return 1/self.myPow(x, -n)
         result = 1.0
         while n:
             if n & 1: 
                 result *= x
-            n /= 2
+            n //= 2
             x *= x
-        return result if positive else 1/result
+        return result

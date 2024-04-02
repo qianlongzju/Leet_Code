@@ -1,8 +1,6 @@
 class Solution:
-    # @param A, a list of integer
-    # @return an integer
-    def singleNumber(self, A):
+    def singleNumber(self, nums: List[int]) -> int:
         result = 0
-        for i in A:
+        for i in nums:
             result ^= i
-        return result
+        return result ^ 0
